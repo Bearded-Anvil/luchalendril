@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --parchment: #f5e6c8;
+  --parchment-dark: #e8d4a0;
+  --ink: #2c1a0e;
+  --stone: #3a3228;
+  --stone-light: #5a4a3a;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --crimson: #8b1a1a;
+  --fog: #a8b8c8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1410;
+  color: var(--parchment);
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.05em;
+}
+
+.gold-border {
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 12px rgba(201, 168, 76, 0.15), inset 0 0 12px rgba(0,0,0,0.3);
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 1.5rem 0;
+}
+
+.dm-private {
+  background: rgba(139, 26, 26, 0.15);
+  border: 1px solid rgba(139, 26, 26, 0.4);
+  box-shadow: 0 0 16px rgba(139, 26, 26, 0.1);
+}
+
+select {
+  background-color: #2a2018;
+  color: var(--parchment);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c9a84c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
 }
