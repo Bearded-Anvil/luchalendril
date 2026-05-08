@@ -11,6 +11,7 @@ export const southMainStreet = {
   vendors: [
     { id: "whittled-things", name: "Whittled Things", description: "Hand-carved wooden goods, training weapons, and miniatures.", path: "/beacon/south-main-street/whittled-things" },
     { id: "risk-and-reward", name: "Risk & Reward", description: "Locked mystery boxes of unknown contents. Fortune favors the bold.", path: "/beacon/south-main-street/risk-and-reward" },
+    { id: "lyrics-and-laughter", name: "Lyrics and Laughter", description: "Instruments, accessories, and magical music items. A song for every tale.", path: "/beacon/south-main-street/lyrics-and-laughter" },
     { id: "splitting-hairs", name: "Splitting Hairs", description: "A weapons stall specializing in bladed goods.", path: "/beacon/south-main-street/splitting-hairs", comingSoon: true },
     { id: "the-curious-handle", name: "The Curious Handle", description: "Oddities, curiosities, and things that probably have a story.", path: "/beacon/south-main-street/the-curious-handle", comingSoon: true },
     { id: "batyas-blades", name: "Batya's Blades", description: "Fine daggers and short swords from a quiet woman with steady hands.", path: "/beacon/south-main-street/batyas-blades", comingSoon: true },
