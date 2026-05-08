@@ -9,17 +9,19 @@ export const riskAndReward = {
   sceneDescription: `The table is covered in a deep purple cloth, stained and worn at the edges. Locked boxes of every size and shape are stacked and arranged across the surface — iron-banded trunks, tiny black cases bound in silver chain, carved wooden chests, and at least one thing wrapped entirely in chain with no visible lid. Lanterns hang from the posts on either side, casting uneven amber light across the locks and latches. Three hand-painted signs are nailed to the frame: "OPEN if you DARE." "WHAT YOU SEEK... MAY SEEK YOU." And at the front of the table, burned into a plank of wood in large letters: "CHOOSE WISELY — NO REFUNDS • NO QUESTIONS • ONLY CONSEQUENCES."`,
 
   owner: {
-    name: "TBD",
-    race: "TBD",
-    age: "TBD",
-    appearance: `To be added.`,
-    history: `To be added.`,
+    name: "Unknown",
+    race: "Unknown",
+    age: "Unknown",
+    appearance: `Appears to be female, though little can be confirmed. She wears an oversized hood pulled far forward, completely obscuring her face in shadow. Her robes are deep blue with intricate gold trim — well-made, but worn.`,
+    greeting: `As you approach, a slightly scratchy and almost shaky voice emerges from beneath the hood: "Feeling lucky? All of these boxes have come from travelers, shipwrecks and other such mishaps… all of them locked with no idea of the contents. Beacon's smiths unable to unlock them." She waves her hands over the boxes as if inviting you to browse.`,
   },
 
   dmPrivate: {
-    personality: `To be added.`,
-    desires: `To be added.`,
-    fears: `To be added.`,
+    personality: `Everything she says sounds like a sales pitch. She thinks she's far better at it than she actually is. Her delivery is slightly off — a beat too eager, a touch too rehearsed — but she commits to it completely.`,
+    desires: `Unknown. She reveals nothing of what she wants, and deflects any personal questions with a redirect back to the merchandise.`,
+    fears: `Her true identity and past are extremely difficult to uncover. However, a player who makes a very high Perception check may notice something odd: she seems genuinely, subtly unsettled by some of her own boxes — particularly if a customer attempts to open one at the booth. She does not know what's in all of them. Some of these boxes she has never been able to open herself.`,
+    identity: `Her exact race, name, and age are unknown and intentionally concealed. DM may reveal at their discretion.`,
+    history: `Very difficult to discover — requires significant trust-building or investigation. If uncovered: Her husband was a thief who prided himself on lockpicking. He would steal lockboxes and jewelry boxes and store them in their home — a growing collection of unopened prizes. Until one day he was caught. She was spared, but her husband was executed for his thievery. She was left alone with a room full of lockboxes he had never successfully picked. So it became her business. She buys them. She sells them. She has never once opened one in front of a customer.`,
     lockpickNote: "All boxes have a DC 20 to lockpick.",
     questHooks: [
       {

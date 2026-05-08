@@ -41,10 +41,20 @@ export default function RiskAndRewardPage() {
         <div className="gold-divider" />
 
         {/* Scene Description */}
-        <div className="mt-8 mb-10">
+        <div className="mt-8 mb-6">
           <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Read to Players</h2>
           <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.88 }}>
             &ldquo;{v.sceneDescription}&rdquo;
+          </p>
+        </div>
+
+        {/* Merchant */}
+        <div className="mb-10 p-6" style={{ background: "rgba(201,168,76,0.05)", border: "1px solid rgba(201,168,76,0.2)" }}>
+          <p className="text-base font-bold mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
+          <p className="text-xs mb-4" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race} — {v.owner.age}</p>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.85 }}>{v.owner.appearance}</p>
+          <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.75 }}>
+            &ldquo;{v.owner.greeting}&rdquo;
           </p>
         </div>
 
@@ -107,6 +117,39 @@ export default function RiskAndRewardPage() {
               <div>
                 <h4 className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080" }}>Important Rule</h4>
                 <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{v.dmPrivate.lockpickNote}</p>
+              </div>
+
+              <div className="gold-divider" style={{ background: "linear-gradient(to right, transparent, rgba(139,26,26,0.5), transparent)" }} />
+
+              {/* Personality */}
+              <div>
+                <h4 className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080" }}>Personality</h4>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmPrivate.personality}</p>
+              </div>
+
+              <div className="gold-divider" style={{ background: "linear-gradient(to right, transparent, rgba(139,26,26,0.5), transparent)" }} />
+
+              {/* Desires */}
+              <div>
+                <h4 className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080" }}>Desires</h4>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmPrivate.desires}</p>
+              </div>
+
+              <div className="gold-divider" style={{ background: "linear-gradient(to right, transparent, rgba(139,26,26,0.5), transparent)" }} />
+
+              {/* Fears & Perception */}
+              <div>
+                <h4 className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080" }}>Fears / Perception Check</h4>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmPrivate.fears}</p>
+              </div>
+
+              <div className="gold-divider" style={{ background: "linear-gradient(to right, transparent, rgba(139,26,26,0.5), transparent)" }} />
+
+              {/* True History */}
+              <div>
+                <h4 className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080" }}>True History</h4>
+                <p className="text-xs italic mb-2" style={{ color: "var(--parchment)", opacity: 0.5 }}>Very difficult to uncover. Reveal only if players earn it.</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmPrivate.history}</p>
               </div>
 
               <div className="gold-divider" style={{ background: "linear-gradient(to right, transparent, rgba(139,26,26,0.5), transparent)" }} />
