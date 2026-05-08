@@ -95,7 +95,7 @@ export default function WhittledThingsPage() {
                   <p className="text-xs leading-relaxed mb-2" style={{ color: "var(--parchment)", opacity: 0.7 }}>{item.description}</p>
                   {"quote" in item && item.quote && (
                     <p className="text-xs leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.55 }}>
-                      &ldquo;{item.quote}&rdquo;
+                      &ldquo;{item.quote}&rdquo;{"quoteNote" in item && item.quoteNote ? ` ${item.quoteNote}` : ""}
                     </p>
                   )}
                 </div>
