@@ -88,15 +88,17 @@ export default function WhittledThingsPage() {
                 }}
               >
                 <div className="flex-1">
-                  <p className="text-sm font-bold mb-1" style={{ color: "var(--gold-light)" }}>{item.name}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.7 }}>{item.description}</p>
+                  <div className="flex items-start justify-between gap-4 mb-1">
+                    <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{item.name}</p>
+                    <p className="text-sm font-bold whitespace-nowrap" style={{ color: "var(--gold)", minWidth: "3.5rem", textAlign: "right" }}>{item.price}</p>
+                  </div>
+                  <p className="text-xs leading-relaxed mb-2" style={{ color: "var(--parchment)", opacity: 0.7 }}>{item.description}</p>
+                  {"quote" in item && item.quote && (
+                    <p className="text-xs leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.55 }}>
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                  )}
                 </div>
-                <p
-                  className="text-sm font-bold whitespace-nowrap"
-                  style={{ color: "var(--gold)", minWidth: "3.5rem", textAlign: "right" }}
-                >
-                  {item.price}
-                </p>
               </div>
             ))}
           </div>
