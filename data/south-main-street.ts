@@ -14,7 +14,7 @@ export const southMainStreet = {
     { id: "lyrics-and-laughter", name: "Lyrics and Laughter", description: "Instruments, accessories, and magical music items. A song for every tale.", path: "/beacon/south-main-street/lyrics-and-laughter" },
     { id: "kelliks-pride", name: "Kellik's Pride", description: "Enchanted jewelry and accessories. Beauty is not vanity — it is intention.", path: "/beacon/south-main-street/kelliks-pride" },
     { id: "a-journeys-first-step", name: "A Journey's First Step", description: "Travel gear, survival supplies, and enchanted road essentials.", path: "/beacon/south-main-street/a-journeys-first-step" },
-    { id: "splitting-hairs", name: "Splitting Hairs", description: "A weapons stall specializing in bladed goods.", path: "/beacon/south-main-street/splitting-hairs", comingSoon: true },
+    { id: "splitting-hairs", name: "Splitting Hairs", description: "A weapons stall specializing in bladed goods.", path: "/beacon/south-main-street/splitting-hairs" },
     { id: "the-curious-handle", name: "The Curious Handle", description: "Oddities, curiosities, and things that probably have a story.", path: "/beacon/south-main-street/the-curious-handle", comingSoon: true },
     { id: "batyas-blades", name: "Batya's Blades", description: "Fine daggers and short swords from a quiet woman with steady hands.", path: "/beacon/south-main-street/batyas-blades", comingSoon: true },
     { id: "boddiks-bargain-goods", name: "Boddik's Bargain Goods", description: "If you need it cheap and don't ask questions, Boddik has it.", path: "/beacon/south-main-street/boddiks-bargain-goods", comingSoon: true },
