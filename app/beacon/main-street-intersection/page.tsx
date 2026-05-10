@@ -174,6 +174,7 @@ export default function MainStreetIntersectionPage() {
                 <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>Follow Hap&apos;s directions</p>
                 <p className="text-base font-bold" style={{ color: "var(--gold-light)" }}>Head down the alley →</p>
                 <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>Find Pip</p>
+                <p className="text-xs mt-3" style={{ color: "#e88080", opacity: 0.5 }}>⚠ Only available after speaking to Hap in session</p>
               </a>
             </div>
           )}
