@@ -14,6 +14,7 @@ export const southMainStreet = {
     { id: "lyrics-and-laughter", name: "Lyrics and Laughter", description: "Instruments, accessories, and magical music items. A song for every tale.", path: "/beacon/south-main-street/lyrics-and-laughter" },
     { id: "kelliks-pride", name: "Kellik's Pride", description: "Enchanted jewelry and accessories. Beauty is not vanity — it is intention.", path: "/beacon/south-main-street/kelliks-pride" },
     { id: "a-journeys-first-step", name: "A Journey's First Step", description: "Travel gear, survival supplies, and enchanted road essentials.", path: "/beacon/south-main-street/a-journeys-first-step" },
+    { id: "natures-hands", name: "Nature's Hands", description: "Potions, tonics, and elixirs. Ask about a sample of the special.", path: "/beacon/south-main-street/natures-hands" },
     { id: "splitting-hairs", name: "Splitting Hairs", description: "A weapons stall specializing in bladed goods.", path: "/beacon/south-main-street/splitting-hairs" },
     { id: "the-calloused-hand", name: "The Calloused Hand", description: "Every tool for every trade. If you build things, Teppy has what you need.", path: "/beacon/south-main-street/the-calloused-hand" },
     { id: "the-curious-handle", name: "The Curious Handle", description: "Oddities, curiosities, and things that probably have a story.", path: "/beacon/south-main-street/the-curious-handle", comingSoon: true },
