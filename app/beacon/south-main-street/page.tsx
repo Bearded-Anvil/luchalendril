@@ -78,12 +78,10 @@ export default function SouthMainStreetPage() {
           <a href="/beacon" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
             ← Back to Beacon
           </a>
-          <div className="text-right">
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.3, letterSpacing: "0.15em" }}>Continue</p>
-            <span className="text-sm" style={{ color: "var(--parchment)", opacity: 0.25 }}>
-              Main Street Intersection → <span className="text-xs italic">(coming soon)</span>
-            </span>
-          </div>
+          <a href="/beacon/main-street-intersection" style={{ textDecoration: "none", textAlign: "right" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
+            <p className="text-sm" style={{ color: "var(--gold)", opacity: 0.8 }}>Main Street Intersection →</p>
+          </a>
         </div>
       </div>
     </main>
