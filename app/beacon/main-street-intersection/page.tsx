@@ -1,13 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { mainStreetIntersection } from "@/data/main-street-intersection";
 
 export default function MainStreetIntersectionPage() {
   const v = mainStreetIntersection;
   const [boyOpen, setBoyOpen] = useState(false);
+  const [alleyUnlocked, setAlleyUnlocked] = useState(false);
+
+  // On mount, check if the alley has already been unlocked
+  useEffect(() => {
+    const unlocked = localStorage.getItem("luchalendril_spoke_to_hap");
+    if (unlocked === "true") setAlleyUnlocked(true);
+  }, []);
+
+  function handleSpeakToBoy() {
+    const opening = !boyOpen;
+    setBoyOpen(opening);
+    if (opening) {
+      localStorage.setItem("luchalendril_spoke_to_hap", "true");
+      setAlleyUnlocked(true);
+    }
+  }
 
   return (
     <main className="min-h-screen" style={{ background: "#0f0d0a" }}>
@@ -46,13 +62,13 @@ export default function MainStreetIntersectionPage() {
           </div>
         </div>
 
-        {/* The Boy */}
+        {/* Hap scene intro */}
         <div className="mt-10">
           <div className="gold-divider" />
           <div className="mt-8">
             <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Read to Players</h2>
             <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.88 }}>
-              &ldquo;{v.theboy.description}&rdquo;
+              &ldquo;{v.theboy.sceneDescription}&rdquo;
             </p>
           </div>
         </div>
@@ -92,10 +108,10 @@ export default function MainStreetIntersectionPage() {
               <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>Inn &amp; Eatery</p>
             </a>
 
-            {/* Speak to the Boy */}
+            {/* Speak to Hap */}
             <button
-              onClick={() => setBoyOpen(!boyOpen)}
-              className="px-6 py-5 text-left w-full transition-all duration-200"
+              onClick={handleSpeakToBoy}
+              className="px-6 py-5 text-left w-full transition-all duration-200 md:col-span-2"
               style={{
                 border: boyOpen ? "1px solid rgba(201,168,76,0.4)" : "1px solid rgba(201,168,76,0.25)",
                 background: boyOpen ? "rgba(201,168,76,0.07)" : "rgba(201,168,76,0.03)",
@@ -104,33 +120,69 @@ export default function MainStreetIntersectionPage() {
             >
               <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>Approach</p>
               <p className="text-base font-bold" style={{ color: "var(--gold-light)" }}>
-                {boyOpen ? "▲ Speaking to the boy…" : "Speak to the Boy on the Barrel ▼"}
+                {boyOpen ? "▲ Speaking with Hap…" : "Speak to the Boy on the Barrel ▼"}
               </p>
             </button>
 
           </div>
 
-          {/* Boy Expanded */}
+          {/* Hap Expanded */}
           {boyOpen && (
-            <div className="mt-0 p-6 space-y-5" style={{
+            <div className="mt-0 p-6 space-y-6" style={{
               background: "rgba(201,168,76,0.04)",
               border: "1px solid rgba(201,168,76,0.2)",
               borderTop: "none",
             }}>
+              {/* Hap image */}
+              <div className="relative w-full overflow-hidden gold-border" style={{ aspectRatio: "3/4", maxHeight: "480px" }}>
+                <Image src={v.theboy.image} alt={v.theboy.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+              </div>
+
+              {/* Approach */}
               <div>
-                <h4 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>The Boy Speaks</h4>
+                <h4 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Read to Players</h4>
                 <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.88 }}>
-                  &ldquo;{v.theboy.dmNote}&rdquo;
+                  &ldquo;{v.theboy.approach}&rdquo;
                 </p>
               </div>
+
+              {/* DM note */}
+              <div className="p-5" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.3)" }}>
+                <h4 className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — {v.theboy.name}</h4>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.theboy.dmNote}</p>
+                <div style={{ borderTop: "1px solid rgba(139,26,26,0.2)", paddingTop: "1rem" }}>
+                  <p className="text-xs mb-1" style={{ color: "#e88080", opacity: 0.7 }}><span className="font-bold">Fears: </span>{v.theboy.dmPrivate.fears}</p>
+                  <p className="text-xs mb-1" style={{ color: "#e88080", opacity: 0.7 }}><span className="font-bold">Goals: </span>{v.theboy.dmPrivate.goals}</p>
+                  <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>{v.theboy.dmPrivate.note}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Alley — unlocked after speaking to Hap */}
+          {alleyUnlocked && (
+            <div className="mt-4">
+              <a
+                href="/beacon/main-street-intersection/the-alley"
+                className="px-6 py-5 block transition-all duration-200 hover:bg-[rgba(201,168,76,0.06)]"
+                style={{
+                  border: "1px solid rgba(201,168,76,0.35)",
+                  background: "rgba(201,168,76,0.04)",
+                  textDecoration: "none",
+                }}
+              >
+                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>Follow Hap&apos;s directions</p>
+                <p className="text-base font-bold" style={{ color: "var(--gold-light)" }}>Head down the alley →</p>
+                <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>Find Pip</p>
+              </a>
             </div>
           )}
         </div>
 
         {/* Back */}
         <div className="mt-14 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/south-main-street" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
-            ← Back to South Main Street
+          <a href="/beacon" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
+            ← Back to Beacon
           </a>
         </div>
       </div>
