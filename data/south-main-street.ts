@@ -17,8 +17,5 @@ export const southMainStreet = {
     { id: "natures-hands", name: "Nature's Hands", description: "Potions, tonics, and elixirs. Ask about a sample of the special.", path: "/beacon/south-main-street/natures-hands" },
     { id: "splitting-hairs", name: "Splitting Hairs", description: "A weapons stall specializing in bladed goods.", path: "/beacon/south-main-street/splitting-hairs" },
     { id: "the-calloused-hand", name: "The Calloused Hand", description: "Every tool for every trade. If you build things, Teppy has what you need.", path: "/beacon/south-main-street/the-calloused-hand" },
-    { id: "the-curious-handle", name: "The Curious Handle", description: "Oddities, curiosities, and things that probably have a story.", path: "/beacon/south-main-street/the-curious-handle", comingSoon: true },
-    { id: "batyas-blades", name: "Batya's Blades", description: "Fine daggers and short swords from a quiet woman with steady hands.", path: "/beacon/south-main-street/batyas-blades", comingSoon: true },
-    { id: "boddiks-bargain-goods", name: "Boddik's Bargain Goods", description: "If you need it cheap and don't ask questions, Boddik has it.", path: "/beacon/south-main-street/boddiks-bargain-goods", comingSoon: true },
   ],
 };
