@@ -72,6 +72,19 @@ export default function SouthMainStreetPage() {
           </h2>
           <VendorNav vendors={southMainStreet.vendors} />
         </div>
+
+        {/* Street Navigation Footer */}
+        <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/beacon" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
+            ← Back to Beacon
+          </a>
+          <div className="text-right">
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.3, letterSpacing: "0.15em" }}>Continue</p>
+            <span className="text-sm" style={{ color: "var(--parchment)", opacity: 0.25 }}>
+              Main Street Intersection → <span className="text-xs italic">(coming soon)</span>
+            </span>
+          </div>
+        </div>
       </div>
     </main>
   );
