@@ -98,7 +98,7 @@ export default function BeaconPage() {
         {/* Fast Travel */}
         <div className="mt-16 pt-10" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
           <h2 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Fast Travel in Beacon</h2>
-          <p className="text-sm italic mb-8" style={{ color: "var(--parchment)", opacity: 0.45 }}>
+          <p className="text-sm italic mb-8" style={{ color: "#e88080", opacity: 0.85 }}>
             Skipping streets means skipping what happens on them. Random encounters, rare merchants, and moments of city life will not occur if you fast travel. Use these links when time in session is short — not as a default.
           </p>
 
