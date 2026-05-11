@@ -219,7 +219,10 @@ export default function SouthwestBeaconStreetPage() {
               )}
 
               {"rewardNote" in currentEncounter && currentEncounter.rewardNote && (
-                <p className="text-xs italic" style={{ color: "#e88080", opacity: 0.65 }}>{currentEncounter.rewardNote}</p>
+                <div className="p-4" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.25)" }}>
+                  <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", letterSpacing: "0.15em" }}>DM Note</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{currentEncounter.rewardNote}</p>
+                </div>
               )}
 
               {"afterText" in currentEncounter && currentEncounter.afterText && !childRescued && (
@@ -316,7 +319,18 @@ export default function SouthwestBeaconStreetPage() {
                           <p className="text-xs italic" style={{ color: "#e88080", opacity: 0.6 }}>{enc.afterText}</p>
                         )}
                         {"items" in enc && enc.items && (
-                          <p className="text-xs italic" style={{ color: "var(--parchment)", opacity: 0.4 }}>11 items — use the dice roller above to display full inventory.</p>
+                          <div className="mt-2 space-y-2">
+                            {enc.items.map((item, ii) => (
+                              <div key={ii} className="px-3 py-2" style={{ border: "1px solid rgba(201,168,76,0.1)", background: "rgba(201,168,76,0.02)" }}>
+                                <div className="flex items-start justify-between gap-4 mb-1">
+                                  <p className="text-xs font-bold" style={{ color: "var(--gold-light)" }}>{item.name}</p>
+                                  <p className="text-xs font-bold whitespace-nowrap" style={{ color: "var(--gold)" }}>{item.price}</p>
+                                </div>
+                                <p className="text-xs mb-1" style={{ color: "var(--gold)", opacity: 0.65 }}>{item.effect}</p>
+                                <p className="text-xs italic" style={{ color: "#e88080", opacity: 0.6 }}><span className="font-bold not-italic">Side Effect: </span>{item.sideEffect}</p>
+                              </div>
+                            ))}
+                          </div>
                         )}
                       </div>
                     )}
