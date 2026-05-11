@@ -315,6 +315,12 @@ export default function SouthwestBeaconStreetPage() {
                         {"reward" in enc && enc.reward && (
                           <p className="text-xs" style={{ color: "var(--gold)", opacity: 0.75 }}><span className="font-bold">Reward: </span>{enc.reward}</p>
                         )}
+                        {"rewardNote" in enc && enc.rewardNote && (
+                          <div className="p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.25)" }}>
+                            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#e88080", letterSpacing: "0.15em" }}>DM Note</p>
+                            <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{enc.rewardNote}</p>
+                          </div>
+                        )}
                         {"afterText" in enc && enc.afterText && (
                           <p className="text-xs italic" style={{ color: "#e88080", opacity: 0.6 }}>{enc.afterText}</p>
                         )}
