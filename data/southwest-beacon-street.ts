@@ -14,7 +14,7 @@ Further along, one building rises noticeably higher than its neighbors — five 
 
   locations: [
     { name: "Iron's End Forge", status: "live", path: "/beacon/southwest-beacon-street/irons-end-forge" },
-    { name: "The Traveler's Nest", status: "coming-soon", path: "/beacon/southwest-beacon-street/travelers-nest" },
+    { name: "The Traveler's Nest", status: "live", path: "/beacon/southwest-beacon-street/travelers-nest" },
   ],
 
   encounters: {
