@@ -99,10 +99,23 @@ export default function SouthwestBeaconStreetPage() {
           <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Notable Locations</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {v.locations.map((loc, i) => (
-              <div key={i} className="px-5 py-4" style={{ border: "1px solid rgba(201,168,76,0.15)", background: "rgba(201,168,76,0.02)", opacity: 0.5 }}>
-                <p className="text-sm" style={{ color: "var(--parchment)" }}>{loc.name}</p>
-                <p className="text-xs italic mt-1" style={{ color: "var(--parchment)", opacity: 0.4 }}>Coming soon</p>
-              </div>
+              loc.status === "live" ? (
+                <a key={i} href={loc.path} style={{ textDecoration: "none" }}>
+                  <div className="px-5 py-4 transition-all duration-200" style={{
+                    border: "1px solid rgba(201,168,76,0.35)",
+                    background: "rgba(201,168,76,0.05)",
+                    cursor: "pointer",
+                  }}>
+                    <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{loc.name}</p>
+                    <p className="text-xs mt-1" style={{ color: "var(--gold)", opacity: 0.6 }}>Enter →</p>
+                  </div>
+                </a>
+              ) : (
+                <div key={i} className="px-5 py-4" style={{ border: "1px solid rgba(201,168,76,0.15)", background: "rgba(201,168,76,0.02)", opacity: 0.5 }}>
+                  <p className="text-sm" style={{ color: "var(--parchment)" }}>{loc.name}</p>
+                  <p className="text-xs italic mt-1" style={{ color: "var(--parchment)", opacity: 0.4 }}>Coming soon</p>
+                </div>
+              )
             ))}
           </div>
         </div>

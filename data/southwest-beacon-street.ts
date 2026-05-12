@@ -13,7 +13,7 @@ Further along, one building rises noticeably higher than its neighbors — five 
   dmNotes: `Southwest Beacon Street is primarily residential. It is quieter than South Main Street but not empty — residents go about their lives, carts make deliveries, and foot traffic moves between the intersection and the dockyard. The street has character. Use it.`,
 
   locations: [
-    { name: "Iron's End Forge", status: "coming-soon", path: "/beacon/southwest-beacon-street/irons-end-forge" },
+    { name: "Iron's End Forge", status: "live", path: "/beacon/southwest-beacon-street/irons-end-forge" },
     { name: "The Traveler's Nest", status: "coming-soon", path: "/beacon/southwest-beacon-street/travelers-nest" },
   ],
 
