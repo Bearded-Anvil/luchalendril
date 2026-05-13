@@ -36,7 +36,7 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
     {
       name: "Saltwater Loaves",
       description: "Bakery and specialty saltwater taffy shop. The smell reaches you before the sign does.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/dock-yard/saltwater-loaves",
     },
     {
