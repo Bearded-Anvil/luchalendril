@@ -368,12 +368,10 @@ export default function SouthwestBeaconStreetPage() {
           <a href="/beacon/main-street-intersection" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
             ← Back to Intersection
           </a>
-          <div className="text-right">
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.3, letterSpacing: "0.15em" }}>Continue</p>
-            <span className="text-sm" style={{ color: "var(--parchment)", opacity: 0.25 }}>
-              Dock Yard → <span className="text-xs italic">(coming soon)</span>
-            </span>
-          </div>
+          <a href="/beacon/dock-yard" className="text-right" style={{ textDecoration: "none" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
+            <p className="text-sm" style={{ color: "var(--gold)", opacity: 0.7 }}>Dock Yard →</p>
+          </a>
         </div>
       </div>
     </main>
