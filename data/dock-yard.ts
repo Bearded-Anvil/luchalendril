@@ -29,8 +29,8 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
     },
     {
       name: "The Hook",
-      description: "Fresh catch fish market. Packaged and ready to travel.",
-      status: "coming-soon",
+      description: "Fresh catch fish market. Packaged and ready to travel. Toxins and venoms on the counter.",
+      status: "live",
       path: "/beacon/dock-yard/the-hook",
     },
     {
