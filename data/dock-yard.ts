@@ -16,16 +16,10 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
 
   locations: [
     {
-      name: "Here & There",
-      description: "Cartographer shop specializing in mapping White Bay. Charts, sea journals, ink, parchment, and wax seals.",
-      status: "coming-soon",
+      name: "Here & There / The Inkwell",
+      description: "One building, two shops. Bay maps and cartography on the left. Utility, protection, and offensive scrolls on the right.",
+      status: "live",
       path: "/beacon/dock-yard/here-and-there",
-    },
-    {
-      name: "The Inkwell",
-      description: "Scrolls, paper, and ink. A quiet place on a loud street.",
-      status: "coming-soon",
-      path: "/beacon/dock-yard/the-inkwell",
     },
     {
       name: "White Bay Navigators",
