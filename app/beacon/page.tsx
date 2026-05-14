@@ -68,7 +68,7 @@ export default function BeaconPage() {
         <div className="mb-14">
           <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Where does your party arrive?</h2>
           <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Choose the entry point that matches your party&rsquo;s origin. Each begins a different path through Beacon.</p>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-4">
             <NavCard
               href="/beacon/south-main-street"
               title="South Main Street"
