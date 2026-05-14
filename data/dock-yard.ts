@@ -51,5 +51,11 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
       status: "live",
       path: "/beacon/dock-yard/reel-works",
     },
+    {
+      name: "Warehouse District",
+      description: "The quiet northern end of the docks. Mostly abandoned. Not always empty.",
+      status: "live",
+      path: "/beacon/dock-yard/warehouse-district",
+    },
   ],
 };
