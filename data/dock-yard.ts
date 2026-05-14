@@ -42,7 +42,7 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
     {
       name: "Reel Works",
       description: "Deep sea fishing equipment. Rods, reels, nets, harpoons, and spears.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/dock-yard/reel-works",
     },
   ],
