@@ -16,6 +16,12 @@ The edge of the boardwalk is lined with thick yellow ship rope, looped in wide s
 
   locations: [
     {
+      name: "City Watch Station",
+      description: "Information and help for new arrivals. Two guards on duty. A map of Beacon on the wall.",
+      status: "live",
+      path: "/beacon/dock-yard/city-watch-station",
+    },
+    {
       name: "Here & There / The Inkwell",
       description: "One building, two shops. Bay maps and cartography on the left. Utility, protection, and offensive scrolls on the right.",
       status: "live",
