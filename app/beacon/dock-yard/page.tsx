@@ -109,7 +109,7 @@ export default function DockYardPage() {
 
         {/* Navigation Footer */}
         <div className="mt-16 pt-8" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/southwest-beacon-street" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
+          <a href="/beacon/southwest-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Back to Southwest Beacon Street
           </a>
         </div>

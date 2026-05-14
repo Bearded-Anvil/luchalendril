@@ -75,12 +75,12 @@ export default function SouthMainStreetPage() {
 
         {/* Street Navigation Footer */}
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
+          <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Back to Beacon
           </a>
           <a href="/beacon/main-street-intersection" style={{ textDecoration: "none", textAlign: "right" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
-            <p className="text-sm" style={{ color: "var(--gold)", opacity: 0.8 }}>Main Street Intersection →</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Main Street Intersection →</p>
           </a>
         </div>
       </div>

@@ -365,12 +365,12 @@ export default function SouthwestBeaconStreetPage() {
 
         {/* Navigation Footer */}
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/main-street-intersection" className="text-sm" style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}>
+          <a href="/beacon/main-street-intersection" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Back to Intersection
           </a>
           <a href="/beacon/dock-yard" className="text-right" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
-            <p className="text-sm" style={{ color: "var(--gold)", opacity: 0.7 }}>Dock Yard →</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Dock Yard →</p>
           </a>
         </div>
       </div>
