@@ -64,8 +64,28 @@ export default function BeaconPage() {
           </p>
         </div>
 
+        {/* Entry Points */}
+        <div className="mb-14">
+          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Where does your party arrive?</h2>
+          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Choose the entry point that matches your party&rsquo;s origin. Each begins a different path through Beacon.</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <NavCard
+              href="/beacon/south-main-street"
+              title="South Main Street"
+              description="Arrived overland. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you."
+            />
+            <NavCard
+              href="/beacon/dock-yard"
+              title="Beacon Dock Yard"
+              description="Arrived by sea. The White Bay boardwalk — fishing crews, fog, and an information booth ready to welcome you to the city."
+            />
+          </div>
+        </div>
+
+        <div className="gold-divider" />
+
         {/* Streets */}
-        <h2 className="text-xs uppercase tracking-widest mb-8" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Districts &amp; Streets</h2>
+        <h2 className="text-xs uppercase tracking-widest mb-8 mt-10" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Districts &amp; Streets</h2>
 
         <div className="grid gap-4">
           {streets.map((street) =>
