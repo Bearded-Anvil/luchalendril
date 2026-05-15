@@ -10,6 +10,13 @@ const streets = [
     available: true,
   },
   {
+    id: "central-bowl-street",
+    name: "Central Bowl Street",
+    description: "Runs straight from the Dock Yard to Braver's Temple at the city's center. A wide median of wildflowers, iron benches, and lantern posts arching overhead.",
+    href: "/beacon/central-bowl-street",
+    available: true,
+  },
+  {
     id: "dock-row",
     name: "Dock Row",
     description: "Where the White Bay meets the city. Ships, sailors, fishmongers, and fog.",

@@ -83,6 +83,24 @@ export default function DockYardPage() {
           </div>
         </div>
 
+        {/* Connecting Streets */}
+        <div className="gold-divider" />
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Leaving the Dock Yard</h2>
+          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>The road north leads into the city proper.</p>
+          <a href="/beacon/central-bowl-street" style={{ textDecoration: "none" }}>
+            <div className="px-5 py-4 transition-all duration-200" style={{
+              border: "1px solid rgba(201,168,76,0.35)",
+              background: "rgba(201,168,76,0.05)",
+              cursor: "pointer",
+            }}>
+              <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>Central Bowl Street</p>
+              <p className="text-xs mt-1 leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>Runs straight from the Dock Yard to Braver&rsquo;s Temple at the city&rsquo;s center. Wildflower median, lantern posts, and the temple visible from one end to the other.</p>
+              <p className="text-xs mt-2" style={{ color: "var(--gold)", opacity: 0.6 }}>Enter →</p>
+            </div>
+          </a>
+        </div>
+
         {/* DM Notes Toggle */}
         <div className="mt-8">
           <button
@@ -108,9 +126,13 @@ export default function DockYardPage() {
         </div>
 
         {/* Navigation Footer */}
-        <div className="mt-16 pt-8" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+        <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <a href="/beacon/southwest-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Back to Southwest Beacon Street
+          </a>
+          <a href="/beacon/central-bowl-street" className="text-right" style={{ textDecoration: "none" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Central Bowl Street →</p>
           </a>
         </div>
       </div>
