@@ -16,7 +16,7 @@ On both sides, a mix of homes and businesses lines the walk, all fronted by side
     {
       name: "Braver's Gaze Brewery",
       description: "A brewery on the western side of the street. The sign bears a foaming mug.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/central-bowl-street/bravers-gaze-brewery",
     },
     {
