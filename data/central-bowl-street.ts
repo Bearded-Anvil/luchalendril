@@ -28,7 +28,7 @@ On both sides, a mix of homes and businesses lines the walk, all fronted by side
     {
       name: "Shipwreck Tavern",
       description: "A tavern on the eastern side. A chalkboard out front reads: Drink Until You Dance.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/central-bowl-street/shipwreck-tavern",
     },
     {
