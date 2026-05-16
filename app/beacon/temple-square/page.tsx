@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import NavCard from "@/components/NavCard";
 import { templeSquare } from "@/data/temple-square";
@@ -21,6 +22,11 @@ export default function TempleSquarePage() {
           <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Beacon — City Center</p>
           <h1 className="text-5xl md:text-7xl mb-2" style={{ color: "var(--gold-light)", letterSpacing: "0.08em" }}>{v.name}</h1>
           <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.5 }}>The Roundabout at Braver&rsquo;s Temple</p>
+        </div>
+
+        {/* Image */}
+        <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9", maxHeight: "560px" }}>
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
         </div>
 
         <div className="gold-divider" />

@@ -2,10 +2,11 @@ export const templeSquare = {
   id: "temple-square",
   name: "Temple Square",
   city: "Beacon",
+  image: "/temple-square.jpg",
 
-  description: `Central Bowl Street ends — and begins — at Temple Square. The road rounds into a wide circle around Braver's Temple, giving the temple grounds room to breathe in a city that otherwise packs itself tight. The square is paved in a darker stone than the street that feeds it, and the roundabout itself is wide enough that two carts can pass each other on it without either driver holding their breath. From the square, four roads branch outward in each direction of the city.
+  description: `Central Bowl Street ends — and begins — at Temple Square. The road rounds into a wide circle around Braver's Temple, giving the temple grounds room to breathe in a city that otherwise packs itself tight. The square is paved in darker cobblestone than the street that feeds it, and the roundabout itself is wide enough that two carts can pass each other on it without either driver holding their breath. Iron lamp posts stand at intervals around the circle, and blue banners bearing Braver's flame hang between them, catching whatever wind comes through.
 
-Braver's Temple stands at the center, elevated slightly above the square on a low stone platform. The statue of Braver faces outward from the top, visible from most of Central Bowl Street on the approach. The blue fire in its eyes is closer now.`,
+Braver's Temple stands at the center, elevated slightly above the square on a low stone platform ringed with trimmed hedges and small garden plantings. The temple door is tall and arched, carved wood set into heavy stone, with the golden flame of Braver's mark above it. From here, looking up, the tower seems to go further than it should. From here, the four roads of the city branch outward — and the four businesses of Temple Square wait at each corner, lit warmly against the stone.`,
 
   dmNotes: `Temple Square is the geographic center of Beacon — every major road in the city either connects here or connects to something that does. It is not a busy market or a rough district. People pass through it with purpose. Locals don't linger unless they're heading into the temple. It is orderly and slightly formal by Beacon standards.
 
@@ -14,25 +15,25 @@ The Warehouse District is accessible via the northern route out of Temple Square
   businesses: [
     {
       name: "Roundabout Way",
-      description: "A restaurant situated at the edge of the square, beside Braver's Temple. Suite guests at Lighthouse Inn arrive with a voucher for a free meal.",
+      description: "A candlelit restaurant on the southwest corner. White tablecloths, warm light through the windows. Suite guests at the Lighthouse Inn carry a voucher for one free meal.",
       status: "coming-soon",
       path: "/beacon/temple-square/roundabout-way",
     },
     {
       name: "Enchanted Steps",
-      description: "A shop on the square.",
+      description: "A shop on the southeast corner. The sign reads: The Beginning of Every Journey.",
       status: "coming-soon",
       path: "/beacon/temple-square/enchanted-steps",
     },
     {
       name: "Saida's Arms and Armaments",
-      description: "A weapons and armor shop on the square.",
+      description: "A weapons and armor shop on the northeast corner. Suits of armor stand in the shopfront, visible from across the square.",
       status: "coming-soon",
       path: "/beacon/temple-square/saidas-arms-and-armaments",
     },
     {
       name: "Cordun's Custom Clothier",
-      description: "A tailor and clothier on the square.",
+      description: "A tailor on the northwest corner. The sign reads: Pay As A King.",
       status: "coming-soon",
       path: "/beacon/temple-square/corduns-custom-clothier",
     },
