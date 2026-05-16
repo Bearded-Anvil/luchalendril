@@ -17,6 +17,13 @@ const streets = [
     available: true,
   },
   {
+    id: "temple-square",
+    name: "Temple Square",
+    description: "The roundabout at the city's center, circling Braver's Temple. Four roads branch from here in every direction across Beacon.",
+    href: "/beacon/temple-square",
+    available: true,
+  },
+  {
     id: "dock-row",
     name: "Dock Row",
     description: "Where the White Bay meets the city. Ships, sailors, fishmongers, and fog.",

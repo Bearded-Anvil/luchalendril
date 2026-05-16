@@ -81,10 +81,10 @@ export default function CentralBowlStreetPage() {
           <a href="/beacon/dock-yard" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Back to Dock Yard
           </a>
-          <div className="text-right">
+          <a href="/beacon/temple-square" className="text-right" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Continue</p>
-            <p style={{ color: "var(--parchment)", fontSize: "0.85rem", fontStyle: "italic", opacity: 0.3 }}>Braver&rsquo;s Temple — coming soon</p>
-          </div>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Temple Square →</p>
+          </a>
         </div>
       </div>
     </main>
