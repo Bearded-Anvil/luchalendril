@@ -65,7 +65,7 @@ export default function TempleSquarePage() {
                   style={{
                     background: "rgba(255,255,255,0.015)",
                     border: "1px solid rgba(255,255,255,0.07)",
-                    opacity: isNamed ? 0.55 : 0.3,
+                    opacity: 0.5,
                   }}
                 >
                   <div>
