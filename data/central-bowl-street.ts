@@ -34,7 +34,7 @@ On both sides, a mix of homes and businesses lines the walk, all fronted by side
     {
       name: "Lighthouse Inn",
       description: "An inn built to resemble a lighthouse, complete with a small tower on the corner.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/central-bowl-street/lighthouse-inn",
     },
   ],
