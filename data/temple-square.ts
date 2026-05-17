@@ -22,7 +22,7 @@ The Warehouse District is accessible via the northern route out of Temple Square
     {
       name: "Enchanted Steps",
       description: "A shop on the southeast corner. The sign reads: The Beginning of Every Journey.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/temple-square/enchanted-steps",
     },
     {
