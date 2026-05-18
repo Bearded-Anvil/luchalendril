@@ -34,7 +34,7 @@ The Warehouse District is accessible via the northern route out of Temple Square
     {
       name: "Cordun's Custom Clothier",
       description: "A tailor on the northwest corner. The sign reads: Fit for a King.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/temple-square/corduns-custom-clothier",
     },
   ],
