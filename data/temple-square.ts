@@ -28,7 +28,7 @@ The Warehouse District is accessible via the northern route out of Temple Square
     {
       name: "Saida's Arms and Armaments",
       description: "A weapons and armor shop on the northeast corner. Suits of armor stand in the shopfront, visible from across the square.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/temple-square/saidas-arms-and-armaments",
     },
     {
