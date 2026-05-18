@@ -16,7 +16,7 @@ The Warehouse District is accessible via the northern route out of Temple Square
     {
       name: "Roundabout Way",
       description: "A candlelit restaurant on the southwest corner. White tablecloths, warm light through the windows. Suite guests at the Lighthouse Inn carry a voucher for one free meal.",
-      status: "coming-soon",
+      status: "live",
       path: "/beacon/temple-square/roundabout-way",
     },
     {
