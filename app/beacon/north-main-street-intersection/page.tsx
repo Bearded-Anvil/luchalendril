@@ -167,11 +167,16 @@ export default function NorthMainStreetIntersectionPage() {
           </div>
         </div>
 
-        {/* Back */}
+        {/* Footer Navigation */}
         <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/northeast-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Northeast Beacon Street
-          </a>
+          <div className="grid grid-cols-2 gap-3">
+            <a href="/beacon/northeast-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              ← Northeast Beacon Street
+            </a>
+            <a href="/beacon/northwest-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              Northwest Beacon Street →
+            </a>
+          </div>
         </div>
       </div>
     </main>
