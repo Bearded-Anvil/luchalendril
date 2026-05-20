@@ -40,4 +40,21 @@ Past all of this, the cliff face of Braver's Bowl rises behind the district and 
   // clickable locations whenever the content exists to fill them.
   // ────────────────────────────────────────────────────────────────────────────
   futureNote: `Sub-locations (individual warehouses, the floating storage sheds, the crane platforms, the pull-through stations) are planned but empty. Do not add them to the page until content exists to fill them. Empty clickable rooms create the wrong kind of mystery.`,
+
+  roads: [
+    {
+      name: "Northwest Beacon Street",
+      direction: "East",
+      description: "Back toward the city. The cranes are visible from the street.",
+      status: "live",
+      path: "/beacon/northwest-beacon-street",
+    },
+    {
+      name: "The Dock Yard",
+      direction: "South",
+      description: "The main boardwalk and working waterfront of Beacon.",
+      status: "live",
+      path: "/beacon/dock-yard",
+    },
+  ],
 };
