@@ -38,8 +38,8 @@ For flavor: the first time the party comes through this street, have someone app
     {
       name: "City Watch",
       description: "A squat, one-floor building of plain gray stone with a flat roof. Double doors face the street — a push bar across both, faintly glowing. A large shield above the door reads: City Watch.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/northeast-beacon-street/city-watch",
     },
     {
       name: "Centaur Hooves and Hubs",

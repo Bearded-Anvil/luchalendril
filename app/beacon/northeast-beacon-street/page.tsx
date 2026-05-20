@@ -95,18 +95,33 @@ export default function NortheastBeaconStreetPage() {
           <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>On This Street</h2>
           <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Businesses and landmarks along Northeast Beacon Street.</p>
           <div className="grid md:grid-cols-2 gap-4">
-            {v.locations.map((loc, i) => (
-              <div key={i} className="px-5 py-4 flex flex-col" style={{
-                border: "1px solid rgba(255,255,255,0.07)",
-                background: "rgba(255,255,255,0.015)",
-                opacity: 0.5,
-                height: "100%",
-              }}>
-                <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{loc.name}</p>
-                <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{loc.description}</p>
-                <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming soon</p>
-              </div>
-            ))}
+            {v.locations.map((loc, i) =>
+              loc.status === "live" && loc.path ? (
+                <a key={i} href={loc.path} style={{ textDecoration: "none", display: "block", height: "100%" }}>
+                  <div className="px-5 py-4 transition-all duration-200 flex flex-col" style={{
+                    border: "1px solid rgba(201,168,76,0.35)",
+                    background: "rgba(201,168,76,0.05)",
+                    cursor: "pointer",
+                    height: "100%",
+                  }}>
+                    <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{loc.name}</p>
+                    <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{loc.description}</p>
+                    <p className="text-xs mt-2" style={{ color: "var(--gold)", opacity: 0.6 }}>Enter →</p>
+                  </div>
+                </a>
+              ) : (
+                <div key={i} className="px-5 py-4 flex flex-col" style={{
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  background: "rgba(255,255,255,0.015)",
+                  opacity: 0.5,
+                  height: "100%",
+                }}>
+                  <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{loc.name}</p>
+                  <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{loc.description}</p>
+                  <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming soon</p>
+                </div>
+              )
+            )}
           </div>
         </div>
 
