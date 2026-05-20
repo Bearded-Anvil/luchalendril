@@ -189,11 +189,19 @@ export default function NortheastBeaconStreetPage() {
           )}
         </div>
 
-        {/* Back */}
+        {/* Footer Navigation */}
         <div className="mt-12 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/temple-square" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Temple Square
-          </a>
+          <div className="grid grid-cols-2 gap-3">
+            <a href="/beacon/temple-square" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              ← Temple Square
+            </a>
+            <a href="/beacon/north-main-street-intersection" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              North Main Street Intersection →
+            </a>
+            <div className="col-span-2" style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
+              Garden District
+            </div>
+          </div>
         </div>
       </div>
     </main>
