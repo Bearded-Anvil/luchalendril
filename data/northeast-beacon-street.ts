@@ -44,8 +44,8 @@ For flavor: the first time the party comes through this street, have someone app
     {
       name: "Centaur Hooves and Hubs",
       description: "Horse and carriage rental. The sign shows a centaur drawing back on a bow. Beneath the name, in smaller letters: Horse and Carriage Rental.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/northeast-beacon-street/centaur-hooves-and-hubs",
     },
   ],
 
