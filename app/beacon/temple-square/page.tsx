@@ -75,24 +75,31 @@ export default function TempleSquarePage() {
           <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Four businesses line the roundabout, one at each road.</p>
           <div className="grid md:grid-cols-2 gap-4">
             {v.businesses.map((biz, i) => {
-              const isNamed = biz.name !== "Coming Soon";
               return biz.status === "live" && biz.path ? (
-                <NavCard key={i} href={biz.path} title={biz.name} description={biz.description} />
+                <a key={i} href={biz.path} style={{ textDecoration: "none", display: "flex" }}>
+                  <div className="px-5 py-4 transition-all duration-200 flex flex-col w-full" style={{
+                    border: "1px solid rgba(201,168,76,0.35)",
+                    background: "rgba(201,168,76,0.05)",
+                    cursor: "pointer",
+                  }}>
+                    <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{biz.name}</p>
+                    <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{biz.description}</p>
+                    <p className="text-xs mt-2" style={{ color: "var(--gold)", opacity: 0.6 }}>Enter →</p>
+                  </div>
+                </a>
               ) : (
                 <div
                   key={i}
-                  className="p-6 flex items-center justify-between"
+                  className="px-5 py-4 flex flex-col"
                   style={{
                     background: "rgba(255,255,255,0.015)",
                     border: "1px solid rgba(255,255,255,0.07)",
                     opacity: 0.5,
                   }}
                 >
-                  <div>
-                    <h3 className="text-base mb-1" style={{ color: "var(--parchment)" }}>{biz.name}</h3>
-                    <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.6 }}>{biz.description}</p>
-                  </div>
-                  <span className="text-xs italic ml-6 whitespace-nowrap" style={{ color: "var(--parchment)", opacity: 0.4 }}>soon</span>
+                  <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{biz.name}</p>
+                  <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{biz.description}</p>
+                  <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming soon</p>
                 </div>
               );
             })}
