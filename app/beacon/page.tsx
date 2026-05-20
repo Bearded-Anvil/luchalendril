@@ -86,12 +86,17 @@ export default function BeaconPage() {
             <NavCard
               href="/beacon/south-main-street"
               title="South Main Street"
-              description="Arrived overland. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you."
+              description="Arrived overland from the south. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you."
             />
             <NavCard
               href="/beacon/dock-yard"
               title="Beacon Dock Yard"
               description="Arrived by sea. The White Bay boardwalk — fishing crews, fog, and an information booth ready to welcome you to the city."
+            />
+            <NavCard
+              href="/beacon/north-main-street"
+              title="North Main Street"
+              description="Arrived overland from the north. The lighthouse road into Beacon — apple trees, quiet cobblestone, and the city ahead."
             />
           </div>
         </div>
