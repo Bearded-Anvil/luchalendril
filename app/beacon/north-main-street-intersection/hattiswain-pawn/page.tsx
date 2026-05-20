@@ -16,12 +16,13 @@ export default function HattiswainPawnPage() {
           crumbs={[
             { label: "Luchalendril", href: "/" },
             { label: "Beacon", href: "/beacon" },
+            { label: "North Main Street Intersection", href: "/beacon/north-main-street-intersection" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Beacon</p>
+          <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>North Main Street Intersection — Beacon</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
         </div>
 
@@ -121,10 +122,10 @@ export default function HattiswainPawnPage() {
           )}
         </div>
 
-        {/* Back — placeholder until street is confirmed */}
+        {/* Back */}
         <div className="mt-12 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Beacon
+          <a href="/beacon/north-main-street-intersection" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← Back to North Main Street Intersection
           </a>
         </div>
       </div>
