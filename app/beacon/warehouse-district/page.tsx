@@ -124,10 +124,13 @@ export default function WarehouseDistrictPage() {
           </div>
         </div>
 
-        {/* Back */}
-        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Beacon
+        {/* Navigation */}
+        <div className="mt-6 pt-6 flex justify-between items-center" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/beacon/northwest-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← To Northwest Beacon Street
+          </a>
+          <a href="/beacon/dock-yard" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            To The Dock Yard →
           </a>
         </div>
       </div>
