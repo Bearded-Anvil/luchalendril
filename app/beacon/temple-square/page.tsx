@@ -49,7 +49,21 @@ export default function TempleSquarePage() {
               <p className="text-xl font-bold" style={{ color: "var(--gold-light)" }}>Braver&rsquo;s Temple</p>
               <p className="text-sm mt-1 italic" style={{ color: "var(--parchment)", opacity: 0.55 }}>The blue fire in the statue&rsquo;s eyes burns day and night.</p>
             </div>
-            <span className="text-xs italic" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming soon</span>
+            <a
+              href="/beacon/temple-square/bravers-temple"
+              style={{
+                color: "var(--gold)",
+                textDecoration: "none",
+                fontSize: "0.75rem",
+                fontWeight: "700",
+                border: "1px solid rgba(201,168,76,0.4)",
+                padding: "0.4rem 0.9rem",
+                letterSpacing: "0.1em",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Enter →
+            </a>
           </div>
         </div>
 
