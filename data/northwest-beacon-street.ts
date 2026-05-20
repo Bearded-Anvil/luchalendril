@@ -112,8 +112,8 @@ It isn't a place where violence breaks out in the open. It's a place where it's 
       name: "Warehouse District",
       direction: "West",
       description: "The northern end of the Dock Yard. The cranes are visible from here.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/warehouse-district",
     },
   ],
 };
