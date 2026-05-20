@@ -18,8 +18,8 @@ The apple trees are maintained by the city. Locals help themselves to fallen app
       name: "North Main Street Intersection",
       direction: "South",
       description: "Where the street meets the city. Hattiswain Pawn is here.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/north-main-street-intersection",
     },
     {
       name: "North Gate — Toward the Lighthouse",

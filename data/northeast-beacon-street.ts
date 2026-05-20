@@ -61,8 +61,8 @@ For flavor: the first time the party comes through this street, have someone app
       name: "North Main Street Intersection",
       direction: "North",
       description: "Where Northeast Beacon Street meets North Main Street. Hattiswain Pawn is here.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/north-main-street-intersection",
     },
     {
       name: "Warehouse District",
