@@ -64,13 +64,6 @@ For flavor: the first time the party comes through this street, have someone app
       status: "live",
       path: "/beacon/north-main-street-intersection",
     },
-    {
-      name: "Warehouse District",
-      direction: "Northwest",
-      description: "Where Northeast Beacon Street meets the northern end of the Dock Yard.",
-      status: "coming-soon",
-      path: null,
-    },
   ],
 
   dmNotes: `Northeast Beacon Street is where ordinary Beacon ends and something else begins. The City Watch on the left and the King's Guard on the right are not accidentally placed across from each other. Their jurisdictions stop exactly at those iron gates. That boundary is worth making the party feel — not through explanation, but through the quiet way both sets of guards ignore each other completely.
