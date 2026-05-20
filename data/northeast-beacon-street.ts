@@ -58,9 +58,9 @@ For flavor: the first time the party comes through this street, have someone app
       path: "/beacon/temple-square",
     },
     {
-      name: "North Main Street",
+      name: "North Main Street Intersection",
       direction: "North",
-      description: "Branches off the curve and runs straight north through Beacon's wall.",
+      description: "Where Northeast Beacon Street meets North Main Street. Hattiswain Pawn is here.",
       status: "coming-soon",
       path: null,
     },
