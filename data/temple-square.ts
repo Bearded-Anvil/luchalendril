@@ -57,9 +57,9 @@ The Warehouse District is accessible via the northern route out of Temple Square
     {
       name: "Northeast Beacon Street",
       direction: "North",
-      description: "Heads north, connecting to Northwest Beacon Street and eventually the Warehouse District at the northern end of the Dock Yard.",
-      status: "coming-soon",
-      path: null,
+      description: "Heads north, connecting to the Warehouse District at the northern end of the Dock Yard. The Garden District gate is halfway up.",
+      status: "live",
+      path: "/beacon/northeast-beacon-street",
     },
     {
       name: "East Main Street",
