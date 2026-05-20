@@ -149,11 +149,22 @@ export default function TempleSquarePage() {
           ))}
         </div>
 
-        {/* Footer */}
+        {/* Footer Navigation */}
         <div className="mt-8 pt-8" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/central-bowl-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Central Bowl Street
-          </a>
+          <div className="grid grid-cols-2 gap-3">
+            <a href="/beacon/central-bowl-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              ← Central Bowl Street
+            </a>
+            <a href="/beacon/northeast-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              Northeast Beacon Street →
+            </a>
+            <div style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
+              ← East Main Street
+            </div>
+            <div style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
+              Southeast Beacon Street →
+            </div>
+          </div>
         </div>
       </div>
     </main>
