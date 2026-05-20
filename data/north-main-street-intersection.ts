@@ -57,8 +57,8 @@ The identity of the mage is for the DM to determine. This encounter is designed 
       name: "Northwest Beacon Street",
       direction: "West",
       description: "Curves west toward the Warehouse District at the northern end of the Dock Yard.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/northwest-beacon-street",
     },
   ],
 };
