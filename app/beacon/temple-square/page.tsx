@@ -76,11 +76,12 @@ export default function TempleSquarePage() {
           <div className="grid md:grid-cols-2 gap-4">
             {v.businesses.map((biz, i) => {
               return biz.status === "live" && biz.path ? (
-                <a key={i} href={biz.path} style={{ textDecoration: "none", display: "flex" }}>
-                  <div className="px-5 py-4 transition-all duration-200 flex flex-col w-full" style={{
+                <a key={i} href={biz.path} style={{ textDecoration: "none", display: "block", height: "100%" }}>
+                  <div className="px-5 py-4 transition-all duration-200 flex flex-col" style={{
                     border: "1px solid rgba(201,168,76,0.35)",
                     background: "rgba(201,168,76,0.05)",
                     cursor: "pointer",
+                    height: "100%",
                   }}>
                     <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{biz.name}</p>
                     <p className="text-xs mt-1 leading-relaxed flex-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>{biz.description}</p>
@@ -95,6 +96,7 @@ export default function TempleSquarePage() {
                     background: "rgba(255,255,255,0.015)",
                     border: "1px solid rgba(255,255,255,0.07)",
                     opacity: 0.5,
+                    height: "100%",
                   }}
                 >
                   <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{biz.name}</p>
