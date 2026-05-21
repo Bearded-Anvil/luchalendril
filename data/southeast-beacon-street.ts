@@ -58,13 +58,6 @@ If the party needs to find someone who lives in Beacon rather than works in it â
       status: "coming-soon",
       path: null,
     },
-    {
-      name: "East Main Street",
-      direction: "East",
-      description: "The road continues toward the eastern gate.",
-      status: "coming-soon",
-      path: null,
-    },
   ],
 
   dmNotes: `Southeast Beacon Street sits between the civic center of Temple Square and the residential calm of the Home Hearth District. It is not a destination street â€” most people passing through are either heading home or cutting through toward the square. The businesses here serve a steady, local clientele.

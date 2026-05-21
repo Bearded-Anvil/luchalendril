@@ -173,7 +173,7 @@ export default function SoutheastBeaconStreetPage() {
               ← Temple Square
             </a>
             <div style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
-              East Main Street →
+              Home Hearth District →
             </div>
           </div>
         </div>
