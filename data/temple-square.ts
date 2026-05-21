@@ -51,8 +51,8 @@ The Warehouse District is accessible via the northern route out of Temple Square
       name: "Southeast Beacon Street",
       direction: "South",
       description: "Heads south from the square into the lower city.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/southeast-beacon-street",
     },
     {
       name: "Northeast Beacon Street",
