@@ -29,18 +29,6 @@ If the party needs to find someone who lives in Beacon rather than works in it â
       status: "coming-soon",
       path: null,
     },
-    {
-      name: "Iron's End Forge",
-      description: "A smithy on the left side of the street. The sign is mounted on the wall above the door.",
-      status: "coming-soon",
-      path: null,
-    },
-    {
-      name: "The Traveler's Nest",
-      description: "Long term housing for rent. A large sign faces the street from the upper floor of a stone and timber building.",
-      status: "coming-soon",
-      path: null,
-    },
   ],
 
   roads: [
