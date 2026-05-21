@@ -26,8 +26,8 @@ If the party needs to find someone who lives in Beacon rather than works in it â
     {
       name: "The Tinker Box",
       description: "Mechanics and repairs. The sign is shaped like a toolbox and hangs over the sidewalk on an L-bracket.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/southeast-beacon-street/tinker-box",
     },
   ],
 
