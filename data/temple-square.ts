@@ -65,8 +65,8 @@ The Warehouse District is accessible via the northern route out of Temple Square
       name: "East Main Street",
       direction: "East",
       description: "Runs east from the temple through Beacon and out through the city's outer wall.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/east-main-street",
     },
   ],
 };
