@@ -37,11 +37,11 @@ Players who enter without an escort will attract quiet attention. No one will st
       path: "/beacon/northeast-beacon-street",
     },
     {
-      name: "Garden District Ring Road — West",
+      name: "Hydrangea Way",
       direction: "Left",
-      description: "The ring road heading left through the homes. Bends gradually right.",
-      status: "coming-soon",
-      path: null,
+      description: "A row of boutiques along a pretty sidewalk. The finest shopping in Beacon.",
+      status: "live",
+      path: "/beacon/garden-district/hydrangea-way",
     },
     {
       name: "Garden District Ring Road — East",
