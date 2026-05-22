@@ -45,8 +45,8 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
     {
       name: "Luxury Awaits",
       description: "Carpets, an ivory bathtub, a wine rack. Make Your House a Home.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/garden-district/hydrangea-way/luxury-awaits",
     },
   ],
 
