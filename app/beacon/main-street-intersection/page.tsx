@@ -87,12 +87,12 @@ export default function MainStreetIntersectionPage() {
               <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>Towards the Dock Yard</p>
             </a>
 
-            {/* Right — Temple */}
-            <div className="px-6 py-5" style={{ border: "1px solid rgba(201,168,76,0.15)", background: "rgba(201,168,76,0.02)" }}>
-              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.3, letterSpacing: "0.15em" }}>Head Right</p>
-              <p className="text-base" style={{ color: "var(--parchment)", opacity: 0.25 }}>Towards Braver&apos;s Temple</p>
-              <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.2 }}>Coming soon</p>
-            </div>
+            {/* Right — Southeast Beacon Street */}
+            <a href="/beacon/southeast-beacon-street" className="px-6 py-5 block transition-all duration-200 hover:bg-[rgba(201,168,76,0.06)]" style={{ border: "1px solid rgba(201,168,76,0.3)", background: "rgba(201,168,76,0.03)", textDecoration: "none" }}>
+              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>Head Right</p>
+              <p className="text-base font-bold" style={{ color: "var(--gold-light)" }}>Southeast Beacon Street →</p>
+              <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>Towards Temple Square</p>
+            </a>
 
             {/* South Main Street */}
             <a href="/beacon/south-main-street" className="px-6 py-5 block transition-all duration-200 hover:bg-[rgba(201,168,76,0.06)]" style={{ border: "1px solid rgba(201,168,76,0.3)", background: "rgba(201,168,76,0.03)", textDecoration: "none" }}>
