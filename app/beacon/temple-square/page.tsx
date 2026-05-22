@@ -158,9 +158,9 @@ export default function TempleSquarePage() {
             <a href="/beacon/northeast-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
               Northeast Beacon Street →
             </a>
-            <div style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
+            <a href="/beacon/east-main-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
               ← East Main Street
-            </div>
+            </a>
             <a href="/beacon/southeast-beacon-street" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
               Southeast Beacon Street →
             </a>
