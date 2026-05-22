@@ -33,8 +33,8 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
     {
       name: "Finesse for Success",
       description: "Rapiers with ornate basket hilts in silver and gold. Premium leather outfits in muted blues, reds, and greens.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/garden-district/hydrangea-way/finesse-for-success",
     },
     {
       name: "Things You Didn't Know",
