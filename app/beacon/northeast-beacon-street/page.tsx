@@ -84,6 +84,53 @@ export default function NortheastBeaconStreetPage() {
                   {paragraph}
                 </p>
               ))}
+
+              {/* Stat Block */}
+              <div className="mt-6 pt-5" style={{ borderTop: "1px solid rgba(139,26,26,0.3)" }}>
+                <h4 className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", letterSpacing: "0.15em" }}>Stat Block — {v.gardenDistrictGate.guardStats.name}</h4>
+                <div className="grid grid-cols-3 gap-2 mb-3">
+                  <div className="px-3 py-2 text-center" style={{ background: "rgba(139,26,26,0.1)", border: "1px solid rgba(139,26,26,0.2)" }}>
+                    <p className="text-xs uppercase" style={{ color: "#e88080", opacity: 0.6 }}>AC</p>
+                    <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{v.gardenDistrictGate.guardStats.ac}</p>
+                  </div>
+                  <div className="px-3 py-2 text-center" style={{ background: "rgba(139,26,26,0.1)", border: "1px solid rgba(139,26,26,0.2)" }}>
+                    <p className="text-xs uppercase" style={{ color: "#e88080", opacity: 0.6 }}>HP</p>
+                    <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{v.gardenDistrictGate.guardStats.hp}</p>
+                  </div>
+                  <div className="px-3 py-2 text-center" style={{ background: "rgba(139,26,26,0.1)", border: "1px solid rgba(139,26,26,0.2)" }}>
+                    <p className="text-xs uppercase" style={{ color: "#e88080", opacity: 0.6 }}>Speed</p>
+                    <p className="text-sm font-bold" style={{ color: "var(--parchment)" }}>{v.gardenDistrictGate.guardStats.speed}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-6 gap-2 mb-3">
+                  {[
+                    { label: "STR", val: v.gardenDistrictGate.guardStats.str },
+                    { label: "DEX", val: v.gardenDistrictGate.guardStats.dex },
+                    { label: "CON", val: v.gardenDistrictGate.guardStats.con },
+                    { label: "INT", val: v.gardenDistrictGate.guardStats.int },
+                    { label: "WIS", val: v.gardenDistrictGate.guardStats.wis },
+                    { label: "CHA", val: v.gardenDistrictGate.guardStats.cha },
+                  ].map((s) => (
+                    <div key={s.label} className="px-2 py-2 text-center" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                      <p className="text-xs uppercase mb-1" style={{ color: "#e88080", opacity: 0.6 }}>{s.label}</p>
+                      <p className="text-xs font-bold" style={{ color: "var(--parchment)" }}>{s.val}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-2 mb-3">
+                  <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}><span style={{ color: "#e88080", opacity: 0.7 }}>Skills</span> — {v.gardenDistrictGate.guardStats.skills}</p>
+                  <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}><span style={{ color: "#e88080", opacity: 0.7 }}>Languages</span> — {v.gardenDistrictGate.guardStats.languages}</p>
+                  <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}><span style={{ color: "#e88080", opacity: 0.7 }}>Challenge</span> — {v.gardenDistrictGate.guardStats.challenge}</p>
+                </div>
+                <div className="space-y-2">
+                  {v.gardenDistrictGate.guardStats.actions.map((action, i) => (
+                    <div key={i} className="pt-2" style={{ borderTop: "1px solid rgba(139,26,26,0.15)" }}>
+                      <p className="text-xs font-bold mb-1" style={{ color: "var(--parchment)", opacity: 0.9 }}>{action.name}</p>
+                      <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.65 }}>{action.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
         </div>

@@ -25,13 +25,40 @@ The gate is closed. The two guards stand at parade rest on either side. They do 
         description: "Larger still. The same practiced stillness. His eyes track movement on the street without his head moving to follow it.",
       },
     ],
+    guardStats: {
+      name: "King's Guard",
+      ac: "18 (plate armor)",
+      hp: "52 (8d8 + 16)",
+      speed: "30 ft",
+      str: "16 (+3)",
+      dex: "14 (+2)",
+      con: "12 (+1)",
+      int: "13 (+1)",
+      wis: "12 (+1)",
+      cha: "10 (+0)",
+      skills: "Perception +3, Athletics +5",
+      languages: "Common",
+      challenge: "3 (700 XP)",
+      actions: [
+        {
+          name: "Longsword",
+          description: "+5 to hit, reach 5 ft. Hit: 1d8+3 slashing, or 1d10+3 slashing if used two-handed.",
+        },
+        {
+          name: "Heavy Crossbow",
+          description: "+4 to hit, range 100/400 ft. Hit: 1d10+2 piercing.",
+        },
+      ],
+    },
     dmNote: `These are not City Watch. These are King's Guard — soldiers of the High King, stationed here specifically to protect the Garden District's residents. Most of those residents are wealthy supporters of the High King's interests in Beacon. The King's Guard answers to the High King, not to Beacon's local government. The City Watch across the street has no jurisdiction past those gates. The King's Guard has no interest in anything outside them.
 
 They will not engage with players or common folk beyond "move along." They are not rude. They are simply not speaking to anyone who doesn't already belong inside.
 
 Entry requires a magical brand — it appears on the palm only when held up before the gates, and only if the person holding it has been granted access. When presented, the gates swing open on their own. No words are exchanged. No acknowledgment is given.
 
-For flavor: the first time the party comes through this street, have someone approach the gate from the other direction — a well-dressed figure, unhurried. They raise their palm toward the gate without breaking stride. The gates open. They walk through. The gates close. The guards do not move. Use this to establish the mechanic before the party ever thinks to ask about it.`,
+For flavor: the first time the party comes through this street, have someone approach the gate from the other direction — a well-dressed figure, unhurried. They raise their palm toward the gate without breaking stride. The gates open. They walk through. The gates close. The guards do not move. Use this to establish the mechanic before the party ever thinks to ask about it.
+
+If the party attacks the gate guards, do not run this as a two-guard fight. There are many King's Guard inside the district walls — these two are the visible face of a much larger presence. Reinforcements arrive within 1–2 rounds of any altercation. The City Watch across the street will not intervene. This is not their jurisdiction and they know it.`,
   },
 
   locations: [
