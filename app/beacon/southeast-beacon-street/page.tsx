@@ -83,7 +83,7 @@ export default function SoutheastBeaconStreetPage() {
         {/* Locations */}
         <div className="mt-8 mb-10">
           <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>On the Street</h2>
-          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Businesses along the block.</p>
+          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Businesses on this street.</p>
           <div className="grid md:grid-cols-2 gap-4">
             {v.locations.map((loc, i) =>
               loc.status === "live" && loc.path ? (
