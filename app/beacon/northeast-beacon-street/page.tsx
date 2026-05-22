@@ -245,9 +245,9 @@ export default function NortheastBeaconStreetPage() {
             <a href="/beacon/north-main-street-intersection" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
               North Main Street Intersection →
             </a>
-            <div className="col-span-2" style={{ color: "var(--parchment)", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", textAlign: "center", fontSize: "0.875rem", opacity: 0.3, cursor: "default" }}>
-              Garden District
-            </div>
+            <a href="/beacon/garden-district" className="col-span-2" style={{ color: "var(--gold)", textDecoration: "none", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "block", textAlign: "center", fontSize: "0.875rem" }}>
+              Enter the Garden District
+            </a>
           </div>
         </div>
       </div>
