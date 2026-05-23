@@ -27,8 +27,8 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
     {
       name: "The Finest Things Enchantments",
       description: "Fine clothing and quality travel wear. Nothing that openly says adventurer. Mannequins in the window.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/garden-district/hydrangea-way/the-finest-things",
     },
     {
       name: "Finesse for Success",
