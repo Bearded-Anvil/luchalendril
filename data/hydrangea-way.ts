@@ -39,8 +39,8 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
     {
       name: "Things You Didn't Know",
       description: "Books on pedestals. Leather straps, small locks. A sign in front of one stack reads: Rare Copies Only.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/garden-district/hydrangea-way/things-you-didnt-know",
     },
     {
       name: "Luxury Awaits",
