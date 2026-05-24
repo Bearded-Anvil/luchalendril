@@ -59,6 +59,13 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
       path: "/beacon/garden-district",
     },
     {
+      name: "Rooftop Garden Walk",
+      direction: "Above",
+      description: "A staircase at the far end of Hydrangea Way leads up to the rooftop gardens.",
+      status: "live",
+      path: "/beacon/garden-district/rooftop-garden-walk",
+    },
+    {
       name: "Garden District Ring Road",
       direction: "Continues",
       description: "The ring road continues further into the district.",

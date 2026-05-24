@@ -44,6 +44,13 @@ Players who enter without an escort will attract quiet attention. No one will st
       path: "/beacon/garden-district/hydrangea-way",
     },
     {
+      name: "Rooftop Garden Walk",
+      direction: "Above Hydrangea Way",
+      description: "Accessible from the far end of Hydrangea Way. Flowers, fireflies, and a view of the mountains from the outer wall.",
+      status: "live",
+      path: "/beacon/garden-district/rooftop-garden-walk",
+    },
+    {
       name: "Garden District Ring Road — East",
       direction: "Right",
       description: "The ring road heading right through the homes. Bends gradually left.",
