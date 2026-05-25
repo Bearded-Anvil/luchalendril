@@ -5,8 +5,33 @@ import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { rooftopGardenWalk } from "@/data/rooftop-garden-walk";
 
+function WalkSection({ title, subtitle, description, image, imageAlt, imageAspect = "16/9" }: {
+  title: string;
+  subtitle?: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  imageAspect?: string;
+}) {
+  return (
+    <div className="mt-8 mb-10">
+      <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>{title}</h2>
+      {subtitle && <p className="text-xs italic mb-4" style={{ color: "var(--parchment)", opacity: 0.35 }}>{subtitle}</p>}
+      {description.split("\n\n").map((paragraph, i, arr) => (
+        <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
+          {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
+          {i === arr.length - 1 ? <>&rdquo;</> : ""}
+        </p>
+      ))}
+      <div className="relative w-full mt-6 gold-border overflow-hidden" style={{ aspectRatio: imageAspect, maxHeight: "540px" }}>
+        <Image src={image} alt={imageAlt} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+      </div>
+    </div>
+  );
+}
+
 export default function RooftopGardenWalkPage() {
-  const [hallwayLoaded, setHallwayLoaded] = useState(false);
+  const [_unused] = useState(false);
   const v = rooftopGardenWalk;
 
   return (
@@ -27,7 +52,7 @@ export default function RooftopGardenWalkPage() {
           <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>{v.tagline}</p>
         </div>
 
-        {/* Image */}
+        {/* Main Image */}
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9", maxHeight: "540px" }}>
           <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
         </div>
@@ -47,41 +72,37 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
-        {/* Amphitheater View */}
-        <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Above the Amphitheater</h2>
-          <p className="text-xs italic mb-4" style={{ color: "var(--parchment)", opacity: 0.35 }}>Read when players reach the halfway point of the walk.</p>
-          {v.amphitheaterView.split("\n\n").map((paragraph, i, arr) => (
-            <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
-              {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
-              {i === arr.length - 1 ? <>&rdquo;</> : ""}
-            </p>
-          ))}
-        </div>
+        {/* Above the Amphitheater */}
+        <WalkSection
+          title="Above the Amphitheater"
+          subtitle="Read when players reach the halfway point of the walk."
+          description={v.amphitheaterView.description}
+          image={v.amphitheaterView.image}
+          imageAlt="PrimRose Amphitheater from above"
+        />
 
         <div className="gold-divider" />
 
-        {/* Walk Final — The Hallway */}
-        <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>End of the Walk</h2>
-          <p className="text-xs italic mb-4" style={{ color: "var(--parchment)", opacity: 0.35 }}>Read when players descend from the rooftop and enter the hallway.</p>
-          {v.walkFinal.description.split("\n\n").map((paragraph, i, arr) => (
-            <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
-              {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
-              {i === arr.length - 1 ? <>&rdquo;</> : ""}
-            </p>
-          ))}
-          {/* Hallway Image */}
-          <div className="relative w-full mt-6 gold-border overflow-hidden" style={{ aspectRatio: "4/3", maxHeight: "480px" }}>
-            <Image
-              src={v.walkFinal.image}
-              alt="The Giant's Hallway"
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-              onError={() => setHallwayLoaded(false)}
-            />
-          </div>
-        </div>
+        {/* Atop The Drunken Giant */}
+        <WalkSection
+          title="Atop The Drunken Giant"
+          subtitle="Read when players reach the stairs beyond the amphitheater."
+          description={v.rooftopCrossing.description}
+          image={v.rooftopCrossing.image}
+          imageAlt="The Drunken Giant exterior"
+        />
+
+        <div className="gold-divider" />
+
+        {/* The Hallway */}
+        <WalkSection
+          title="End of the Walk"
+          subtitle="Read when players step through the door at the bottom of the stairs."
+          description={v.walkFinal.description}
+          image={v.walkFinal.image}
+          imageAlt="The Giant's Hallway"
+          imageAspect="4/3"
+        />
 
         <div className="gold-divider" />
 
@@ -99,38 +120,21 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
-        {/* Connections */}
+        {/* Access Point */}
         <div className="mt-8 mb-10">
           <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Access Points</h2>
           <div className="space-y-3">
-            {v.connections.map((conn, i) => {
-              const isLive = conn.status === "live" && conn.path;
-              return isLive ? (
-                <a
-                  key={i}
-                  href={conn.path!}
-                  style={{ display: "block", textDecoration: "none" }}
-                >
-                  <div className="px-5 py-4" style={{
-                    background: "rgba(201,168,76,0.04)",
-                    border: "1px solid rgba(201,168,76,0.25)",
-                  }}>
-                    <p className="text-sm font-bold mb-1" style={{ color: "var(--gold-light)" }}>{conn.name}</p>
-                    <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>{conn.description}</p>
-                  </div>
-                </a>
-              ) : (
-                <div key={i} className="px-5 py-4" style={{
-                  background: "rgba(201,168,76,0.02)",
-                  border: "1px solid rgba(201,168,76,0.1)",
-                  opacity: 0.5,
+            {v.connections.map((conn, i) => (
+              <a key={i} href={conn.path!} style={{ display: "block", textDecoration: "none" }}>
+                <div className="px-5 py-4" style={{
+                  background: "rgba(201,168,76,0.04)",
+                  border: "1px solid rgba(201,168,76,0.25)",
                 }}>
-                  <p className="text-sm font-bold mb-1" style={{ color: "var(--parchment)" }}>{conn.name}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.5 }}>{conn.description}</p>
-                  <p className="text-xs mt-1" style={{ color: "var(--gold)", opacity: 0.4 }}>Coming soon</p>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--gold-light)" }}>{conn.name}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>{conn.description}</p>
                 </div>
-              );
-            })}
+              </a>
+            ))}
           </div>
         </div>
 
