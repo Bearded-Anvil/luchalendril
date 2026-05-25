@@ -55,15 +55,9 @@ The walk connects Hydrangea Way at one end and Rose Vine View at the other, with
   connections: [
     {
       name: "Hydrangea Way",
-      description: "The walk begins at the far end of Hydrangea Way, up a staircase beside the last shop.",
+      description: "The only entry point. A staircase at the far end of Hydrangea Way leads up to the start of the walk.",
       status: "live",
       path: "/beacon/garden-district/hydrangea-way",
-    },
-    {
-      name: "PrimRose Amphitheater",
-      description: "The walk passes directly over the back wall of the amphitheater. The whole stage is visible from above.",
-      status: "live",
-      path: "/beacon/garden-district/primrose-amphitheater",
     },
     {
       name: "The Drunken Giant",

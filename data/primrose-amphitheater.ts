@@ -38,12 +38,5 @@ The Rooftop Garden Walk passes directly above the back wall. Players standing on
       status: "live",
       path: "/beacon/garden-district/rose-vine-view",
     },
-    {
-      name: "Rooftop Garden Walk",
-      direction: "Above",
-      description: "The walk passes directly over the back wall of the theater. From up there, the whole stage is visible below.",
-      status: "live",
-      path: "/beacon/garden-district/rooftop-garden-walk",
-    },
   ],
 };
