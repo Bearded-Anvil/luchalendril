@@ -91,7 +91,7 @@ export default function RooftopGardenWalkPage() {
           image={v.walkFinal.image}
           imageAlt="The Giant's Hallway"
           imageAspect="4/3"
-          imagePosition="center center"
+          imagePosition="center bottom"
         />
 
         <div className="gold-divider" />
