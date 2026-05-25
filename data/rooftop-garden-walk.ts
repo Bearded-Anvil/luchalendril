@@ -49,10 +49,16 @@ The walk connects Hydrangea Way at one end and Rose Vine View at the other, with
       path: "/beacon/garden-district/primrose-amphitheater",
     },
     {
+      name: "The Drunken Giant",
+      description: "Wooden stairs lead up to the rooftop dining terrace. The walk continues past the tables, down the far stairs, through a hallway bar, and out onto Rose Vine View.",
+      status: "live",
+      path: "/beacon/garden-district/rose-vine-view/the-drunken-giant",
+    },
+    {
       name: "Rose Vine View",
-      description: "The walk continues down the wall and across the rooftops of the shops on Rose Vine View.",
-      status: "coming-soon",
-      path: null,
+      description: "The walk exits onto Rose Vine View through The Drunken Giant's street-level hallway.",
+      status: "live",
+      path: "/beacon/garden-district/rose-vine-view",
     },
   ],
 };

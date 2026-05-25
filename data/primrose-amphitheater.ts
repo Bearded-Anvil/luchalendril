@@ -35,8 +35,8 @@ The Rooftop Garden Walk passes directly above the back wall. Players standing on
       name: "Rose Vine View",
       direction: "Right road",
       description: "The ring road continues right toward Rose Vine View, the district's other shopping street.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/garden-district/rose-vine-view",
     },
     {
       name: "Rooftop Garden Walk",

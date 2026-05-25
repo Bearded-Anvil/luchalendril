@@ -58,11 +58,11 @@ Players who enter without an escort will attract quiet attention. No one will st
       path: "/beacon/garden-district/primrose-amphitheater",
     },
     {
-      name: "Garden District Ring Road — East",
+      name: "Rose Vine View",
       direction: "Right",
-      description: "The ring road heading right through the homes. Bends gradually left.",
-      status: "coming-soon",
-      path: null,
+      description: "The ring road heading right through the homes. The Drunken Giant anchors the far end.",
+      status: "live",
+      path: "/beacon/garden-district/rose-vine-view",
     },
   ],
 };
