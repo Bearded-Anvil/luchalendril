@@ -177,7 +177,7 @@ Behind the right door: candlelight, the soft murmur of conversation, black table
     },
     {
       name: "Rooftop Garden Walk",
-      description: "Wooden stairs on the amphitheater side lead up to the rooftop dining area and connect to the walk above.",
+      description: "The walk exits through this building. Walkers descend from the rooftop, pass through the flower hallway, and step out onto Rose Vine View. The walk cannot be entered from here.",
       status: "live",
       path: "/beacon/garden-district/rooftop-garden-walk",
     },
