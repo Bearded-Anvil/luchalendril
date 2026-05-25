@@ -125,9 +125,12 @@ export default function HydrangeaWayPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+        <div className="mt-6 pt-6 flex justify-between gap-4" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <a href="/beacon/garden-district" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Garden District Entrance
+            ← Garden District
+          </a>
+          <a href="/beacon/garden-district/primrose-amphitheater" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            PrimRose Amphitheater →
           </a>
         </div>
       </div>
