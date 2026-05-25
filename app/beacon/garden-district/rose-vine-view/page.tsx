@@ -23,6 +23,24 @@ export default function RoseVineViewPage() {
           <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>{v.tagline}</p>
         </div>
 
+        {/* Image */}
+        <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9", maxHeight: "540px" }}>
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
+        </div>
+
+        <div className="gold-divider" />
+
+        {/* Scene Description */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Read to Players</h2>
+          {v.sceneDescription.split("\n\n").map((paragraph, i, arr) => (
+            <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
+              {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
+              {i === arr.length - 1 ? <>&rdquo;</> : ""}
+            </p>
+          ))}
+        </div>
+
         <div className="gold-divider" />
 
         {/* Locations */}
