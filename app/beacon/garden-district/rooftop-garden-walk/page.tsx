@@ -43,6 +43,20 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
+        {/* Amphitheater View */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Above the Amphitheater</h2>
+          <p className="text-xs italic mb-4" style={{ color: "var(--parchment)", opacity: 0.35 }}>Read when players reach the halfway point of the walk.</p>
+          {v.amphitheaterView.split("\n\n").map((paragraph, i, arr) => (
+            <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
+              {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
+              {i === arr.length - 1 ? <>&rdquo;</> : ""}
+            </p>
+          ))}
+        </div>
+
+        <div className="gold-divider" />
+
         {/* DM Notes */}
         <div className="mt-8 mb-10">
           <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>DM Notes</h2>

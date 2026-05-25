@@ -17,6 +17,14 @@ At the end of the shops, a final bridge leads out onto the top of Beacon's outer
 
 The King's Guard stationed at the wall walk here are not the same men you'll find at the gate. They have been given one additional instruction: when someone reaches the wall and stops to look out, give them a short bow. Not a greeting. Not a dismissal. Just an acknowledgment that they made it here, and that what they're looking at is worth the walk.`,
 
+  amphitheaterView: `As you continue your walk across the top of the wall, you find yourself above and behind the PrimRose Amphitheater, the beautiful lighting and the smell of the hundreds of flowers wafting upward to enhance the experience.
+
+To your right, you can see the seating area of the amphitheater and, behind that, both roadways through the Garden District arcing through the cottage-like homes. To your left, you are looking out over the walls of Beacon — the rolling green hills of The Valpin below, and the packed dirt road that snakes through and over them.
+
+In the evening, the sun's light is just enough to catch the peaks of the mountains, far off on the horizon.
+
+You feel an appreciation for whoever designed this walk, because as you pass the halfway point, it seems that every step has been laid out to leave the passerby in awe.`,
+
   dmNotes: `The Rooftop Garden Walk is not a scripted encounter. It is an atmosphere. Let the players have it.
 
 The fireflies are not magical — they are simply fireflies, drawn to the flowers in unusual numbers because the gardens are unusually well-kept. A player who investigates will find this out and may feel briefly foolish for expecting enchantment. That is the point. Sometimes things are just beautiful.
