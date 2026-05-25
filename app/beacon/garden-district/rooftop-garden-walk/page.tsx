@@ -2,13 +2,14 @@ import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { rooftopGardenWalk } from "@/data/rooftop-garden-walk";
 
-function WalkSection({ title, subtitle, description, image, imageAlt, imageAspect = "16/9" }: {
+function WalkSection({ title, subtitle, description, image, imageAlt, imageAspect = "16/9", imagePosition = "center top" }: {
   title: string;
   subtitle?: string;
   description: string;
   image: string;
   imageAlt: string;
   imageAspect?: string;
+  imagePosition?: string;
 }) {
   return (
     <div className="mt-8 mb-10">
@@ -21,7 +22,7 @@ function WalkSection({ title, subtitle, description, image, imageAlt, imageAspec
         </p>
       ))}
       <div className="relative w-full mt-6 gold-border overflow-hidden" style={{ aspectRatio: imageAspect, maxHeight: "540px" }}>
-        <Image src={image} alt={imageAlt} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+        <Image src={image} alt={imageAlt} fill style={{ objectFit: "cover", objectPosition: imagePosition }} />
       </div>
     </div>
   );
@@ -60,7 +61,7 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
-        {/* Above the Amphitheater */}
+        {/* Scene 2 — Above the Amphitheater */}
         <WalkSection
           title="Above the Amphitheater"
           subtitle="Read when players reach the halfway point of the walk."
@@ -71,7 +72,7 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
-        {/* Atop The Drunken Giant */}
+        {/* Scene 3 — Atop The Drunken Giant */}
         <WalkSection
           title="Atop The Drunken Giant"
           subtitle="Read when players reach the stairs beyond the amphitheater."
@@ -82,7 +83,7 @@ export default function RooftopGardenWalkPage() {
 
         <div className="gold-divider" />
 
-        {/* The Hallway */}
+        {/* Scene 4 — The Hallway */}
         <WalkSection
           title="End of the Walk"
           subtitle="Read when players step through the door at the bottom of the stairs."
@@ -90,6 +91,7 @@ export default function RooftopGardenWalkPage() {
           image={v.walkFinal.image}
           imageAlt="The Giant's Hallway"
           imageAspect="4/3"
+          imagePosition="center center"
         />
 
         <div className="gold-divider" />
@@ -102,26 +104,6 @@ export default function RooftopGardenWalkPage() {
               <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.75 }}>
                 {paragraph}
               </p>
-            ))}
-          </div>
-        </div>
-
-        <div className="gold-divider" />
-
-        {/* Access Point */}
-        <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Access Points</h2>
-          <div className="space-y-3">
-            {v.connections.map((conn, i) => (
-              <a key={i} href={conn.path!} style={{ display: "block", textDecoration: "none" }}>
-                <div className="px-5 py-4" style={{
-                  background: "rgba(201,168,76,0.04)",
-                  border: "1px solid rgba(201,168,76,0.25)",
-                }}>
-                  <p className="text-sm font-bold mb-1" style={{ color: "var(--gold-light)" }}>{conn.name}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>{conn.description}</p>
-                </div>
-              </a>
             ))}
           </div>
         </div>
