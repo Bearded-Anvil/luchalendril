@@ -51,6 +51,13 @@ Players who enter without an escort will attract quiet attention. No one will st
       path: "/beacon/garden-district/rooftop-garden-walk",
     },
     {
+      name: "PrimRose Amphitheater",
+      direction: "Far end",
+      description: "Where the two ring roads meet. An open-air theater sunken into the ground, ringed with flowers and open to the sky.",
+      status: "live",
+      path: "/beacon/garden-district/primrose-amphitheater",
+    },
+    {
       name: "Garden District Ring Road — East",
       direction: "Right",
       description: "The ring road heading right through the homes. Bends gradually left.",

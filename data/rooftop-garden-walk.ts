@@ -35,6 +35,12 @@ The walk connects Hydrangea Way at one end and Rose Vine View at the other, with
       path: "/beacon/garden-district/hydrangea-way",
     },
     {
+      name: "PrimRose Amphitheater",
+      description: "The walk passes directly over the back wall of the amphitheater. The whole stage is visible from above.",
+      status: "live",
+      path: "/beacon/garden-district/primrose-amphitheater",
+    },
+    {
       name: "Rose Vine View",
       description: "The walk continues down the wall and across the rooftops of the shops on Rose Vine View.",
       status: "coming-soon",

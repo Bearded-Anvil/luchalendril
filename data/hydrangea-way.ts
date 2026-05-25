@@ -66,11 +66,11 @@ The rooftop gardens above these shops are the beginning of the city walk. Access
       path: "/beacon/garden-district/rooftop-garden-walk",
     },
     {
-      name: "Garden District Ring Road",
+      name: "PrimRose Amphitheater",
       direction: "Continues",
-      description: "The ring road continues further into the district.",
-      status: "coming-soon",
-      path: null,
+      description: "The ring road bends at the far end of the street to the PrimRose Amphitheater, where both roads of the district meet.",
+      status: "live",
+      path: "/beacon/garden-district/primrose-amphitheater",
     },
   ],
 };
