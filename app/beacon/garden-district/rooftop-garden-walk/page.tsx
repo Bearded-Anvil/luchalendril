@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { rooftopGardenWalk } from "@/data/rooftop-garden-walk";
 
 export default function RooftopGardenWalkPage() {
+  const [hallwayLoaded, setHallwayLoaded] = useState(false);
   const v = rooftopGardenWalk;
 
   return (
@@ -53,6 +57,30 @@ export default function RooftopGardenWalkPage() {
               {i === arr.length - 1 ? <>&rdquo;</> : ""}
             </p>
           ))}
+        </div>
+
+        <div className="gold-divider" />
+
+        {/* Walk Final — The Hallway */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>End of the Walk</h2>
+          <p className="text-xs italic mb-4" style={{ color: "var(--parchment)", opacity: 0.35 }}>Read when players descend from the rooftop and enter the hallway.</p>
+          {v.walkFinal.description.split("\n\n").map((paragraph, i, arr) => (
+            <p key={i} className="text-sm leading-relaxed italic mb-4" style={{ color: "var(--parchment)", opacity: 0.88 }}>
+              {i === 0 ? <>&ldquo;{paragraph}</> : paragraph}
+              {i === arr.length - 1 ? <>&rdquo;</> : ""}
+            </p>
+          ))}
+          {/* Hallway Image */}
+          <div className="relative w-full mt-6 gold-border overflow-hidden" style={{ aspectRatio: "4/3", maxHeight: "480px" }}>
+            <Image
+              src={v.walkFinal.image}
+              alt="The Giant's Hallway"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              onError={() => setHallwayLoaded(false)}
+            />
+          </div>
         </div>
 
         <div className="gold-divider" />

@@ -25,6 +25,23 @@ In the evening, the sun's light is just enough to catch the peaks of the mountai
 
 You feel an appreciation for whoever designed this walk, because as you pass the halfway point, it seems that every step has been laid out to leave the passerby in awe.`,
 
+  walkFinal: {
+    image: "/rooftop-walk-hallway.jpg",
+    description: `As you reach the other side of the amphitheater, a King's Guard stands in the path ahead, preventing you from continuing further along the wall. A wooden staircase leads you up and to the right instead. The handrail is clean and smooth on top — but beneath, the railing is wrapped in flowers and greenery all the way up.
+
+At the top of the stairs, you find yourself on the rooftop of The Drunken Giant. Tables are arranged across the roof, guests at most of them, enjoying their food and drink and the view out over the rolling hills of The Valpin. They hardly seem to notice you passing. You continue across the rooftop — the streets and the theater visible to your right — until you reach the far edge of the building.
+
+Turning left, a two-level staircase runs down the side of the inn. At the bottom, a door opens inward. You step through it.
+
+You are not inside the restaurant. Not exactly. Instead, you find yourself in a long, narrow hallway. The stone walls on either side are painted floor to ceiling with flowers — vivid oranges and reds, deep purples, soft pinks and blues — each one rendered with a care that makes the hallway feel less like a corridor and more like something you are meant to walk slowly through. Along the ceiling, a row of lanterns hangs barely three feet apart, each one glowing with a soft magical light that catches the color in the painted petals.
+
+At the end of the hallway, a man stands behind a small half-counter. Bottles line the shelf behind him. A sign above reads: The Giant's Finest. He sets a mug on the counter and looks at you.
+
+"Five silver," he says. "End of the walk."
+
+Beyond him, a door opens back out onto Rose Vine View.`,
+  },
+
   dmNotes: `The Rooftop Garden Walk is not a scripted encounter. It is an atmosphere. Let the players have it.
 
 The fireflies are not magical — they are simply fireflies, drawn to the flowers in unusual numbers because the gardens are unusually well-kept. A player who investigates will find this out and may feel briefly foolish for expecting enchantment. That is the point. Sometimes things are just beautiful.
