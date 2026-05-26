@@ -12,7 +12,7 @@ type MapZone = {
 };
 
 // Set to true to show all zones as visible gold boxes for calibration.
-const DEBUG_ZONES = true;
+const DEBUG_ZONES = false;
 
 // Zones calibrated to 1402 × 1122 source image.
 // Each zone is sized to cover the text label on the map.
@@ -69,8 +69,9 @@ const mapZones: MapZone[] = [
   { label: "The Inkwell — Here & There Maps", href: "/beacon/dock-yard/here-and-there", left: "1%", top: "62%", width: "9%", height: "8%" },
 
   // ── South ────────────────────────────────────────────────────────────────────
-  { label: "Iron End Forge", href: "/beacon/southwest-beacon-street/irons-end-forge",          left: "18%", top: "77%", width: "8%", height: "5%" },
-  { label: "Orphanage",      href: "/beacon/main-street-intersection/the-alley/orphanage",      left: "74%", top: "78%", width: "7%", height: "4%" },
+  { label: "Iron End Forge",       href: "/beacon/southwest-beacon-street/irons-end-forge",     left: "18%", top: "77%", width: "8%", height: "5%" },
+  { label: "Orphanage",            href: "/beacon/main-street-intersection/the-alley/orphanage",left: "74%", top: "78%", width: "7%", height: "4%" },
+  { label: "Home Hearth District", href: "/beacon/home-hearth-district",                        left: "75%", top: "69%", width: "14%", height: "6%" },
 ];
 
 export default function BeaconPage() {
