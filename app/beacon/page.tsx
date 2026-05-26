@@ -15,60 +15,62 @@ type MapZone = {
 const DEBUG_ZONES = true;
 
 // Zones calibrated to 1402 × 1122 source image.
+// Each zone is sized to cover the text label on the map.
 // left/width are % of image width; top/height are % of image height.
 const mapZones: MapZone[] = [
-  // ── Entry roads ────────────────────────────────────────────────────────────
-  { label: "North Main Street",    href: "/beacon/north-main-street",    left: "36%", top:  "2%", width: "12%", height:  "7%" },
-  { label: "South Main Street",    href: "/beacon/south-main-street",    left: "36%", top: "73%", width: "12%", height:  "9%" },
-  { label: "The Dock Yard",        href: "/beacon/dock-yard",             left:  "1%", top: "33%", width: "10%", height: "12%" },
+  // ── Ring roads (curved text along the arc) ──────────────────────────────────
+  { label: "N.W. Beacon St.", href: "/beacon/northwest-beacon-street",  left: "14%", top:  "7%", width: "16%", height: "4%" },
+  { label: "N.E. Beacon St.", href: "/beacon/northeast-beacon-street",  left: "48%", top:  "6%", width: "17%", height: "4%" },
+  { label: "S.W. Beacon St.", href: "/beacon/southwest-beacon-street",  left: "15%", top: "63%", width: "15%", height: "4%" },
+  { label: "S.E. Beacon St.", href: "/beacon/southeast-beacon-street",  left: "44%", top: "62%", width: "15%", height: "4%" },
 
-  // ── Ring roads ─────────────────────────────────────────────────────────────
-  { label: "N.W. Beacon St.", href: "/beacon/northwest-beacon-street",  left: "12%", top:  "5%", width: "18%", height:  "7%" },
-  { label: "N.E. Beacon St.", href: "/beacon/northeast-beacon-street",  left: "47%", top:  "4%", width: "18%", height:  "7%" },
-  { label: "S.W. Beacon St.", href: "/beacon/southwest-beacon-street",  left: "14%", top: "56%", width: "18%", height:  "7%" },
-  { label: "S.E. Beacon St.", href: "/beacon/southeast-beacon-street",  left: "39%", top: "55%", width: "18%", height:  "7%" },
+  // ── Entry roads ─────────────────────────────────────────────────────────────
+  { label: "The Dockyard",     href: "/beacon/dock-yard",            left:  "7%", top: "35%", width:  "4%", height: "10%" },
+  { label: "S. Main Street",   href: "/beacon/south-main-street",   left: "40%", top: "78%", width:  "7%", height:  "5%" },
+  { label: "North Main Street",href: "/beacon/north-main-street",   left: "39%", top:  "2%", width:  "8%", height:  "5%" },
 
-  // ── North intersection area ─────────────────────────────────────────────────
-  { label: "Hattswain Pawn",           href: "/beacon/north-main-street-intersection/hattiswain-pawn", left: "33%", top: "10%", width: "12%", height: "7%" },
-  { label: "City Watch",               href: "/beacon/northeast-beacon-street/city-watch",             left: "42%", top: "10%", width: "12%", height: "7%" },
-  { label: "Warehouse District",       href: "/beacon/dock-yard/warehouse-district",                    left:  "6%", top: "13%", width: "12%", height: "7%" },
-  { label: "White Bay Navigators",     href: "/beacon/dock-yard/white-bay-navigators",                  left: "16%", top: "17%", width: "12%", height: "7%" },
-  { label: "Braver's Gate Brewery",    href: "/beacon/central-bowl-street/bravers-gaze-brewery",        left: "29%", top: "16%", width: "12%", height: "7%" },
-  { label: "Cordon's Custom Clothier", href: "/beacon/temple-square/corduns-custom-clothier",           left: "44%", top: "16%", width: "12%", height: "7%" },
+  // ── Upper interior ──────────────────────────────────────────────────────────
+  { label: "Hattswain Pawn",        href: "/beacon/north-main-street-intersection/hattiswain-pawn", left: "37%", top: "11%", width:  "7%", height: "5%" },
+  { label: "City Watch",            href: "/beacon/northeast-beacon-street/city-watch",              left: "48%", top: "11%", width:  "6%", height: "5%" },
+  { label: "Warehouse District",    href: "/beacon/dock-yard/warehouse-district",                     left:  "9%", top: "15%", width:  "7%", height: "5%" },
+  { label: "White Bay Navigators",  href: "/beacon/dock-yard/white-bay-navigators",                   left: "18%", top: "19%", width: "10%", height: "5%" },
+  { label: "Beaver's Gate Brewery", href: "/beacon/central-bowl-street/bravers-gaze-brewery",         left: "31%", top: "19%", width: "10%", height: "5%" },
+  { label: "Cordon's Clothiers",    href: "/beacon/temple-square/corduns-custom-clothier",             left: "47%", top: "19%", width:  "9%", height: "5%" },
 
-  // ── Central Bowl Street + interior buildings ────────────────────────────────
-  { label: "Central Bowl Street", href: "/beacon/central-bowl-street",               left: "19%", top: "23%", width: "26%", height: "7%" },
-  { label: "City Watch Station",  href: "/beacon/dock-yard/city-watch-station",       left: "18%", top: "34%", width: "12%", height: "7%" },
-  { label: "Reel Works",          href: "/beacon/dock-yard/reel-works",               left: "26%", top: "35%", width: "12%", height: "7%" },
-  { label: "Lighthouse Inn",      href: "/beacon/central-bowl-street/lighthouse-inn", left: "33%", top: "35%", width: "12%", height: "7%" },
-  { label: "Bowl Street Grocer",  href: "/beacon/central-bowl-street/bowl-street-grocer", left: "41%", top: "36%", width: "12%", height: "7%" },
+  // ── Central band ────────────────────────────────────────────────────────────
+  { label: "Central Bowl Street", href: "/beacon/central-bowl-street",                    left: "24%", top: "27%", width: "26%", height: "4%" },
+  { label: "Temple Square",       href: "/beacon/temple-square",                          left: "59%", top: "28%", width: "10%", height: "4%" },
 
-  // ── Temple Square area ──────────────────────────────────────────────────────
-  { label: "Temple Square",            href: "/beacon/temple-square",                          left: "57%", top: "27%", width: "20%", height: "22%" },
-  { label: "Roundabout Way",           href: "/beacon/temple-square/roundabout-way",           left: "51%", top: "43%", width: "12%", height:  "7%" },
-  { label: "Enchanted Steps",          href: "/beacon/temple-square/enchanted-steps",          left: "60%", top: "47%", width: "12%", height:  "7%" },
-  { label: "Saida's Arms & Armaments", href: "/beacon/temple-square/saidas-arms-and-armaments", left: "77%", top: "30%", width: "12%", height:  "7%" },
+  // ── Mid-city buildings ───────────────────────────────────────────────────────
+  { label: "City Watch Station", href: "/beacon/dock-yard/city-watch-station",        left: "23%", top: "35%", width: "6%", height: "5%" },
+  { label: "Reel Works",         href: "/beacon/dock-yard/reel-works",                left: "30%", top: "36%", width: "6%", height: "5%" },
+  { label: "Lighthouse Inn",     href: "/beacon/central-bowl-street/lighthouse-inn",  left: "37%", top: "36%", width: "8%", height: "4%" },
+  { label: "Bowl Street Grocer", href: "/beacon/central-bowl-street/bowl-street-grocer", left: "45%", top: "37%", width: "7%", height: "6%" },
+  { label: "Braver's Temple",    href: "/beacon/temple-square/bravers-temple",         left: "61%", top: "35%", width: "9%", height: "5%" },
 
-  // ── Dockyard interior buildings ─────────────────────────────────────────────
-  { label: "The Hook",        href: "/beacon/dock-yard/the-hook",        left: "19%", top: "42%", width: "12%", height: "7%" },
-  { label: "Saltwater Loaves",href: "/beacon/dock-yard/saltwater-loaves",left:  "5%", top: "45%", width: "12%", height: "7%" },
+  // ── Lower interior ───────────────────────────────────────────────────────────
+  { label: "The Hook",        href: "/beacon/dock-yard/the-hook",                       left: "21%", top: "44%", width: "5%", height: "5%" },
+  { label: "Saltwater Loaves",href: "/beacon/dock-yard/saltwater-loaves",               left:  "7%", top: "45%", width: "8%", height: "5%" },
+  { label: "Roundabout Way",  href: "/beacon/temple-square/roundabout-way",             left: "54%", top: "44%", width: "9%", height: "5%" },
+  { label: "Enchanted Steps", href: "/beacon/temple-square/enchanted-steps",            left: "67%", top: "49%", width: "8%", height: "5%" },
+  { label: "Traveler's Nest", href: "/beacon/southwest-beacon-street/travelers-nest",   left: "31%", top: "53%", width: "8%", height: "5%" },
+  { label: "Hibernations",    href: "/beacon/main-street-intersection/hibernations",    left: "39%", top: "54%", width: "9%", height: "4%" },
+  { label: "Tinker Box",      href: "/beacon/southeast-beacon-street/tinker-box",       left: "56%", top: "52%", width: "6%", height: "5%" },
 
-  // ── Lower city ──────────────────────────────────────────────────────────────
-  { label: "Traveler's Nest", href: "/beacon/southwest-beacon-street/travelers-nest",           left: "26%", top: "48%", width: "12%", height: "7%" },
-  { label: "Hibernations",    href: "/beacon/main-street-intersection/hibernations",            left: "34%", top: "49%", width: "12%", height: "7%" },
-  { label: "Tinker Box",      href: "/beacon/southeast-beacon-street/tinker-box",               left: "48%", top: "47%", width: "12%", height: "7%" },
+  // ── Saida's Arms (inside Temple Square ring road, east side) ─────────────────
+  { label: "Saida's Arms & Armaments", href: "/beacon/temple-square/saidas-arms-and-armaments", left: "78%", top: "33%", width: "12%", height: "6%" },
 
   // ── Garden District (outside east wall) ────────────────────────────────────
-  { label: "Garden District",          href: "/beacon/garden-district",                left: "80%", top: "19%", width: "14%", height: "7%" },
-  { label: "Hubs & Hooves",            href: "/beacon/east-main-street/hubs-and-hooves",left: "77%", top: "24%", width: "12%", height: "7%" },
-  { label: "E. Main Street",           href: "/beacon/east-main-street",               left: "78%", top: "35%", width: "12%", height: "7%" },
+  { label: "Garden District", href: "/beacon/garden-district",                  left: "81%", top: "20%", width: "10%", height: "5%" },
+  { label: "Hubs & Hooves",   href: "/beacon/east-main-street/hubs-and-hooves", left: "80%", top: "26%", width:  "8%", height: "5%" },
+  { label: "E. Main Street",  href: "/beacon/east-main-street",                  left: "80%", top: "38%", width:  "9%", height: "4%" },
 
-  // ── Far left (south dockyard) ───────────────────────────────────────────────
-  { label: "The Inkwell — Here & There Maps", href: "/beacon/dock-yard/here-and-there", left: "0%", top: "59%", width: "12%", height: "8%" },
+  // ── Far left (Inkwell) ───────────────────────────────────────────────────────
+  { label: "The Inkwell — Here & There Maps", href: "/beacon/dock-yard/here-and-there", left: "1%", top: "62%", width: "9%", height: "8%" },
 
-  // ── South area ──────────────────────────────────────────────────────────────
-  { label: "Iron End Forge", href: "/beacon/southwest-beacon-street/irons-end-forge",            left: "14%", top: "75%", width: "12%", height: "7%" },
-  { label: "Orphanage",      href: "/beacon/main-street-intersection/the-alley/orphanage",        left: "70%", top: "75%", width: "12%", height: "7%" },
+  // ── South ────────────────────────────────────────────────────────────────────
+  { label: "Iron End Forge", href: "/beacon/southwest-beacon-street/irons-end-forge",          left: "18%", top: "77%", width: "8%", height: "5%" },
+  { label: "Orphanage",      href: "/beacon/main-street-intersection/the-alley/orphanage",      left: "74%", top: "78%", width: "7%", height: "4%" },
 ];
 
 export default function BeaconPage() {
