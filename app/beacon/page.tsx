@@ -1,49 +1,68 @@
+import Image from "next/image";
+import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import NavCard from "@/components/NavCard";
 
-const streets = [
-  {
-    id: "south-main-street",
-    name: "South Main Street",
-    description: "The main commercial strip of the lower city. Open-air vendors, tradespeople, and the constant hum of coin changing hands.",
-    href: "/beacon/south-main-street",
-    available: true,
-  },
-  {
-    id: "central-bowl-street",
-    name: "Central Bowl Street",
-    description: "Runs straight from the Dock Yard to Braver's Temple at the city's center. A wide median of wildflowers, iron benches, and lantern posts arching overhead.",
-    href: "/beacon/central-bowl-street",
-    available: true,
-  },
-  {
-    id: "temple-square",
-    name: "Temple Square",
-    description: "The roundabout at the city's center, circling Braver's Temple. Four roads branch from here in every direction across Beacon.",
-    href: "/beacon/temple-square",
-    available: true,
-  },
-  {
-    id: "dock-row",
-    name: "Dock Row",
-    description: "Where the White Bay meets the city. Ships, sailors, fishmongers, and fog.",
-    href: "/beacon/dock-row",
-    available: false,
-  },
-  {
-    id: "the-upper-ring",
-    name: "The Upper Ring",
-    description: "The wealthier tier of the city, carved into the higher crater walls. Government buildings, temples, and the homes of those who matter.",
-    href: "/beacon/the-upper-ring",
-    available: false,
-  },
-  {
-    id: "the-bowl-flats",
-    name: "The Bowl Flats",
-    description: "The low ground at the crater's center. Markets, inns, and the kind of establishments that don't require a sign.",
-    href: "/beacon/the-bowl-flats",
-    available: false,
-  },
+type MapZone = {
+  label: string;
+  href: string;
+  left: string;
+  top: string;
+  width: string;
+  height: string;
+};
+
+const mapZones: MapZone[] = [
+  // Entry roads
+  { label: "North Main Street", href: "/beacon/north-main-street", left: "40%", top: "1%", width: "14%", height: "7%" },
+  { label: "South Main Street", href: "/beacon/south-main-street", left: "42%", top: "80%", width: "14%", height: "10%" },
+  { label: "The Dock Yard", href: "/beacon/dock-yard", left: "2%", top: "34%", width: "12%", height: "10%" },
+
+  // Ring roads
+  { label: "N.W. Beacon St.", href: "/beacon/northwest-beacon-street", left: "15%", top: "7%", width: "22%", height: "7%" },
+  { label: "N.E. Beacon St.", href: "/beacon/northeast-beacon-street", left: "48%", top: "5%", width: "22%", height: "7%" },
+  { label: "S.W. Beacon St.", href: "/beacon/southwest-beacon-street", left: "19%", top: "63%", width: "18%", height: "8%" },
+  { label: "S.E. Beacon St.", href: "/beacon/southeast-beacon-street", left: "51%", top: "63%", width: "18%", height: "8%" },
+
+  // North intersection area
+  { label: "Hattswain Pawn", href: "/beacon/north-main-street-intersection/hattiswain-pawn", left: "36%", top: "9%", width: "14%", height: "8%" },
+  { label: "City Watch", href: "/beacon/northeast-beacon-street/city-watch", left: "50%", top: "10%", width: "12%", height: "8%" },
+  { label: "White Bay Navigators", href: "/beacon/dock-yard/white-bay-navigators", left: "20%", top: "19%", width: "15%", height: "7%" },
+  { label: "Braver's Gate Brewery", href: "/beacon/central-bowl-street/bravers-gaze-brewery", left: "34%", top: "18%", width: "15%", height: "7%" },
+  { label: "Cordon's Custom Clothier", href: "/beacon/temple-square/corduns-custom-clothier", left: "50%", top: "17%", width: "15%", height: "7%" },
+
+  // Dockyard area
+  { label: "Warehouse District", href: "/beacon/dock-yard/warehouse-district", left: "11%", top: "14%", width: "13%", height: "8%" },
+  { label: "City Watch Station", href: "/beacon/dock-yard/city-watch-station", left: "26%", top: "36%", width: "12%", height: "7%" },
+  { label: "Reel Works", href: "/beacon/dock-yard/reel-works", left: "36%", top: "39%", width: "11%", height: "7%" },
+  { label: "The Hook", href: "/beacon/dock-yard/the-hook", left: "27%", top: "47%", width: "10%", height: "7%" },
+  { label: "Saltwater Loaves", href: "/beacon/dock-yard/saltwater-loaves", left: "9%", top: "49%", width: "13%", height: "7%" },
+  { label: "The Inkwell — Here & There Maps", href: "/beacon/dock-yard/here-and-there", left: "3%", top: "62%", width: "14%", height: "9%" },
+
+  // Central Bowl Street + buildings
+  { label: "Central Bowl Street", href: "/beacon/central-bowl-street", left: "25%", top: "28%", width: "33%", height: "7%" },
+  { label: "Lighthouse Inn", href: "/beacon/central-bowl-street/lighthouse-inn", left: "43%", top: "36%", width: "10%", height: "7%" },
+  { label: "Bowl Street Grocer", href: "/beacon/central-bowl-street/bowl-street-grocer", left: "51%", top: "39%", width: "12%", height: "7%" },
+
+  // Temple Square area
+  { label: "Temple Square", href: "/beacon/temple-square", left: "60%", top: "28%", width: "20%", height: "18%" },
+  { label: "Roundabout Way", href: "/beacon/temple-square/roundabout-way", left: "59%", top: "44%", width: "13%", height: "7%" },
+  { label: "Enchanted Steps", href: "/beacon/temple-square/enchanted-steps", left: "72%", top: "48%", width: "13%", height: "7%" },
+  { label: "Saida's Arms and Armaments", href: "/beacon/temple-square/saidas-arms-and-armaments", left: "79%", top: "35%", width: "16%", height: "7%" },
+
+  // East Main Street + Garden District
+  { label: "Garden District", href: "/beacon/garden-district", left: "83%", top: "19%", width: "15%", height: "9%" },
+  { label: "Hubs & Hooves", href: "/beacon/east-main-street/hubs-and-hooves", left: "79%", top: "28%", width: "13%", height: "7%" },
+  { label: "E. Main Street", href: "/beacon/east-main-street", left: "82%", top: "41%", width: "12%", height: "7%" },
+
+  // Main Street Intersection area
+  { label: "Main Street Intersection", href: "/beacon/main-street-intersection", left: "43%", top: "55%", width: "14%", height: "7%" },
+  { label: "Hibernations", href: "/beacon/main-street-intersection/hibernations", left: "45%", top: "59%", width: "12%", height: "7%" },
+  { label: "Traveler's Nest", href: "/beacon/southwest-beacon-street/travelers-nest", left: "31%", top: "52%", width: "13%", height: "7%" },
+  { label: "Tinker Box", href: "/beacon/southeast-beacon-street/tinker-box", left: "61%", top: "51%", width: "11%", height: "7%" },
+
+  // South area
+  { label: "Iron End Forge", href: "/beacon/southwest-beacon-street/irons-end-forge", left: "20%", top: "77%", width: "14%", height: "7%" },
+  { label: "Orphanage", href: "/beacon/main-street-intersection/the-alley/orphanage", left: "79%", top: "78%", width: "14%", height: "7%" },
 ];
 
 export default function BeaconPage() {
@@ -63,7 +82,7 @@ export default function BeaconPage() {
 
         {/* City Description */}
         <div
-          className="p-8 mb-12"
+          className="p-8 mb-10"
           style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.2)" }}
         >
           <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Overview</h2>
@@ -78,78 +97,57 @@ export default function BeaconPage() {
           </p>
         </div>
 
-        {/* Entry Points */}
-        <div className="mb-14">
-          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Where does your party arrive?</h2>
-          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Choose the entry point that matches your party&rsquo;s origin. Each begins a different path through Beacon.</p>
-          <div className="flex flex-col gap-4">
-            <NavCard
-              href="/beacon/south-main-street"
-              title="South Main Street"
-              description="Arrived overland from the south. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you."
+        <div className="gold-divider" />
+
+        {/* Interactive Map */}
+        <div className="mt-8 mb-12">
+          <h2 className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Navigate Beacon</h2>
+          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Click any location on the map to navigate there directly.</p>
+
+          <div style={{ position: "relative" }} className="gold-border">
+            <Image
+              src="/map-of-beacon.jpg"
+              alt="Map of Beacon"
+              width={1402}
+              height={1122}
+              style={{ width: "100%", height: "auto", display: "block" }}
+              priority
             />
-            <NavCard
-              href="/beacon/dock-yard"
-              title="Beacon Dock Yard"
-              description="Arrived by sea. The White Bay boardwalk — fishing crews, fog, and an information booth ready to welcome you to the city."
-            />
-            <NavCard
-              href="/beacon/north-main-street"
-              title="North Main Street"
-              description="Arrived overland from the north. The lighthouse road into Beacon — apple trees, quiet cobblestone, and the city ahead."
-            />
+            {mapZones.map((zone) => (
+              <Link
+                key={zone.label}
+                href={zone.href}
+                className="map-zone"
+                title={zone.label}
+                style={{
+                  left: zone.left,
+                  top: zone.top,
+                  width: zone.width,
+                  height: zone.height,
+                }}
+              />
+            ))}
           </div>
         </div>
 
-        <div className="gold-divider" />
-
-        {/* Streets */}
-        <h2 className="text-xs uppercase tracking-widest mb-8 mt-10" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Districts &amp; Streets</h2>
-
-        <div className="grid gap-4">
-          {streets.map((street) =>
-            street.available ? (
-              <NavCard
-                key={street.id}
-                href={street.href}
-                title={street.name}
-                description={street.description}
-              />
-            ) : (
-              <div
-                key={street.id}
-                className="p-6 flex items-center justify-between"
-                style={{
-                  background: "rgba(255,255,255,0.015)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  opacity: 0.4,
-                }}
-              >
-                <div>
-                  <h3 className="text-xl mb-1" style={{ color: "var(--parchment)" }}>{street.name}</h3>
-                  <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.6 }}>{street.description}</p>
-                </div>
-                <span className="text-xs italic ml-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>soon</span>
-              </div>
-            )
-          )}
-        </div>
         {/* Fast Travel */}
-        <div className="mt-16 pt-10" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
+        <div className="mt-10 pt-10" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
           <h2 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Fast Travel in Beacon</h2>
           <p className="text-sm italic mb-8" style={{ color: "#e88080", opacity: 0.85 }}>
             Skipping streets means skipping what happens on them. Random encounters, rare merchants, and moments of city life will not occur if you fast travel. Use these links when time in session is short — not as a default.
           </p>
 
           <div className="grid gap-4">
-            <NavCard
+            <Link
               href="/beacon/main-street-intersection/hibernations"
-              title="Hibernations"
-              description="Inn & Eatery — Main Street Intersection"
-            />
+              style={{ textDecoration: "none", color: "var(--gold-light)", background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.3)", padding: "1.25rem 1.5rem", display: "block" }}
+            >
+              <span className="text-xs uppercase tracking-widest block mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em", fontSize: "0.65rem" }}>Main Street Intersection</span>
+              <span className="text-xl">Hibernations</span>
+              <span className="text-sm block mt-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>Inn &amp; Eatery</span>
+            </Link>
           </div>
         </div>
-
       </div>
     </main>
   );
