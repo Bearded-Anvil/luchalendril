@@ -1,7 +1,7 @@
 export const saidasArmsAndArmaments = {
   id: "saidas-arms-and-armaments",
   name: "Saida's Arms and Armaments",
-  image: "/saidas-arms.jpg",
+  image: "/saidas-arms-and-armaments.jpg",
 
   sceneDescription: `The floors and walls of Saida's shop are sandstone-colored, plain and practical, and the ceiling is open to the A-frame rafters above — no decoration, no pretense. The shop is organized like someone who takes inventory seriously. Along one wall, mannequins stand in a line wearing every grade of armor from padded leather to full plate, shields mounted beside most of them. Along the other wall, glass-topped display cases run the full length, filled with daggers, knives, hand axes, and every kind of handheld weapon she stocks. Weapon racks are mounted above those cases — long swords, great swords, things that need the height. Down the center of the room, a rack holds the ranged weapons: bows, crossbows, sorted and displayed without drama. At the back of the room, a row of practice dummies lines the wall. They are there to be used. Saida expects it — she'd rather you test a weapon here than bring it back.
 
