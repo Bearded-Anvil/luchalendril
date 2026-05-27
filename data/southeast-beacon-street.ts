@@ -43,8 +43,8 @@ If the party needs to find someone who lives in Beacon rather than works in it â
       name: "Home Hearth District",
       direction: "Right (through the arch)",
       description: "Beacon's residential quarter. Where working people live.",
-      status: "coming-soon",
-      path: null,
+      status: "live",
+      path: "/beacon/home-hearth-district",
     },
   ],
 
