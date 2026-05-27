@@ -1,103 +1,103 @@
 export const aromaticEmbers = {
   id: "aromatic-embers",
   name: "Aromatic Embers",
-  image: "/home-hearth-district.jpg",
+  image: "/aromatic-embers.jpg",
   tagline: "Fine Pipes, Tobaccos & Accessories.",
   path: "/beacon/home-hearth-district/aromatic-embers",
 
   signs: [
     `A flat carved wooden pipe mounted above the door — the smoke from the bowl has been shaped into letters: "Aromatic Embers."`,
     `"Fine Pipes, Tobaccos & Accessories" — smaller sign hung below the front window.`,
+    `"A Good Pipe, A Fine Tobacco, and Good Company Make Life Worth Savouring." — posted inside, near the door.`,
+    `"A Moment's Quiet Smoke Is A Moment Well Spent." — mounted above the workbench.`,
   ],
 
-  sceneDescription: `The shop smells the way a good pipe shop should — deep and woody, with something faintly sweet underneath. Not smoke exactly. The potential of smoke. The memory of it in the walls and the shelves and the grain of the old wooden counter.
+  sceneDescription: `When you open the door, you are instantly surrounded by the amalgam of smells and aromas. Vanilla. Maple. Mint. And somehow — a breeze? Hillsides? You can't explain it, but these aromas bring back memories. Places you've been. People you've spoken to.
 
-Pipes line one wall from floor to ceiling, mounted in neat rows on wooden pegs. Clay, briar, cherry, bone, carved and plain — every type in at least three sizes. Glass cases on the counter hold accessories: brass tampers, leather pouches, small knives for scraping, pipe stands both simple and ornate.
+Leather chairs and a sofa, all deep brown with brass buttons, make up a sitting area just inside the door. A low table sits at the center, a lantern burning quietly on it alongside a pipe stand and a small ashtray. This is not a waiting area. People come here to stay for a while.
 
-Behind the counter, jars of tobacco line a shelf — a dozen or more, each labelled in small careful script, each with a strip of paper listing the variety and price clipped to the front. A few of the jars are half empty. A few appear untouched.
+To the left, beyond the sitting area, is a workbench — mounted table vice, woodworking tools, hand drills, sandpapers. Everything either hung on the wall above it or laid flat on the counter. It is a working bench, not a display.
 
-The man behind the counter is shorter than most people he serves. Halfling, neat hair, dressed plainly, with a worn apron that has seen a lot of pipe resin. He is cleaning a pipe when you enter — holding it up to the light from the window, turning it slowly, looking for something. He sets it down when you cross the threshold.
+Along the right wall, rows of large glass jars lean slightly forward — angled for reach. Each jar holds a different blend. The labels are written in an old hand: Vanilla Cream, Maple Leaf, Wintergreen, Cherry Wood, Black Shadow, Nightcap. Dozens more.
 
-"Blend first or pipe first?" he says. As if those are the only two options, and they probably are.`,
+The back wall is a tall set of shelves lined with green felt. Pipes fill every tier — hand carved, including long churchwardens that lean at an angle and small stubby pipes set upright. One shelf holds boxes of cigars, angled so their contents are visible through the lids.
+
+Behind the counter, an old man holds a pipe loosely in one hand and watches you look around. He does not rush you.`,
 
   owner: {
-    name: "Caelan Drest",
-    race: "Halfling (Male)",
-    appearance: `Short even by Halfling measure, with neat dark hair and the kind of hands that are precise without being delicate. He wears a plain apron over dark clothing and keeps a pipe in his breast pocket that he almost never lights in the shop. He smells, faintly, of Silverleaf Reserve.`,
-    personality: `Caelan is not talkative in the social sense. He is talkative in the sense that he will speak at length about tobacco — about origin, cut, aging, moisture content, the effect of a bowl's shape on a draw. If you have questions about his product, he has answers, and the answers are long. If you do not have questions, he will finish cleaning the pipe and wait. He is not unfriendly. He just measures conversation the way he measures a blend.`,
+    name: "Todd Smokestack",
+    race: "Dwarf (Male) — Very old",
+    appearance: `Shaggy white hair spills out from beneath a small plaid cap worn atop his head. Brown eyes, warm and alert. A thick white beard, untrimmed but not unkempt. He wears a grey overcoat over a white shirt and green pants, and carries himself with the quiet confidence of someone who has earned the right to move slowly. He is getting old. He is still stout.`,
+    personality: `Todd is at ease in a way that most people never quite reach. He has done what he set out to do in life and now does this — which is less a business than a calling. He will talk to anyone who wants to talk, and he will sit quietly with anyone who doesn't. He is not trying to sell you anything. He is trying to share something. There is a difference, and you feel it the moment you walk in.`,
+    goals: `Todd has reached the end of what most people mean when they say "a life." His goal now is simple: to spread the tradition of the pipe and the blend to as many people as he can. He believes, sincerely, that a good smoke shared in good company is one of the genuinely civilizing acts available to a person. He is not wrong.`,
     dmPrivate: {
-      background: `Caelan came to Beacon through the docks — he worked tobacco import and quality review for a merchant house for nearly a decade before buying the shop from its previous owner. He knows the docking manifests, the import schedules, and most of the dock factors by name.`,
-      whatHeKnows: `He knows which ships bring what. He knows when a shipment of high-end tobacco has arrived and when one has gone missing. He hears things from the dock crews who buy his Dockside Black and talk while they smoke it. He does not volunteer this information. He can be asked. He responds to specific questions better than general ones.`,
-      hookNote: `If the party is investigating anything moving through the docks — smuggling, missing cargo, unusual ships — Caelan is a useful contact. He won't lie, and he won't speculate. But he'll tell you what he knows if you ask him the right way.`,
+      background: `Todd has been in Beacon longer than anyone in the district can reliably remember. He was here before the current City Watch structure, before the Garden District was walled, before the road names were standardized. He has watched the city change around him and has opinions about all of it.`,
+      whatHeKnows: `The sitting area has hosted a remarkable range of people over the decades. Merchants, guards, city officials, sailors passing through, people who needed somewhere warm and quiet and didn't want to explain themselves. Todd has heard things. He does not volunteer information, but if the party asks him about the city — its history, its people, its patterns — he will tell them what he knows with the candor of someone who no longer has anything to lose by honesty.`,
+      theBlends: `Todd developed his magical blends over decades of experimentation. He will not explain exactly how. If asked, he says he found that the right material, dried and prepared correctly, carries a memory of what it was. He works with that. He has never written the recipes down. He does not intend to.`,
+      hookNote: `If the party needs historical information about Beacon — something that happened years or decades ago, a family name, a building that used to be something else — Todd may know. He will not perform expertise. He will simply answer what he knows and say clearly when he doesn't.`,
     },
   },
 
-  inventory: {
-    tobaccoBlends: [
-      {
-        name: "Valley Mild",
-        cost: "2 sp / oz",
-        description: "Light and sweet, with a note of fresh hay. A beginner's blend. Burns clean and cool.",
-      },
-      {
-        name: "Shoregrass Twist",
-        cost: "2 sp / oz",
-        description: "Local leaf, twisted and dried. A simple, honest smoke. No complexity. Gets the job done.",
-      },
-      {
-        name: "Dockside Black",
-        cost: "3 sp / oz",
-        description: "Strong and smoky, rolled dense. Popular with the dock crews. Not a social smoke — it commands the air around you.",
-      },
-      {
-        name: "Hearthwarm",
-        cost: "4 sp / oz",
-        description: "Spiced with clove and dried orange peel. Burns slowly. Good for long evenings.",
-      },
-      {
-        name: "Ember's Own",
-        cost: "5 sp / oz",
-        description: "The house blend. Caelan won't share the recipe. Medium strength, complex finish, never harsh.",
-      },
-      {
-        name: "Silverleaf Reserve",
-        cost: "1 gp / oz",
-        description: "An aged blend from the southern reach. Low smoke, long burn. A quiet tobacco for someone who knows what they're doing.",
-      },
-    ],
-    pipes: [
-      {
-        name: "Clay Pipe",
-        cost: "2 sp",
-        description: "Simple. Functional. Breaks if dropped hard enough. Good for someone who hasn't decided yet.",
-      },
-      {
-        name: "Briar Pipe",
-        cost: "8 sp",
-        description: "Standard working pipe. Good grain, clean draw, comfortable in the hand.",
-      },
-      {
-        name: "Cherry Wood Pipe",
-        cost: "14 sp",
-        description: "A slightly sweet wood that adds its own quiet note to whatever blend you run through it.",
-      },
-      {
-        name: "Carved Bone Pipe",
-        cost: "22 sp",
-        description: "Heavier than it looks. Runs cooler than briar. Some say it changes the flavor. Caelan says it doesn't.",
-      },
-      {
-        name: "Rosewood Long Pipe",
-        cost: "2 gp",
-        description: "A long-stemmed pipe for a long evening. The stem keeps the heat away from your face. Slightly pretentious. Caelan stocks it because people ask.",
-      },
-    ],
-    accessories: [
-      { name: "Leather Tobacco Pouch", cost: "1 sp", description: "Keeps tobacco dry. Fits about two ounces." },
-      { name: "Oilskin Pipe Wrap", cost: "4 sp", description: "Protects a pipe from impact in a pack or pocket." },
-      { name: "Brass Tamper", cost: "3 sp", description: "For packing and clearing the bowl. The correct tool for this. Using your finger is not." },
-      { name: "Pipe Stand, Simple", cost: "2 sp", description: "A turned wooden stand. Keeps the pipe upright between draws." },
-      { name: "Pipe Cleaning Kit", cost: "5 sp", description: "Brushes, picks, and a cloth. For maintaining a briar or bone pipe properly." },
-    ],
-  },
+  blendNote: `1 pinch = 1 use. Interruption: Taking damage that knocks you prone or moves your character interrupts the smoke. Dispel magic, used on smoke, ends it immediately — no roll necessary.`,
+
+  magicalBlends: [
+    {
+      name: "Muffleleaf Blend",
+      cost: "5 gp per pinch",
+      duration: "30 minutes (unless interrupted)",
+      flavorText: `For some reason, when the smell of this blend reaches your nostrils, you can't help but think of a strong breeze cooling you while you stand atop a high bluff.`,
+      effect: `When this blend is being puffed, the smoke rings around the user and those within 5' hang thick in the air — sound has a hard time punching through. Anyone outside the ring of smoke cannot hear words spoken inside the 15' radius. Magical hearing spells and devices can penetrate.`,
+    },
+    {
+      name: "Restwell Aromatic",
+      cost: "10 gp per pinch",
+      duration: "One long rest",
+      flavorText: `As you begin to dream, you feel a warmth flow inside you. Comfort. And, suddenly, as if choosing from a store's inventory, you find yourself picking what you dream about this night.`,
+      effect: `Restwell doesn't make one sleepy, but those who smell it during their slumber dream of peaceful things and sleep very well. If puffed during a long rest, everyone sleeping in the camp or area wakes up with 5 temporary hit points. Cannot be stacked.`,
+    },
+    {
+      name: "Dried Magebane",
+      cost: "25 gp per pinch",
+      duration: "30 minutes (unless interrupted)",
+      flavorText: `Magebane isn't a pleasant smell. When burned, it's even less pleasant — close to sulfur and ash. Not one to be smoked for pleasure. Most find the smell worth the effect.`,
+      effect: `A cloud of Magebane snakes through the user and allies within 10'. Magebane is a poison that weakens arcane powers in casters, muffling incoming spells that pass through it. Any spell attacks hitting a friendly creature within the Dried Magebane cloud deal half damage.`,
+    },
+    {
+      name: "Clarity Blend",
+      cost: "25 gp per pinch",
+      duration: "15 minutes after use (takes 10 minutes to smoke)",
+      flavorText: `Taken from a medicinal herb used to calm the nerves. Todd has found just the right amount to puff that gives the calming effect without causing anyone around him to sleep.`,
+      effect: `After taking 10 minutes to smoke a pinch of Clarity Blend, the user and all party members within 10' gain advantage on WIS saving throws for 15 minutes.`,
+    },
+    {
+      name: "Puff of Hilarity",
+      cost: "40 gp per pinch",
+      duration: "While being puffed",
+      flavorText: `A morbid way to die — many a traveler confused the berries of the Humor Bush for edible fruits. Their bodies were often found nearby with a smile still on their face. Todd's dried and crushed version has a different effect entirely.`,
+      effect: `While this blend is being puffed, every creature within 10' of the user must pass a WIS saving throw (DC 14) or begin laughing. A new save must be taken at the end of each of their rounds. On a failed save, the creature cannot stop laughing — or whatever the equivalent is for their species. Creatures casting spells with a verbal component cannot cast those spells on a failed save.`,
+    },
+    {
+      name: "Todd's Illusionary Blend",
+      cost: "30 gp per pinch",
+      duration: "As long as the user puffs it (one pinch burns for 20 minutes)",
+      flavorText: `Todd spent a long time perfecting this blend — largely when he was younger and wanted to smoke his pipe without getting caught.`,
+      effect: `The smoke from the pipe affects a 20' radius centered on the pipe. The smoke magically replicates the appearance of its surroundings, forming a dome of illusion around the area. Anyone attempting to see inside must pass a Perception check (DC 14) or miss it completely. Enemies can wander inside accidentally without consequence — unless those inside are ready for them.`,
+    },
+  ],
+
+  mundanePipes: [
+    { name: "Clay Pipe", cost: "2 sp", description: "Simple. Functional. Breaks if dropped hard enough." },
+    { name: "Briar Pipe", cost: "8 sp", description: "Standard working pipe. Good grain, clean draw, comfortable in the hand." },
+    { name: "Cherry Wood Pipe", cost: "14 sp", description: "A slightly sweet wood that adds its own quiet note to the blend." },
+    { name: "Carved Bone Pipe", cost: "22 sp", description: "Heavier than it looks. Runs cooler than briar." },
+    { name: "Rosewood Long Pipe (Churchwarden)", cost: "2 gp", description: "A long-stemmed pipe for a long evening. Keeps the heat away from your face." },
+  ],
+
+  accessories: [
+    { name: "Leather Tobacco Pouch", cost: "1 sp", description: "Keeps tobacco dry. Fits about two ounces." },
+    { name: "Oilskin Pipe Wrap", cost: "4 sp", description: "Protects a pipe from impact in a pack or pocket." },
+    { name: "Brass Tamper", cost: "3 sp", description: "For packing and clearing the bowl." },
+    { name: "Pipe Stand, Simple", cost: "2 sp", description: "A turned wooden stand. Keeps the pipe upright between draws." },
+    { name: "Pipe Cleaning Kit", cost: "5 sp", description: "Brushes, picks, and a cloth." },
+  ],
 };

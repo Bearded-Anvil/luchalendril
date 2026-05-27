@@ -5,6 +5,26 @@ import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { aromaticEmbers } from "@/data/aromatic-embers";
 
+function BlendCard({ name, cost, duration, flavorText, effect }: {
+  name: string;
+  cost: string;
+  duration: string;
+  flavorText: string;
+  effect: string;
+}) {
+  return (
+    <div className="px-5 py-5" style={{ border: "1px solid rgba(201,168,76,0.25)", background: "rgba(201,168,76,0.03)" }}>
+      <div className="flex items-start justify-between gap-4 mb-1">
+        <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{name}</p>
+        <p className="text-sm shrink-0" style={{ color: "var(--gold)", opacity: 0.8 }}>{cost}</p>
+      </div>
+      <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.4 }}>Duration: {duration}</p>
+      <p className="text-xs leading-relaxed italic mb-3" style={{ color: "var(--parchment)", opacity: 0.65 }}>{flavorText}</p>
+      <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.85 }}>{effect}</p>
+    </div>
+  );
+}
+
 function ItemCard({ name, cost, description }: { name: string; cost: string; description: string }) {
   return (
     <div className="px-5 py-4" style={{ border: "1px solid rgba(201,168,76,0.2)", background: "rgba(201,168,76,0.03)" }}>
@@ -73,7 +93,8 @@ export default function AromaticEmbersPage() {
             <p className="text-lg mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
             <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
             <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
-            <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
+            <p className="text-sm leading-relaxed italic mb-3" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.65 }}>{v.owner.goals}</p>
           </div>
 
           <button
@@ -90,6 +111,8 @@ export default function AromaticEmbersPage() {
               <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.background}</p>
               <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>What He Knows</p>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.whatHeKnows}</p>
+              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Blends</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.theBlends}</p>
               <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Hook Note</p>
               <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.hookNote}</p>
             </div>
@@ -98,23 +121,37 @@ export default function AromaticEmbersPage() {
 
         <div className="gold-divider" />
 
-        {/* Inventory */}
+        {/* Magical Blends */}
         <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Inventory</h2>
+          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Magical Blends</h2>
 
-          <h3 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Tobacco Blends</h3>
-          <div className="grid gap-3 mb-6">
-            {v.inventory.tobaccoBlends.map((item, i) => <ItemCard key={i} {...item} />)}
+          {/* Blend rule note */}
+          <div className="px-5 py-3 mb-6" style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.18)" }}>
+            <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>{v.blendNote}</p>
           </div>
 
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Pipes</h3>
-          <div className="grid gap-3 mb-6">
-            {v.inventory.pipes.map((item, i) => <ItemCard key={i} {...item} />)}
+          <div className="grid gap-4">
+            {v.magicalBlends.map((blend, i) => <BlendCard key={i} {...blend} />)}
           </div>
+        </div>
 
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Accessories</h3>
+        <div className="gold-divider" />
+
+        {/* Mundane Pipes */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Pipes</h2>
           <div className="grid gap-3">
-            {v.inventory.accessories.map((item, i) => <ItemCard key={i} {...item} />)}
+            {v.mundanePipes.map((item, i) => <ItemCard key={i} {...item} />)}
+          </div>
+        </div>
+
+        <div className="gold-divider" />
+
+        {/* Accessories */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Accessories</h2>
+          <div className="grid gap-3">
+            {v.accessories.map((item, i) => <ItemCard key={i} {...item} />)}
           </div>
         </div>
 
