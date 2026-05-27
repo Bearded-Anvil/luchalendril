@@ -51,22 +51,33 @@ export default function BeaconPage() {
           </div>
         </div>
 
-        {/* Fast Travel */}
+        {/* Entry Points */}
         <div className="mt-10 pt-10" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
-          <h2 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Fast Travel in Beacon</h2>
-          <p className="text-sm italic mb-8" style={{ color: "#e88080", opacity: 0.85 }}>
-            Skipping streets means skipping what happens on them. Random encounters, rare merchants, and moments of city life will not occur if you fast travel. Use these links when time in session is short — not as a default.
-          </p>
-
+          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Where does your party arrive?</h2>
+          <p className="text-xs italic mb-6" style={{ color: "var(--parchment)", opacity: 0.4 }}>Choose the entry point that matches your party&rsquo;s origin.</p>
           <div className="grid gap-4">
-            <Link
-              href="/beacon/main-street-intersection/hibernations"
-              style={{ textDecoration: "none", color: "var(--gold-light)", background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.3)", padding: "1.25rem 1.5rem", display: "block" }}
-            >
-              <span className="text-xs uppercase tracking-widest block mb-1" style={{ color: "var(--gold)", letterSpacing: "0.2em", fontSize: "0.65rem" }}>Main Street Intersection</span>
-              <span className="text-xl">Hibernations</span>
-              <span className="text-sm block mt-1" style={{ color: "var(--parchment)", opacity: 0.6 }}>Inn &amp; Eatery</span>
-            </Link>
+            {[
+              { href: "/beacon/south-main-street", label: "South Main Street", description: "Arrived overland from the south. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you." },
+              { href: "/beacon/dock-yard",          label: "The Dock Yard",      description: "Arrived by sea. The White Bay boardwalk — fishing crews, fog, and an information booth ready to welcome you to the city." },
+              { href: "/beacon/east-main-street",   label: "East Main Street",   description: "Arrived overland from the east. The quieter gate — a residential approach past the Garden District wall." },
+            ].map((entry) => (
+              <Link
+                key={entry.href}
+                href={entry.href}
+                style={{ textDecoration: "none" }}
+              >
+                <div
+                  className="p-6 flex items-center justify-between"
+                  style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.3)" }}
+                >
+                  <div>
+                    <p className="text-xl mb-1" style={{ color: "var(--gold-light)" }}>{entry.label}</p>
+                    <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.65 }}>{entry.description}</p>
+                  </div>
+                  <span className="text-2xl ml-6 shrink-0" style={{ color: "var(--gold)", opacity: 0.5 }}>›</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
