@@ -60,6 +60,7 @@ export default function BeaconPage() {
               { href: "/beacon/south-main-street", label: "South Main Street", description: "Arrived overland from the south. The main gate into Beacon — merchant stalls, tradespeople, and the city opening up before you." },
               { href: "/beacon/dock-yard",          label: "The Dock Yard",      description: "Arrived by sea. The White Bay boardwalk — fishing crews, fog, and an information booth ready to welcome you to the city." },
               { href: "/beacon/east-main-street",   label: "East Main Street",   description: "Arrived overland from the east. The quieter gate — a residential approach past the Garden District wall." },
+              { href: "/beacon/government",         label: "The Government",     description: "The Grand Magister of Law and his nine-seat council. Who runs Beacon, and what they want." },
             ].map((entry) => (
               <Link
                 key={entry.href}
