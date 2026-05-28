@@ -5,7 +5,7 @@ import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { mercysHandsHealing } from "@/data/mercys-hands-healing";
 
-function ItemCard({ name, cost, description, dmNote }: { name: string; cost: string; description: string; dmNote?: string }) {
+function ServiceCard({ name, cost, description }: { name: string; cost: string; description: string }) {
   return (
     <div className="px-5 py-4" style={{ border: "1px solid rgba(201,168,76,0.2)", background: "rgba(201,168,76,0.03)" }}>
       <div className="flex items-start justify-between gap-4 mb-1">
@@ -13,9 +13,6 @@ function ItemCard({ name, cost, description, dmNote }: { name: string; cost: str
         <p className="text-sm shrink-0" style={{ color: "var(--gold)", opacity: 0.8 }}>{cost}</p>
       </div>
       <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.7 }}>{description}</p>
-      {dmNote && (
-        <p className="text-xs italic mt-2" style={{ color: "#e88080", opacity: 0.7 }}>DM: {dmNote}</p>
-      )}
     </div>
   );
 }
@@ -39,7 +36,6 @@ export default function MercysHandsHealingPage() {
         <div className="mb-8">
           <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Home Hearth District</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
-          <p className="text-xs italic mt-2" style={{ color: "var(--parchment)", opacity: 0.4 }}>{v.tagline}</p>
         </div>
 
         {/* Signs */}
@@ -51,7 +47,7 @@ export default function MercysHandsHealingPage() {
 
         {/* Image */}
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9", maxHeight: "540px" }}>
-          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "left center" }} priority />
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center" }} priority />
         </div>
 
         <div className="gold-divider" />
@@ -75,11 +71,9 @@ export default function MercysHandsHealingPage() {
           <div className="p-6" style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.2)" }}>
             <p className="text-lg mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
             <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
-            <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
-            <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
           </div>
 
-          {/* DM Toggle */}
           <button
             onClick={() => setDmOpen(!dmOpen)}
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between mt-2"
@@ -90,42 +84,39 @@ export default function MercysHandsHealingPage() {
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
-              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>What She Carries</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.background}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>What She Sees</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.whatSheSees}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Her Limits</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.limits}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Hook Note</p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.hookNote}</p>
+              <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Her Fear</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.fear}</p>
+              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Her Goals</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.goals}</p>
             </div>
           )}
         </div>
 
         <div className="gold-divider" />
 
-        {/* Inventory */}
+        {/* Services */}
         <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Inventory & Services</h2>
-
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Salves</h3>
-          <div className="grid gap-3 mb-6">
-            {v.inventory.salves.map((item, i) => <ItemCard key={i} {...item} />)}
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Services</h2>
+          <div className="grid gap-3 mb-10">
+            {v.services.map((service, i) => (
+              <ServiceCard key={i} {...service} />
+            ))}
           </div>
 
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Tonics & Drafts</h3>
-          <div className="grid gap-3 mb-6">
-            {v.inventory.tonics.map((item, i) => <ItemCard key={i} {...item} />)}
-          </div>
-
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Poultices</h3>
-          <div className="grid gap-3 mb-6">
-            {v.inventory.poultices.map((item, i) => <ItemCard key={i} {...item} />)}
-          </div>
-
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Services</h3>
+          {/* HP Healing */}
+          <h3 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>HP Healing</h3>
           <div className="grid gap-3">
-            {v.inventory.services.map((item, i) => <ItemCard key={i} {...item} />)}
+            {v.hpHealing.map((tier, i) => (
+              <div key={i} className="px-5 py-4" style={{ border: "1px solid rgba(201,168,76,0.2)", background: "rgba(201,168,76,0.03)" }}>
+                <div className="flex items-start justify-between gap-4 mb-1">
+                  <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{tier.amount}</p>
+                  <p className="text-sm shrink-0" style={{ color: "var(--gold)", opacity: 0.8 }}>{tier.cost}</p>
+                </div>
+                {tier.note && (
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>{tier.note}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 

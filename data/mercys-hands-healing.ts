@@ -1,120 +1,78 @@
 export const mercysHandsHealing = {
   id: "mercys-hands-healing",
-  name: "Mercy's Hands Healing",
-  image: "/home-hearth-district.jpg",
-  tagline: "Cure for Body, Mind and Soul.",
+  name: "Mercy's Hand Healing",
+  image: "/mercys-hand-healing.jpg",
+  tagline: "Mercy's Hand Healing",
   path: "/beacon/home-hearth-district/mercys-hands-healing",
 
   signs: [
-    `A large carved wooden sign above the door — two hands, palms outward, with "Mercy's Hands Healing" carved deeply into the palms.`,
-    `"Cure for Body, Mind and Soul" — smaller plank below the main sign.`,
-    `A green banner beneath the window: two open hands on dark fabric.`,
+    `A large carved wooden sign above the door — "Mercy's Hand Healing" with a hand below it, palms outward.`,
   ],
 
-  sceneDescription: `The inside of Mercy's Hands Healing is warm and quiet. Not the kind of quiet that comes from emptiness — the kind that comes from deliberate effort. Low light from oil lamps on the walls, the smell of dried herbs and something faintly sweet underneath, the sound of nothing in particular.
+  sceneDescription: `When you enter Mercy's Hand you see shelves to your immediate right. Most of the shelves are full of books on healing and herbal remedies. The other shelves have different parts of bones and bone joints, a study and demonstration place for Blessing to help patients understand ailments.
 
-The walls are lined with shelves — every shelf filled with jars, pouches, bundles of dried plant material tied with cord, small bottles stoppered with wax, labelled in a tight, careful hand. Behind the counter, a row of larger crocks stands at eye height, their contents obscured.
+The left wall has a bath tub, large enough for two people. Along the wall, beside the bathtub, are bottles of oils and salts for adding to the bath. Behind the tub, all the way down the left wall, are beds — beds with holes for faces to go in when laying face down. This is where Blessing does adjustments and massages to help with pains and aches.
 
-A wide wooden worktable runs along the back wall. A mortar sits beside a pestle. A folded cloth lies next to a small pair of shears. Everything is clean and in its place.
-
-There is a door to the back room, slightly ajar. A sign on it reads: Please wait. I will be with you.
-
-The woman who comes out shortly after is not what you expected, if you were expecting anything. She is older — mid-fifties, perhaps — broad through the shoulders, with short-cut grey hair and brown skin. Her hands are large and capable. She looks you over the way a tradesperson looks at a job before giving a quote.
-
-"What are you here for," she says. Not a question, exactly. More like the beginning of a process.`,
+Along the right hand wall are chairs and several tools and medical devices for working with wounded knees and elbows, necks and spines.`,
 
   owner: {
-    name: "Mercy Aldmore",
-    race: "Human (Female)",
-    appearance: `Mid-fifties. Broad-shouldered and unhurried. Short grey hair, brown skin, large capable hands. She wears a plain linen apron over dark clothing and moves efficiently through her shop without looking at her feet. Her face is calm without being warm — she is paying attention to you, but she is assessing, not greeting.`,
-    personality: `Direct. Not unkind, but not interested in pleasantries before she understands what is needed. She has been doing this work for thirty years and has seen most things. She asks good questions. She listens to the answers. If you are not honest with her about your condition, she will notice.`,
+    name: "Blessing Hyruff",
+    race: "Fawn (Female)",
+    appearance: `Light brown fur, deep green hair down to her shoulder blades. Blue eyes that barely seem to glow. Her antlers are short, barely peeking through the tops of her hair. She wears a fitted green dress and a rust orange apron with the Mercy's Hand logo on it.`,
     dmPrivate: {
-      background: `Mercy trained in the city of her birth and came to Beacon in her late twenties, following a relationship that ended a year after she arrived. She stayed because she had built something. She has never regretted it.`,
-      whatSheSees: `She sees injuries honestly. A player who walks in with a poorly tended wound, a broken rib they are walking through, or something magically inflicted will have these things noticed. She will say so, clearly, and ask how it happened. She does not require the truth. But she notes the evasion.`,
-      limits: `Mercy has no magical ability. She cannot cure curses, magical diseases, or conditions that require divine or arcane intervention. She knows this and will say so without apology. She can set bones, close wounds, treat infection, and manage pain. She can also tell you when something is outside her skill and who in Beacon might have the ability to help.`,
-      hookNote: `If the party returns to her more than once, she will begin to ask questions. Not prying ones — just the kind a person asks when they notice someone keeps getting hurt in interesting ways. She may eventually offer information if she decides the party is doing something worth helping.`,
+      fear: `Blessing once had a dream where her healing abilities were strongly needed yet she wasn't nearly capable enough to help all of those in need from whatever disaster had befallen Beacon. Feel free to invent her dream to match whatever disaster or story you're putting in your campaign.`,
+      goals: `Blessing is always looking to improve her trade. She's always looking for new ways to heal including herbal, homeopathic and magical spells and potions. Whatever she thinks is coming, she wants to be ready.`,
     },
   },
 
-  inventory: {
-    salves: [
-      {
-        name: "Minor Wound Salve",
-        cost: "8 sp",
-        description: "Cleans a minor cut or abrasion and promotes sealing. Apply once, leave the cloth on.",
-      },
-      {
-        name: "Standard Wound Salve",
-        cost: "2 gp",
-        description: "For deeper cuts and gashes. Applied with a clean cloth to the wound after cleaning. Reduces infection risk significantly.",
-      },
-      {
-        name: "Deep Wound Salve",
-        cost: "5 gp",
-        description: "For serious wounds requiring closure. Mercy applies this herself and includes basic stitching as needed.",
-      },
-    ],
-    tonics: [
-      {
-        name: "Fever Tonic",
-        cost: "5 sp",
-        description: "Brings a moderate fever down within a few hours. Bitter. Works.",
-      },
-      {
-        name: "Breathing Ease",
-        cost: "3 sp",
-        description: "For chest congestion and difficult breathing from illness. Opens the airways. Not effective against magical causes.",
-      },
-      {
-        name: "Sleep Draft",
-        cost: "2 sp",
-        description: "Induces calm, natural sleep. Used for pain management or simple insomnia. Fades cleanly by morning.",
-      },
-      {
-        name: "Nerve Calmer",
-        cost: "4 sp",
-        description: "Reduces pain signals. Does not remove the cause of pain — it manages it. Mercy sells this only alongside an explanation of that distinction.",
-      },
-      {
-        name: "Gut Settle",
-        cost: "2 sp",
-        description: "For nausea, cramping, or illness of the stomach. Unflavored. Effective.",
-      },
-    ],
-    poultices: [
-      {
-        name: "Bone Knit Poultice",
-        cost: "8 gp",
-        description: "Applied over a splinted fracture, this dense paste accelerates the healing process noticeably. Must be kept in place and the limb must be immobilized. Mercy will not sell this without examining the break first.",
-        dmNote: "Reduces natural bone healing time meaningfully. Does not work on magical damage or cursed injuries.",
-      },
-      {
-        name: "Draw Poultice",
-        cost: "3 gp",
-        description: "Applied to an infected wound to draw out the infection. Works over six to twelve hours. The cloth will need to be changed.",
-      },
-    ],
-    services: [
-      {
-        name: "Wound Assessment",
-        cost: "Free with purchase. 2 sp otherwise.",
-        description: "Mercy examines any wound and tells you what she sees. Honestly.",
-      },
-      {
-        name: "Wound Treatment",
-        cost: "5 sp – 2 gp depending on severity",
-        description: "Cleaning, closure, and dressing as needed. Mercy will tell you the cost before she starts.",
-      },
-      {
-        name: "Illness Examination",
-        cost: "1 gp",
-        description: "A thorough examination. Mercy will identify what she can and tell you what she cannot.",
-      },
-      {
-        name: "Bone Setting",
-        cost: "2 gp",
-        description: "Before applying the Bone Knit Poultice, a break must be properly set. Mercy does this herself. It is not pleasant. She is efficient.",
-      },
-    ],
-  },
+  services: [
+    {
+      name: "Poison Nullification",
+      cost: "2 sp / 1 gp",
+      description: "2 sp for non-deadly poisons. 1 gp for deadly poison removals.",
+    },
+    {
+      name: "Burn Treatments",
+      cost: "5 gp",
+      description: "If a creature has a burn wound causing pain or recurring damage, Blessing can heal it.",
+    },
+    {
+      name: "Magical Ailments — Lesser",
+      cost: "15 gp",
+      description: "Anything that can be healed by a lesser spell of restoration.",
+    },
+    {
+      name: "Magical Ailments — Greater",
+      cost: "45 gp",
+      description: "Anything needing a greater spell of restoration.",
+    },
+    {
+      name: "Broken Bones",
+      cost: "20 gp",
+      description: "If a creature has a broken bone that needs to be set and mended, Blessing can do this service.",
+    },
+  ],
+
+  hpHealing: [
+    {
+      amount: "25% of max health",
+      cost: "20 gp",
+      note: "",
+    },
+    {
+      amount: "50% of max health",
+      cost: "35 gp",
+      note: "",
+    },
+    {
+      amount: "75% of max health",
+      cost: "60 gp",
+      note: "Takes 30 minutes if greater than 100 hp.",
+    },
+    {
+      amount: "100% of max health",
+      cost: "85 gp",
+      note: "Takes 1 hour if greater than 100 hp.",
+    },
+  ],
 };
