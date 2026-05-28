@@ -48,7 +48,7 @@ export default function RayshasRecipeWorksPage() {
 
         {/* Image */}
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9", maxHeight: "540px" }}>
-          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center center" }} priority />
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center" }} priority />
         </div>
 
         <div className="gold-divider" />
@@ -72,8 +72,7 @@ export default function RayshasRecipeWorksPage() {
           <div className="p-6" style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.2)" }}>
             <p className="text-lg mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
             <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
-            <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
-            <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
           </div>
 
           <button
@@ -86,10 +85,8 @@ export default function RayshasRecipeWorksPage() {
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
-              <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Goggles</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.theGoggles}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>What She Knows</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.whatSheKnows}</p>
+              <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Back Room</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.teleportationCircle}</p>
               <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Quest Hook</p>
               <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.questHook}</p>
             </div>
@@ -98,29 +95,24 @@ export default function RayshasRecipeWorksPage() {
 
         <div className="gold-divider" />
 
-        {/* Inventory */}
+        {/* For Sale */}
         <div className="mt-8 mb-10">
-          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Inventory</h2>
-
-          <h3 className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Dried Herbs</h3>
-          <div className="grid md:grid-cols-2 gap-3 mb-6">
-            {v.inventory.driedHerbs.map((item, i) => <ItemCard key={i} {...item} />)}
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>For Sale</h2>
+          <div className="grid gap-3">
+            {v.forSale.map((item, i) => <ItemCard key={i} {...item} />)}
           </div>
+        </div>
 
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Oils</h3>
-          <div className="grid md:grid-cols-2 gap-3 mb-6">
-            {v.inventory.oils.map((item, i) => <ItemCard key={i} {...item} />)}
-          </div>
+        <div className="gold-divider" />
 
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Raw Components</h3>
-          <div className="grid md:grid-cols-2 gap-3 mb-6">
-            {v.inventory.rawComponents.map((item, i) => <ItemCard key={i} {...item} />)}
-          </div>
-
-          <h3 className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Essences</h3>
-          <div className="grid md:grid-cols-2 gap-3">
-            {v.inventory.essences.map((item, i) => <ItemCard key={i} {...item} />)}
-          </div>
+        {/* Spell Components */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Spell Components</h2>
+          {v.componentNote.split("\n\n").map((paragraph, i) => (
+            <p key={i} className="text-sm leading-relaxed mb-4 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.75 }}>
+              {paragraph}
+            </p>
+          ))}
         </div>
 
         {/* Footer */}
