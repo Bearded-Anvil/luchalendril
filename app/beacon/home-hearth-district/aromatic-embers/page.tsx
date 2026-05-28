@@ -93,7 +93,6 @@ export default function AromaticEmbersPage() {
             <p className="text-lg mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
             <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
             <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
-            <p className="text-sm leading-relaxed italic mb-3" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.65 }}>{v.owner.goals}</p>
           </div>
 
