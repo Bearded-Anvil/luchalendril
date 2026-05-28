@@ -18,7 +18,7 @@ Understanding who wants what, and who owes whom, is the key to navigating Beacon
   },
 
   council: [
-    { seat: "Roadways & Streets", name: "", status: "coming-soon", path: null },
+    { seat: "Roadways & Streets", name: "Christopher Pallo", status: "live", path: "/beacon/government/council/streets-and-roadways" },
     { seat: "City Watch", name: "", status: "coming-soon", path: null },
     { seat: "The White Bay", name: "", status: "coming-soon", path: null },
     { seat: "Foreign Trade", name: "", status: "coming-soon", path: null },
