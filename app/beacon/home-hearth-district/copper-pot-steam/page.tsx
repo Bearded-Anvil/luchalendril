@@ -59,9 +59,7 @@ export default function CopperPotSteamPage() {
           <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>The Operator</h2>
           <div className="p-6" style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.2)" }}>
             <p className="text-lg mb-1" style={{ color: "var(--gold-light)" }}>{v.owner.name}</p>
-            <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
-            <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.8 }}>{v.owner.appearance}</p>
-            <p className="text-sm leading-relaxed italic" style={{ color: "var(--parchment)", opacity: 0.7 }}>{v.owner.personality}</p>
+            <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.owner.race}</p>
           </div>
 
           <button
@@ -74,12 +72,10 @@ export default function CopperPotSteamPage() {
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
-              <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Background</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.background}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>What He Hears</p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.whatHeHears}</p>
-              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Hook Note</p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.hookNote}</p>
+              <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Operation</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.theOperation}</p>
+              <p className="text-xs uppercase tracking-widest mb-2 mt-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>For Hire</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.owner.dmPrivate.forHire}</p>
             </div>
           )}
         </div>
@@ -98,20 +94,6 @@ export default function CopperPotSteamPage() {
                 </div>
                 <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.7 }}>{service.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="gold-divider" />
-
-        {/* DM Notes */}
-        <div className="mt-8 mb-10">
-          <div className="p-6" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.3)" }}>
-            <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM Notes</h2>
-            {v.dmNotes.split("\n\n").map((paragraph, i) => (
-              <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.8 }}>
-                {paragraph}
-              </p>
             ))}
           </div>
         </div>
