@@ -28,7 +28,7 @@ Forty feet back, a rope bridge spans the width of the rear wall as a display —
     },
     {
       name: "Travel-Light Staff",
-      cost: "375 gp",
+      cost: "225 gp",
       stock: "1 in stock",
       unique: true,
       description: "Tapping the butt of this staff twice on the ground activates the head, which lights up with a bright steady glow.",
@@ -36,7 +36,7 @@ Forty feet back, a rope bridge spans the width of the rear wall as a display —
     },
     {
       name: "Squeam-Light Lantern",
-      cost: "450 gp",
+      cost: "700 gp",
       stock: "1 in stock",
       unique: true,
       description: "An unremarkable lantern when unlit. When lit at night, it casts a dim green glow and emits an effect that most creatures find deeply unpleasant to approach.",
@@ -69,7 +69,7 @@ Forty feet back, a rope bridge spans the width of the rear wall as a display —
     },
     {
       name: "Ring of Missile's Wrath",
-      cost: "1,000 gp",
+      cost: "1,500 gp",
       stock: "1 in stock",
       unique: true,
       description: "A heavy iron ring with a small amber stone set into the band.",
@@ -77,7 +77,7 @@ Forty feet back, a rope bridge spans the width of the rear wall as a display —
     },
     {
       name: "Glove of the Invisible Hand",
-      cost: "750 gp",
+      cost: "500 gp",
       stock: "1 in stock",
       unique: true,
       description: "A single glove, leather, with faint embroidery along the fingers. The left hand only.",
@@ -93,7 +93,7 @@ Forty feet back, a rope bridge spans the width of the rear wall as a display —
     },
     {
       name: "Whisper Oil",
-      cost: "50 gp per vial",
+      cost: "100 gp per vial",
       stock: "5 in stock",
       stockCount: 5,
       description: "Applied to the bare soles of a creature's feet, this oil creates a noise-dampening field that radiates from the feet in a 2-inch radius for 10 minutes. One vial holds enough for four people.",

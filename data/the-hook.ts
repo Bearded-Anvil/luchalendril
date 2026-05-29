@@ -70,7 +70,7 @@ On the right side of the counter, a wooden box holds paper-wrapped parcels of fi
       description: "The Bloat Fish's bite sends venom through its victim, causing swelling throughout the body — bloated, agonized, and immobilized.",
       weaponUse: "May be applied to any weapon. Affects the next 1d4+1 successful attacks.",
       effect: "Wounded creatures must make a CON saving throw, DC 15, or begin bloating. On a failed save, the creature takes 1d8 damage immediately, and again at the end of each following turn. At the beginning of each subsequent turn, the creature may attempt the CON DC 15 save again to resist the venom. Once resisted, the effect ends unless the venom is reapplied.",
-      cost: "10 gp",
+      cost: "175 gp",
       stock: 2,
     },
     {
@@ -78,7 +78,7 @@ On the right side of the counter, a wooden box holds paper-wrapped parcels of fi
       description: "The Slumberfish's bite fills its victims with extreme weariness — often putting them to sleep while they drown.",
       weaponUse: "May be applied to any weapon. Affects the next 1d4+1 successful attacks.",
       effect: "Deals no additional damage. Wounded creatures must make a CON saving throw, DC 14, or fall asleep. Any damage dealt to the sleeping creature wakes it. At the start of each subsequent turn, the sleeping creature may attempt the CON DC 14 save to wake. Once resisted, the effect ends unless the venom is reapplied.",
-      cost: "10 gp",
+      cost: "125 gp",
       stock: 3,
     },
     {
@@ -86,7 +86,7 @@ On the right side of the counter, a wooden box holds paper-wrapped parcels of fi
       description: "Victims of the Berserkerfish's bite enter severe confusion — thrashing and attacking anything near them without reason or control.",
       weaponUse: "May be applied to any weapon. Affects the next 1d4+1 successful attacks.",
       effect: "Deals no additional damage. Wounded creatures must make a WIS saving throw, DC 14, or immediately turn on the nearest living creature and attack with full aggression — attempting to kill it. At the end of each of its consecutive turns, the creature may attempt the WIS DC 14 save to resist. Once resisted, the effect ends unless the venom is reapplied.",
-      cost: "20 gp",
+      cost: "250 gp",
       stock: 2,
     },
   ],
