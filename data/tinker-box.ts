@@ -71,7 +71,7 @@ Charge gold based on how ambitious the idea is. A self-lighting lantern might co
     },
     {
       name: "Heat Trap Cloak",
-      price: "100 gp",
+      price: "150 gp",
       stock: "4 in stock",
       description: "A cloak with unusual material sewn throughout its lining.",
       effect: "After 1 hour in direct sunlight, the cloak holds warmth for 4 hours. While charged: resistance to cold damage, and advantage on skill checks and saving throws involving cold.",
@@ -95,7 +95,7 @@ Charge gold based on how ambitious the idea is. A self-lighting lantern might co
     },
     {
       name: "Magnetbind Net",
-      price: "70 gp",
+      price: "100 gp",
       stock: "3 in stock",
       description: "A tightly woven net with powerful magnets at each end. Must be retrieved to use again.",
       effect: "On a successful hit, the target must pass a DEX saving throw (DC 14) or be grappled. To escape: STR check (DC 14). If the target is wearing metal armor or carrying a metal weapon, both DCs increase to 16.",
@@ -111,7 +111,7 @@ Charge gold based on how ambitious the idea is. A self-lighting lantern might co
     },
     {
       name: "Solarcharge Bolts and Arrows",
-      price: "100 gp per bundle of 10",
+      price: "150 gp per bundle of 10",
       stock: "3 bundles of each in stock",
       description: "Crossbow bolts and arrows built with a small solar crystal on the back. A copper wire coils up the shaft into the metal tip.",
       effect: "After 1 hour in direct sunlight, each projectile deals an additional 1d6 lightning damage on a hit against a creature. Must be retrieved and recharged to use again.",

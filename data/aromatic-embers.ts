@@ -36,7 +36,7 @@ Along the right wall, slightly angled forward for easier reach, are rows of larg
   magicalBlends: [
     {
       name: "Muffleleaf Blend",
-      cost: "5 gp per pinch",
+      cost: "18 gp per pinch",
       duration: "30 minutes (unless interrupted)",
       flavorText: `For some reason, when the smell of this blend reaches your nostrils, you can't help but think of a strong breeze cooling you while you stand atop a high bluff.`,
       effect: `When this blend is being puffed, the smoke that rings around the user and those within 5' of them hangs thick in the air and sound has a hard time punching through. Anyone outside the ring of smoke cannot hear the words spoken inside the 15' radius of smoke. Magical hearing spells and devices can penetrate.`,
@@ -50,7 +50,7 @@ Along the right wall, slightly angled forward for easier reach, are rows of larg
     },
     {
       name: "Dried Magebane",
-      cost: "25 gp per pinch",
+      cost: "85 gp per pinch",
       duration: "30 minutes (unless interrupted)",
       flavorText: `Magebane isn't a pleasant smell. When burned, its lack of pleasantness is even less as it almost smells like sulfur and ash. Not one to be smoked for pleasure, most find the smell is worth the effect.`,
       effect: `A cloud of Magebane snakes through the user and allies within 10' of him. Magebane, being a poison that weakens arcane powers in casters, muffles incoming spells that pass through it. Any spell attacks hitting a friendly creature within the Dried Magebane halve their damage.`,
