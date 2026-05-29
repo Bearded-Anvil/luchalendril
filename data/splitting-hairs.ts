@@ -77,7 +77,7 @@ export const splittingHairs = {
         name: "Grindstone of the Keen Edge",
         description: "A smooth black stone veined with silver.",
         effect: "After spending 1 minute sharpening a blade, the weapon gains +1 damage on its next 1d4 successful attacks. May only affect a weapon once per short or long rest.",
-        price: "68 gp",
+        price: "110 gp",
       },
     },
     {
@@ -116,7 +116,7 @@ export const splittingHairs = {
         name: "Emberoil Weapon Grease",
         description: "The oil smells faintly of smoke and cloves.",
         effect: "As a bonus action, coat one weapon. For 1 minute the weapon sheds faint ember sparks and deals an additional 1 fire damage on successful hits. Usable once per long rest.",
-        price: "120 gp",
+        price: "160 gp",
       },
     },
     {

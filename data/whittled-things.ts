@@ -42,7 +42,7 @@ export const whittledThings = {
       {
         name: "Rootbound Grip",
         description: "A gnarled wooden handle wrapped in living vine. As a bonus action, press against a surface and speak its command word — roots burst outward, anchoring it firmly. Functions like a temporary immovable rod (natural or worked surfaces only — stone, wood, dirt, no mid-air use). Holds up to 500 lbs. Lasts 1 minute. 2 uses per day. If used in soil or earth, faint roots remain behind — trackable by rangers and druids.",
-        price: "85 gp",
+        price: "175 gp",
         note: "Only shown to players who ask for something special, or when the DM says: \"You look like a group that's seen some things. Take a look at these.\"",
       },
     ],

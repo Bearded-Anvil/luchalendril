@@ -93,7 +93,7 @@ export const roddikssRangedGoods = {
         {
           name: "Bundle of 10 Bodkin Arrows",
           description: "Narrow armor-piercing heads.",
-          price: "3 gp",
+          price: "5 gp",
           rules: "When fired at a target wearing medium or heavy armor, ignore the +2 AC bonus granted by that armor (but not shield or natural armor). No additional benefit against unarmored targets.",
         },
         {

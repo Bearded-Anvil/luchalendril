@@ -110,7 +110,7 @@ export const naturesHands = {
           stock: "2 in stock",
           description: "A swirling violet potion that never settles.",
           effect: "Restores one expended spell slot of up to 3rd level. Only one Mindwell Tonic may benefit a creature per day — additional doses cause violent magical nausea and automatically fail.",
-          price: "650 gp",
+          price: "950 gp",
         },
         {
           name: "Purity Serum",
@@ -164,7 +164,7 @@ export const naturesHands = {
           stock: "10 in stock",
           description: "A translucent pale-blue potion.",
           effect: "For 1 minute: leaves no footprints, creates no ripples in water, and grants advantage on Stealth checks involving movement.",
-          price: "340 gp",
+          price: "450 gp",
         },
       ],
     },

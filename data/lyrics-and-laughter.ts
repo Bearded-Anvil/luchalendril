@@ -129,7 +129,7 @@ export const lyricsAndLaughter = {
       name: "Ever-Tuning Pegs",
       description: "These pegs keep your instrument perfectly tuned. No need to tune it, ever.",
       effect: "Passive. Fits any stringed instrument.",
-      price: "600 gp",
+      price: "350 gp",
     },
     {
       name: "Wind Chime of Echoes",
@@ -143,7 +143,7 @@ export const lyricsAndLaughter = {
       name: "Resounding Resonator",
       description: "Attach to any instrument. Your music carries farther — doubles the normal distance it can be heard and increases bardic spell range by 20 feet.",
       effect: "Doubles audible range. +20 ft to bardic spell range.",
-      price: "1,500 gp",
+      price: "2,000 gp",
       quote: "Sometimes, you just want to make sure you're heard. Become the person that cannot be ignored.",
       quoteNote: "He smiles.",
     },
