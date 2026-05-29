@@ -54,7 +54,7 @@ The man leaning against the counter turns to look at you. He shifts his right le
     },
     {
       name: "Sword of Whittling Ire",
-      price: "3,000 gp",
+      price: "4,000 gp",
       stock: "1 in existence",
       description: "A slender blade, almost too light. It moves faster than it should.",
       effect: "Whenever the owner successfully wounds a creature, that creature loses either an action or a bonus action on their next turn (creature's choice). Only one can be lost per turn, regardless of how many times they are wounded. This sword is also +1 to hit and +1 to damage at all times.",
@@ -62,7 +62,7 @@ The man leaning against the counter turns to look at you. He shifts his right le
     },
     {
       name: "Armor of Determination",
-      price: "3,500 gp",
+      price: "2,800 gp",
       stock: "1 in existence",
       description: "Fine leather armor in deep muted tones. It sits close to the body without restricting movement.",
       effect: "When the wearer knows what they are after, their resolve holds firm. The wearer has advantage on saving throws against bribery and deceit. Counts as leather armor with a +1 armor bonus.",
@@ -86,7 +86,7 @@ The man leaning against the counter turns to look at you. He shifts his right le
     },
     {
       name: "The Black Mask",
-      price: "3,000 gp",
+      price: "4,000 gp",
       stock: "1 in existence",
       description: "A black mask that slips over the top of the head and ties in the back, pulling down to cover the face to the nose. Eye holes only.",
       effect: "While wearing this mask, the wearer is completely unrecognizable — even to people who know them well, even to people who love them. Once the wearer voluntarily reveals their identity to a specific person, the mask's effect is permanently broken for that person alone. It will never work on them again.",
