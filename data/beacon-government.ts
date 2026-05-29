@@ -24,7 +24,7 @@ Understanding who wants what, and who owes whom, is the key to navigating Beacon
     { seat: "Foreign Trade", name: "Delilah Stormcrow", status: "live", path: "/beacon/government/council/foreign-trade" },
     { seat: "Treasury", name: "Gilly Roundtree", status: "live", path: "/beacon/government/council/treasury" },
     { seat: "Housing & Construction", name: "Teggor Stoutwood", status: "live", path: "/beacon/government/council/housing-and-construction" },
-    { seat: "Food & Markets", name: "", status: "coming-soon", path: null },
+    { seat: "Food & Markets", name: "Gendrie Sparrowfall", status: "live", path: "/beacon/government/council/food-and-markets" },
     { seat: "Magic & Arcane Affairs", name: "", status: "coming-soon", path: null },
     { seat: "Docks & Labor", name: "", status: "coming-soon", path: null },
   ],
