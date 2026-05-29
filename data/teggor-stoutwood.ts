@@ -1,7 +1,7 @@
 export const teggorStoutwood = {
   id: "teggor-stoutwood",
   name: "Teggor Stoutwood",
-  image: "/teggor-stoutwood.jpg",
+  image: "/council-building.jpg",
   seat: "Housing & Construction",
   race: "Dwarf (Male)",
 

@@ -1,7 +1,7 @@
 export const lucyndraRavenflight = {
   id: "lucyndra-ravenflight",
   name: "Lucyndra Ravenflight",
-  image: "/lucyndra-ravenflight.jpg",
+  image: "/council-arcane.jpg",
   seat: "Magic & Arcane Affairs",
   race: "Elf (Female)",
 

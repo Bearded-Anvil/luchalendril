@@ -1,7 +1,7 @@
 export const gendrieSparrowfall = {
   id: "gendrie-sparrowfall",
   name: "Gendrie Sparrowfall",
-  image: "/gendrie-sparrowfall.jpg",
+  image: "/council-food.jpg",
   seat: "Food & Markets",
   race: "Fawn (Female)",
 
