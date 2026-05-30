@@ -207,7 +207,7 @@ export default function SaidasArmsPage() {
         {/* Back */}
         <div className="mt-12 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <a href="/beacon/temple-square" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Back to Temple Square
+            ← Temple Square
           </a>
         </div>
       </div>

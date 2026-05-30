@@ -111,7 +111,7 @@ export default function WhittledThingsPage() {
             className="text-sm"
             style={{ color: "var(--gold)", textDecoration: "none", opacity: 0.7 }}
           >
-            ← Back to South Main Street
+            ← South Main Street
           </a>
         </div>
       </div>
