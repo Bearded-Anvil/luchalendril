@@ -68,7 +68,7 @@ export default function OceanviewRunPage() {
             ← South Main Street
           </a>
           <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            Beacon
+            Map of Beacon
           </a>
         </div>
       </div>
