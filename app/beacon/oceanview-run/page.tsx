@@ -59,6 +59,9 @@ export default function OceanviewRunPage() {
             <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>
               {oceanviewRun.dmNotes}
             </p>
+            <p className="text-sm leading-relaxed mt-4" style={{ color: "var(--parchment)", opacity: 0.8 }}>
+              &bull;&nbsp;&nbsp;{oceanviewRun.dmNotesBullet}
+            </p>
           </div>
         </div>
 
