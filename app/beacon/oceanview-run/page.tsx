@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import VendorNav from "@/components/VendorNav";
-import { southMainStreet } from "@/data/south-main-street";
+import { oceanviewRun } from "@/data/oceanview-run";
 
-export default function SouthMainStreetPage() {
+export default function OceanviewRunPage() {
   return (
     <main className="min-h-screen" style={{ background: "#0f0d0a" }}>
       <div className="max-w-5xl mx-auto px-6 py-12">
@@ -11,22 +10,22 @@ export default function SouthMainStreetPage() {
           crumbs={[
             { label: "Luchalendril", href: "/" },
             { label: "Beacon", href: "/beacon" },
-            { label: southMainStreet.name },
+            { label: oceanviewRun.name },
           ]}
         />
 
         <div className="mb-8">
           <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Beacon</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>
-            {southMainStreet.name}
+            {oceanviewRun.name}
           </h1>
         </div>
 
-        {/* Street Image */}
+        {/* Road Image */}
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
           <Image
-            src={southMainStreet.image}
-            alt={southMainStreet.name}
+            src={oceanviewRun.image}
+            alt={oceanviewRun.name}
             fill
             style={{ objectFit: "cover" }}
             priority
@@ -42,7 +41,7 @@ export default function SouthMainStreetPage() {
               Read to Players
             </h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.88, fontStyle: "italic" }}>
-              &ldquo;{southMainStreet.description}&rdquo;
+              &ldquo;{oceanviewRun.description}&rdquo;
             </p>
           </div>
 
@@ -58,30 +57,18 @@ export default function SouthMainStreetPage() {
               DM Notes
             </h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>
-              {southMainStreet.dmNotes}
+              {oceanviewRun.dmNotes}
             </p>
           </div>
         </div>
 
-        <div className="gold-divider mt-10" />
-
-        {/* Vendor Navigation */}
-        <div className="mt-8">
-          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>
-            Vendors on This Street
-          </h2>
-          <VendorNav vendors={southMainStreet.vendors} />
-        </div>
-
-        {/* Street Navigation Footer */}
+        {/* Navigation Footer */}
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/main-street-intersection" style={{ textDecoration: "none" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Main Street Intersection</p>
+          <a href="/beacon/south-main-street" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← South Main Street
           </a>
-          <a href="/beacon/oceanview-run" style={{ textDecoration: "none", textAlign: "right" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Oceanview Run →</p>
+          <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            Beacon
           </a>
         </div>
       </div>
