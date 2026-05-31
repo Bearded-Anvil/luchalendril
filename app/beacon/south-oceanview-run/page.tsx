@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { oceanviewWayStation } from "@/data/oceanview-way-station";
+import { southOceanviewRun } from "@/data/south-oceanview-run";
 
-export default function OceanviewWayStationPage() {
-  const v = oceanviewWayStation;
+export default function SouthOceanviewRunPage() {
+  const v = southOceanviewRun;
 
   return (
     <main className="min-h-screen" style={{ background: "#0f0d0a" }}>
@@ -12,13 +12,13 @@ export default function OceanviewWayStationPage() {
           crumbs={[
             { label: "Luchalendril", href: "/" },
             { label: "Beacon", href: "/beacon" },
-            { label: "North Oceanview Run", href: "/beacon/oceanview-run" },
+            { label: "Oceanview Way Station", href: "/beacon/oceanview-way-station" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>North Oceanview Run</p>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Oceanview Run</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>
             {v.name}
           </h1>
@@ -62,25 +62,21 @@ export default function OceanviewWayStationPage() {
             <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>
               {v.dmNotes}
             </p>
-            <ul className="mt-4 space-y-3">
-              {v.dmNotesBullets.map((bullet, i) => (
-                <li key={i} className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.8 }}>
-                  &bull;&nbsp;&nbsp;{bullet}
-                </li>
-              ))}
-            </ul>
+            <p className="text-sm leading-relaxed mt-4" style={{ color: "var(--parchment)", opacity: 0.8 }}>
+              &bull;&nbsp;&nbsp;{v.dmNotesBullet}
+            </p>
           </div>
         </div>
 
         {/* Navigation Footer */}
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/oceanview-run" style={{ textDecoration: "none" }}>
+          <a href="/beacon/oceanview-way-station" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← North Oceanview Run</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Oceanview Way Station</p>
           </a>
-          <a href="/beacon/south-oceanview-run" style={{ textDecoration: "none", textAlign: "right" }}>
+          <a href="/pine-loft" style={{ textDecoration: "none", textAlign: "right" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>South Oceanview Run →</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Pine Loft →</p>
           </a>
         </div>
       </div>
