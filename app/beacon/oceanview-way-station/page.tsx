@@ -12,13 +12,13 @@ export default function OceanviewWayStationPage() {
           crumbs={[
             { label: "Luchalendril", href: "/" },
             { label: "Beacon", href: "/beacon" },
-            { label: "Oceanview Run", href: "/beacon/oceanview-run" },
+            { label: "North Oceanview Run", href: "/beacon/oceanview-run" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Oceanview Run</p>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>North Oceanview Run</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>
             {v.name}
           </h1>
@@ -76,7 +76,7 @@ export default function OceanviewWayStationPage() {
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <a href="/beacon/oceanview-run" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Oceanview Run</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← North Oceanview Run</p>
           </a>
           <a href="/beacon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             Map of Beacon

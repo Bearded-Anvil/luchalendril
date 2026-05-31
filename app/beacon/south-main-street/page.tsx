@@ -81,7 +81,7 @@ export default function SouthMainStreetPage() {
           </a>
           <a href="/beacon/oceanview-run" style={{ textDecoration: "none", textAlign: "right" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Oceanview Run →</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>North Oceanview Run →</p>
           </a>
         </div>
       </div>
