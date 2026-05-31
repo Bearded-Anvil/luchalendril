@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { southOceanviewRun } from "@/data/south-oceanview-run";
+import VendorNav from "@/components/VendorNav";
+import { pineLoftNorth } from "@/data/pine-loft-north";
 
-export default function SouthOceanviewRunPage() {
-  const v = southOceanviewRun;
+export default function PineLoftNorthPage() {
+  const v = pineLoftNorth;
 
   return (
     <main className="min-h-screen" style={{ background: "#0f0d0a" }}>
@@ -11,14 +12,13 @@ export default function SouthOceanviewRunPage() {
         <Breadcrumb
           crumbs={[
             { label: "Luchalendril", href: "/" },
-            { label: "Beacon", href: "/beacon" },
-            { label: "Oceanview Way Station", href: "/beacon/oceanview-way-station" },
+            { label: "Pine Loft", href: "/pine-loft" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Oceanview Run</p>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Pine Loft</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>
             {v.name}
           </h1>
@@ -68,15 +68,25 @@ export default function SouthOceanviewRunPage() {
           </div>
         </div>
 
+        <div className="gold-divider mt-10" />
+
+        {/* Locations */}
+        <div className="mt-8">
+          <h2 className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>
+            Locations on This Street
+          </h2>
+          <VendorNav vendors={v.locations} />
+        </div>
+
         {/* Navigation Footer */}
         <div className="mt-16 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/beacon/oceanview-way-station" style={{ textDecoration: "none" }}>
+          <a href="/beacon/south-oceanview-run" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Oceanview Way Station</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← South Oceanview Run</p>
           </a>
-          <a href="/pine-loft/north" style={{ textDecoration: "none", textAlign: "right" }}>
+          <a href="/pine-loft/south" style={{ textDecoration: "none", textAlign: "right" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Pine Loft North →</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Pine Loft South →</p>
           </a>
         </div>
       </div>
