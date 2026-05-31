@@ -29,7 +29,6 @@ export const pineLoftNorth = {
       name: "Late Night Crossings",
       description: "The only two-story building on the street. Inn, tavern, and home to Dora's Bakery.",
       path: "/pine-loft/north/late-night-crossings",
-      comingSoon: true,
     },
     {
       id: "tobys-cobbler-shop",
