@@ -36,7 +36,6 @@ export const pineLoftNorth = {
       name: "Toby's Cobbler Shop",
       description: "Built in the shape of a boot. Footwear, repairs, and leather goods.",
       path: "/pine-loft/north/tobys-cobbler-shop",
-      comingSoon: true,
     },
   ],
 };
