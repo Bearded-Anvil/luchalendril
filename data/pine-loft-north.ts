@@ -21,7 +21,6 @@ export const pineLoftNorth = {
       name: "Pine Loft Stables",
       description: "A long building east of the road. Boarding for horses, tack, and feed.",
       path: "/pine-loft/north/pine-loft-stables",
-      comingSoon: true,
     },
     {
       id: "late-night-crossings",
