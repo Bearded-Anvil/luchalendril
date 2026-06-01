@@ -17,11 +17,10 @@ export const pineLoftSouth = {
       path: "/pine-loft/south/no-stone-left-unturned",
     },
     {
-      id: "the-tanner",
-      name: "The Tanner",
+      id: "terrys-tannery",
+      name: "Terry's Tannery",
       description: "Hides, leather goods, and cured materials. Practical stock for travelers and locals alike.",
-      path: "/pine-loft/south/the-tanner",
-      comingSoon: true,
+      path: "/pine-loft/south/terrys-tannery",
     },
   ],
 };
