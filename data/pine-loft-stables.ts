@@ -73,9 +73,14 @@ export const pineLoftStables = {
       price: "5–15 cp",
     },
     {
-      name: "Horse for Hire",
+      name: "Horse for Hire — Day Rate",
       description: "Pine Loft keeps two town horses available for short-term hire. Suitable for local travel — not war horses.",
       price: "5 sp / day",
+    },
+    {
+      name: "Horse for Hire — Week Rate",
+      description: "Same town horses, extended hire. Deposit required — returned when the horse comes back in good shape.",
+      price: "2 gp / week",
     },
   ],
 };
