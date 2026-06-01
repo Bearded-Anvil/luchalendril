@@ -15,7 +15,6 @@ export const pineLoftNorth = {
       name: "Clank's Smithy",
       description: "A squat stone building near the north gate. Weapons, repairs, and metalwork.",
       path: "/pine-loft/north/clanks-smithy",
-      comingSoon: true,
     },
     {
       id: "pine-loft-stables",
