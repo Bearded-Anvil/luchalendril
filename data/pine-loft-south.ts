@@ -15,7 +15,6 @@ export const pineLoftSouth = {
       name: "No Stone Left Unturned",
       description: "Stone mason and stonework shop. Cut stone, decorative work, and structural repair.",
       path: "/pine-loft/south/no-stone-left-unturned",
-      comingSoon: true,
     },
     {
       id: "the-tanner",
