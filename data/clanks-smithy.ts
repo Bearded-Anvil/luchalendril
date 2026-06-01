@@ -59,7 +59,7 @@ export const clanksSmithyData = {
     {
       name: "Armor Piercing Arrow Heads",
       description: `Specially forged to a hardness and edge that punches through even heavily layered armor. Compatible with bows and crossbows. Sold by the dozen.`,
-      price: "Ask Barlin",
+      price: "35 gp (bundle of 5)",
       quote: `"The steel I use for these takes three times as long to work. The edge holds though. You'll feel the difference."`,
       mechanical: `+1 to attack rolls made with these arrows, effectively treating the target's AC as 1 lower. One-time use per arrow head.`,
     },
