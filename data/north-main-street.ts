@@ -22,11 +22,11 @@ The apple trees are maintained by the city. Locals help themselves to fallen app
       path: "/beacon/north-main-street-intersection",
     },
     {
-      name: "North Gate — Toward the Lighthouse",
+      name: "Beacon Lighthouse",
       direction: "North",
-      description: "Through Beacon's northern wall. The road continues up Braver's Bowl toward the lighthouse.",
-      status: "coming-soon",
-      path: null,
+      description: "Through Beacon's northern wall. The road climbs the bluff to the lighthouse at the edge of the bay.",
+      status: "live",
+      path: "/beacon/lighthouse",
     },
   ],
 };
