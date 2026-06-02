@@ -9,6 +9,14 @@ const cities = [
     href: "/beacon",
     available: true,
   },
+  {
+    id: "pine-loft",
+    name: "Pine Loft",
+    region: "The Southern Road",
+    description: "A quiet working town at the edge of the forest, one day's travel south of Beacon. Smaller, slower, and closer to the treeline — a good place to start a campaign that begins away from the city.",
+    href: "/pine-loft",
+    available: true,
+  },
 ];
 
 export default function HomePage() {
