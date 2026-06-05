@@ -4,13 +4,13 @@ export const lonelyPathFallenElder = {
   image: "/lonely-path-fallen-elder.jpg",
   path: "/pine-loft/lonely-path-pines/northern-tract/fallen-elder",
 
-  sceneDescription: `The Elder did not fall against anything — it simply came down where it stood, and the forest around it made room. The impact zone is still visible: a long scar in the earth where the trunk dragged as it fell, the soil still compressed and bare in its center even after what must have been many years. Smaller trees and undergrowth have begun reclaiming the edges of the scar, but the center stays clear, as though the earth remembers.
+  sceneDescription: `The Elder didn't fall to the ground. It fell into the forest, and the forest caught it.
 
-The trunk is enormous — five feet across at the narrowest point near the crown, wider than a doorway at the base. The bark is thick and ridged, gray where it has dried and aged, darker where moisture still gathers in the deep furrows. Moss has taken most of the upper surface. Ferns grow from splits in the wood where rot has softened it enough.
+The trunk crosses the road at a forty-five degree angle — massive, dark with age, moss-covered along its upper face — and extends west into the trees where, over a hundred yards away, it has come to rest in the split of another Elder Pine large enough to hold it. The two trees are locked together at that distance, the fallen one braced and still, as though it simply leaned and stayed.
 
-Where the roots were pulled from the ground, an entire wall of earth came with them. The root ball towers overhead — eight, nine feet of tangled root and embedded stone and torn earth, still mostly intact. The hole left by the uprooting is still there, a rough pit maybe four feet deep, now half-filled with years of fallen needles and rainwater. The root wall casts shade over it even in midday.
+The trunk itself is staggering up close. The bark is ridged and ancient, furrows deep enough to lose a hand in. Standing beneath it, the diameter overhead is beyond easy measure — ten men standing in a circle with arms outstretched could not reach around it. Moss covers the upper surface entirely. Ferns grow from the larger gaps where moisture has softened the wood over years of rain.
 
-The tree was old before it fell. The rings, visible in one large fracture along the trunk, are too numerous to count easily.`,
+It did not fall recently. The trees around the impact zone have grown back toward it. Undergrowth has colonized the length of it. Whatever disturbed the forest when it came down has long since been absorbed. Only the tree remains — unchanged, unhurried, suspended between the moment it fell and the moment it finally reaches the ground.`,
 
   dmNote: `The Fallen Elder is the largest landmark in the Northern Tract and the most likely place for travelers to make camp. The root wall provides natural shelter from wind and rain on one side, the trunk provides a windbreak on the other, and the ground in between is flat and clear.
 
