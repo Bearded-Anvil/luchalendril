@@ -7,7 +7,7 @@ export const pineLoftSouth = {
 
   dmNotes: `Pine Loft South is the quieter, working end of town. The stone mason and tanner serve the town's practical needs — construction, leather goods, repairs. This end of the road also marks the boundary of Pine Loft's safety. The guard tower watches the southern gate and the forest road beyond it. What lives in that forest is up to you.`,
 
-  dmNotesBullet: `The forest south of Pine Loft is uncharted on this site for now — that content is coming. For your campaign, the treeline is an open door.`,
+  dmNotesBullet: `The forest south of Pine Loft is the Lonely Path Pines — unpatrolled, genuinely wild, and accessible from the southern gate. The king's road ends at the tree line. What happens inside is a different matter.`,
 
   locations: [
     {

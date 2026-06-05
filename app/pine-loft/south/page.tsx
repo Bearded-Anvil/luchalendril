@@ -75,6 +75,10 @@ export default function PineLoftSouthPage() {
           <a href="/pine-loft" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             Map of Pine Loft
           </a>
+          <a href="/pine-loft/lonely-path-pines" style={{ textDecoration: "none", textAlign: "right" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Lonely Path Pines →</p>
+          </a>
         </div>
       </div>
     </main>
