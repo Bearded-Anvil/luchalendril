@@ -34,7 +34,7 @@ What lives in the pines is yours to define. The road through is real and passabl
       direction: "South",
       description: "The road continues south through the pines.",
       path: "/pine-loft/lonely-path-pines/northern-tract",
-      status: "coming-soon",
+      status: "live",
     },
   ],
 };

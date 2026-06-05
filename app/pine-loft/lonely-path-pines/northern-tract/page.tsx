@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { lonelyPathPines } from "@/data/lonely-path-pines";
+import { lonelyPathNorthernTract } from "@/data/lonely-path-northern-tract";
 
-export default function LonelyPathPinesPage() {
-  const v = lonelyPathPines;
+export default function NorthernTractPage() {
+  const v = lonelyPathNorthernTract;
   const [dmOpen, setDmOpen] = useState(false);
 
   return (
@@ -16,13 +16,13 @@ export default function LonelyPathPinesPage() {
           crumbs={[
             { label: "Luchalendril", href: "/" },
             { label: "Pine Loft", href: "/pine-loft" },
-            { label: "Pine Loft South", href: "/pine-loft/south" },
+            { label: "Lonely Path Pines", href: "/pine-loft/lonely-path-pines" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>South of Pine Loft</p>
+          <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Lonely Path Pines &mdash; {v.day}</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
         </div>
 
@@ -43,14 +43,24 @@ export default function LonelyPathPinesPage() {
           ))}
         </div>
 
-        {/* The Sign */}
-        <div className="mb-10 p-6" style={{ background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.25)" }}>
-          <h2 className="text-xs uppercase tracking-widest mb-5" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>The Sign</h2>
-          {v.signs.map((sign, i) => (
-            <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.85, fontStyle: "italic" }}>
-              {sign}
-            </p>
-          ))}
+        <div className="gold-divider" />
+
+        {/* Locations */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Along This Section</h2>
+          <div className="grid gap-4">
+            {v.locations.map((loc) => (
+              <a key={loc.path} href={loc.path} style={{ textDecoration: "none" }}>
+                <div className="gold-border p-5 transition-opacity" style={{ opacity: loc.status === "coming-soon" ? 0.4 : 1, pointerEvents: loc.status === "coming-soon" ? "none" : "auto" }}>
+                  <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name}</p>
+                  <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
+                  {loc.status === "coming-soon" && (
+                    <p className="text-xs mt-2 uppercase tracking-widest" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming Soon</p>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="gold-divider" />
@@ -62,7 +72,7 @@ export default function LonelyPathPinesPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Lonely Path Pines</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — Northern Tract</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
           {dmOpen && (
@@ -78,17 +88,14 @@ export default function LonelyPathPinesPage() {
 
         {/* Navigation Footer */}
         <div className="mt-10 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          {/* North */}
-          <a href="/pine-loft/south" style={{ textDecoration: "none" }}>
+          <a href="/pine-loft/lonely-path-pines" style={{ textDecoration: "none" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Pine Loft South</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Lonely Path Pines</p>
           </a>
-
-          {/* South — live */}
-          <a href="/pine-loft/lonely-path-pines/northern-tract" style={{ textDecoration: "none", textAlign: "right" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South — Day 1</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Northern Tract →</p>
-          </a>
+          <div style={{ textAlign: "right" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South — Day 2</p>
+            <p style={{ color: "var(--parchment)", opacity: 0.3, fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Middle Tract →</p>
+          </div>
         </div>
       </div>
     </main>
