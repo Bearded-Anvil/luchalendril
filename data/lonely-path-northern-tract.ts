@@ -83,6 +83,7 @@ This tract should take an entire day of travel before the party reaches the Lone
       direction: "South",
       description: "The road continues deeper into the forest. Day 2.",
       path: "/pine-loft/lonely-path-pines/midbend-tract",
+
       status: "coming-soon",
     },
   ],
