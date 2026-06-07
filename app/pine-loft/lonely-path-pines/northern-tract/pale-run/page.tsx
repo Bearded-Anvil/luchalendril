@@ -50,7 +50,7 @@ export default function PaleRunPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Natural Spring</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Artesian Well</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
           {dmOpen && (

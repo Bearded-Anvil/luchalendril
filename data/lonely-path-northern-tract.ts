@@ -19,8 +19,8 @@ Planned encounters here should favor atmosphere over combat — something heard 
 
   locations: [
     {
-      name: "The Natural Spring",
-      description: "A spring thirty feet east of the road that jets four feet into the air before splashing down on a flat rock. You can hear it clearly before you see it.",
+      name: "The Artesian Well",
+      description: "A natural spring thirty feet east of the road that jets four feet into the air like a miniature geyser. You can hear it from the road before you see it.",
       path: "/pine-loft/lonely-path-pines/northern-tract/pale-run",
       status: "live",
     },
