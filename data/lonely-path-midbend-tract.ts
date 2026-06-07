@@ -53,11 +53,11 @@ On a success: While the main road veers and continues on, the party notices a sm
       status: "live",
     },
     {
-      label: "Lonely Path Southeast Tract",
+      label: "Lonely Path Pine — Southern Tract",
       direction: "South",
       description: "The road continues. Day 3.",
-      path: "/pine-loft/lonely-path-pines/southeast-tract",
-      status: "coming-soon",
+      path: "/pine-loft/lonely-path-pines/southern-tract",
+      status: "live",
     },
     {
       label: "The Foot Path",

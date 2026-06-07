@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { lonelyPathMidbendTract } from "@/data/lonely-path-midbend-tract";
+import { lonelyPathSouthernTract } from "@/data/lonely-path-southern-tract";
 
-export default function MidbendTractPage() {
-  const v = lonelyPathMidbendTract;
+export default function SouthernTractPage() {
+  const v = lonelyPathSouthernTract;
   const [dmOpen, setDmOpen] = useState(false);
 
   return (
@@ -42,6 +42,23 @@ export default function MidbendTractPage() {
           ))}
         </div>
 
+        {/* Stone Tunnel */}
+        <div className="gold-divider" />
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Along This Section</h2>
+          <div className="grid gap-4">
+            {v.locations.map((loc) => (
+              <div key={loc.name} className="gold-border p-5" style={{ opacity: loc.status === "coming-soon" ? 0.4 : 1 }}>
+                <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name}</p>
+                <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
+                {loc.status === "coming-soon" && (
+                  <p className="text-xs mt-2 uppercase tracking-widest" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming Soon</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="gold-divider" />
 
         {/* DM Toggle */}
@@ -51,32 +68,18 @@ export default function MidbendTractPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — Midbend Tract</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — Southern Tract</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
-              {/* Main DM Note */}
               {v.dmNote.split("\n\n").map((paragraph, i) => (
                 <p key={i} className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>
                   {paragraph}
                 </p>
               ))}
 
-              {/* Campsite Check */}
-              <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>At the Campsite</p>
-              {v.campsite.dmNote.split("\n\n").map((paragraph, i) => (
-                <p key={i} className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>
-                  {paragraph}
-                </p>
-              ))}
-
-              {/* Camping */}
-              <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Making Camp</p>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.camping.note}</p>
-
-              {/* Encounter Chart */}
-              <p className="text-xs uppercase tracking-widest mt-2 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Random Encounters</p>
+              <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Random Encounters (Optional)</p>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.encounters.noEncounterNote}</p>
               <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--parchment)", opacity: 0.7, fontStyle: "italic" }}>{v.encounters.note}</p>
               <div className="grid md:grid-cols-3 gap-4">
@@ -94,7 +97,6 @@ export default function MidbendTractPage() {
                   {v.encounters.uncommon.map((e) => (
                     <div key={e.name} className="mb-2">
                       <p className="text-sm font-bold" style={{ color: "var(--parchment)", opacity: 0.9 }}>{e.name}</p>
-                      {e.detail && <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}>{e.detail}</p>}
                     </div>
                   ))}
                 </div>
@@ -113,32 +115,14 @@ export default function MidbendTractPage() {
         </div>
 
         {/* Navigation Footer */}
-        <div className="mt-10 pt-8" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <div className="flex items-start justify-between flex-wrap gap-6">
-            {/* North */}
-            <a href="/pine-loft/lonely-path-pines/northern-tract" style={{ textDecoration: "none" }}>
-              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>North — Day 1</p>
-              <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Northern Tract</p>
-            </a>
-
-            {/* Campsite */}
-            <a href="/pine-loft/lonely-path-pines/midbend-tract/campsite" style={{ textDecoration: "none", textAlign: "center" }}>
-              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>End of Day 2</p>
-              <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>The Campsite</p>
-            </a>
-
-            {/* South — live */}
-            <a href="/pine-loft/lonely-path-pines/southern-tract" style={{ textDecoration: "none", textAlign: "right" }}>
-              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>South — Day 3</p>
-              <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Southern Tract →</p>
-            </a>
-          </div>
-
-          {/* Foot Path — DM only */}
-          <div className="mt-6 p-4" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.2)" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>DM Only</p>
-            <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.6, fontStyle: "italic" }}>Only if they noticed with passive perception or passed the campsite check.</p>
-            <p style={{ color: "var(--parchment)", opacity: 0.3, fontSize: "0.95rem", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", display: "inline-block" }}>The Foot Path → (coming soon)</p>
+        <div className="mt-10 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/pine-loft/lonely-path-pines/midbend-tract/campsite" style={{ textDecoration: "none" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>West</p>
+            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← Campsite</p>
+          </a>
+          <div style={{ textAlign: "right" }}>
+            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>East — Forest Exit</p>
+            <p style={{ color: "var(--parchment)", opacity: 0.3, fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Coming Soon →</p>
           </div>
         </div>
       </div>
