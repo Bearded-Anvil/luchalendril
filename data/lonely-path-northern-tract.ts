@@ -15,7 +15,25 @@ To the west of the road, a giant tree — an Elder Pine — lays at a forty-five
 
 The discomfort is the point. The pines are not hospitable. They are indifferent, which is in some ways worse. Players who decide to leave the road should understand immediately that visibility drops to almost nothing within a few dozen feet and that tracking direction becomes genuinely difficult without a skilled navigator.
 
-Planned encounters here should favor atmosphere over combat — something heard but not seen, tracks that don't match a known creature, a brief glimpse of movement in the dark between the trunks. Save the harder threats for the deeper sections.`,
+Planned encounters here should favor atmosphere over combat — something heard but not seen, tracks that don't match a known creature, a brief glimpse of movement in the dark between the trunks. Save the harder threats for the deeper sections.
+
+This tract should take an entire day of travel before the party reaches the Lonely Pine Midbend Tract.`,
+
+  encounters: {
+    note: `It is up to the DM to make these enemies fit their game system and set the number of enemies or enemy stats appropriate for the party.`,
+    common: [
+      { name: "Goblins", detail: "They patrol looking for travelers to rob or kill." },
+      { name: "Wolves", detail: null },
+      { name: "Bandits", detail: null },
+    ],
+    uncommon: [
+      { name: "Dryads", detail: null },
+      { name: "Giant Snake", detail: null },
+    ],
+    rare: [
+      { name: "River Trolls", detail: null },
+    ],
+  },
 
   locations: [
     {
@@ -47,10 +65,10 @@ Planned encounters here should favor atmosphere over combat — something heard 
       status: "live",
     },
     {
-      label: "Lonely Path — Middle Tract",
+      label: "Lonely Pine Midbend Tract",
       direction: "South",
       description: "The road continues deeper into the forest. Day 2.",
-      path: "/pine-loft/lonely-path-pines/middle-tract",
+      path: "/pine-loft/lonely-path-pines/midbend-tract",
       status: "coming-soon",
     },
   ],
