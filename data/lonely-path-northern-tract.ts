@@ -21,6 +21,7 @@ This tract should take an entire day of travel before the party reaches the Lone
 
   encounters: {
     note: `It is up to the DM to make these enemies fit their game system and set the number of enemies or enemy stats appropriate for the party.`,
+    noEncounterNote: `There is a good chance the party passes through without incident. Roll to determine whether an encounter occurs at all before consulting the table below. Most stretches of the Northern Tract are simply quiet.`,
     common: [
       { name: "Goblins", detail: "They patrol looking for travelers to rob or kill." },
       { name: "Wolves", detail: null },

@@ -85,6 +85,7 @@ export default function NorthernTractPage() {
 
               {/* Encounter Chart */}
               <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Random Encounters</p>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.encounters.noEncounterNote}</p>
               <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--parchment)", opacity: 0.7, fontStyle: "italic" }}>{v.encounters.note}</p>
 
               <div className="grid md:grid-cols-3 gap-4">
