@@ -1,7 +1,7 @@
 export const lonelyPathFallenElder = {
   id: "lonely-path-fallen-elder",
   name: "The Fallen Elder",
-  image: "/lonely-path-fallen-elder.jpg",
+  image: "/elder-pine-top.jpg",
   path: "/pine-loft/lonely-path-pines/northern-tract/fallen-elder",
 
   sceneDescription: `The Elder didn't fall to the ground. It fell into the forest, and the forest caught it.
