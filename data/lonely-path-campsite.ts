@@ -1,7 +1,7 @@
 export const lonelyPathCampsite = {
   id: "lonely-path-campsite",
   name: "The Campsite",
-  image: "/lonely-path-campsite.jpg",
+  image: "/lonely-pine-campsite.jpg",
   path: "/pine-loft/lonely-path-pines/midbend-tract/campsite",
 
   sceneDescription: `As the downward-sloping embankment begins to level back out, you find what appears to be a well-used campsite off the west side of the road. The fireplace seems to have been used many times. A few bundles of firewood are piled around it from previous travelers, and stones have been placed in a rough circle to serve as seats. The road turns relatively sharply to the east here — or north, if you've come from that direction.
