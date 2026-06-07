@@ -17,10 +17,10 @@ The Stone Tunnel is the only point of interest on this tract. It sits at the bot
 
   locations: [
     {
-      name: "The Stone Tunnel",
+      name: "Stonejut Tunnel",
       description: "Two massive stones jutting toward each other at the bottom of the south ravine, forming a natural tunnel nearly one hundred feet long.",
       path: "/pine-loft/lonely-path-pines/southern-tract/stone-tunnel",
-      status: "coming-soon",
+      status: "live",
     },
   ],
 
