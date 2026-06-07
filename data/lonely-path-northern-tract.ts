@@ -49,12 +49,6 @@ This tract should take an entire day of travel before the party reaches the Lone
       path: "/pine-loft/lonely-path-pines/northern-tract/fallen-elder",
       status: "live",
     },
-    {
-      name: "The Marked Tree",
-      description: "A pine at the road's edge bearing carvings no one has been able to identify. They are old. Someone made them deliberately.",
-      path: "/pine-loft/lonely-path-pines/northern-tract/marked-tree",
-      status: "live",
-    },
   ],
 
   roads: [
