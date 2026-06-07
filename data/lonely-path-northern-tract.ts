@@ -19,6 +19,25 @@ Planned encounters here should favor atmosphere over combat — something heard 
 
 This tract should take an entire day of travel before the party reaches the Lonely Pine Midbend Tract.`,
 
+  camping: {
+    note: `There is no safe, obvious place to make camp on the Northern Tract. The road offers no shelter and the forest offers no comfort. Players who want to camp must work for it.`,
+    check: `Nature or Survival check to find a suitable campsite.`,
+    results: [
+      {
+        dc: 12,
+        outcome: `The party finds shaded areas where not even moonlight will make them visible. Any campfire, however, will be seen. Camp here and the fire stays out.`,
+      },
+      {
+        dc: 15,
+        outcome: `The party finds a small valley off the road, out of sight of anyone passing. A small fire could possibly be lit here — but at the DM's discretion, they could still be spotted if they do.`,
+      },
+      {
+        dc: 18,
+        outcome: `The party finds a place off the road where a large piece of stone juts up from the ground, forming an overhang that faces away from the road. A fire should be safe to light here without being spotted from the road.`,
+      },
+    ],
+  },
+
   encounters: {
     note: `It is up to the DM to make these enemies fit their game system and set the number of enemies or enemy stats appropriate for the party.`,
     noEncounterNote: `There is a good chance the party passes through without incident. Roll to determine whether an encounter occurs at all before consulting the table below. Most stretches of the Northern Tract are simply quiet.`,

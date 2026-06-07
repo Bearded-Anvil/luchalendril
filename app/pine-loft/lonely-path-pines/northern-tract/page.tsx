@@ -83,6 +83,19 @@ export default function NorthernTractPage() {
                 </p>
               ))}
 
+              {/* Camping */}
+              <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Making Camp</p>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.camping.note}</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.7, fontStyle: "italic" }}>{v.camping.check}</p>
+              <div className="grid gap-3 mb-6">
+                {v.camping.results.map((r) => (
+                  <div key={r.dc} className="flex gap-4 items-start">
+                    <span className="text-xs uppercase tracking-widest shrink-0 mt-0.5" style={{ color: "var(--gold)", opacity: 0.8, minWidth: "3.5rem" }}>DC {r.dc}</span>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.85 }}>{r.outcome}</p>
+                  </div>
+                ))}
+              </div>
+
               {/* Encounter Chart */}
               <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Random Encounters</p>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.encounters.noEncounterNote}</p>
