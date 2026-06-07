@@ -12,6 +12,12 @@ The trunk itself is staggering up close. The bark is ridged and ancient, furrows
 
 It did not fall recently. The trees around the impact zone have grown back toward it. Undergrowth has colonized the length of it. Whatever disturbed the forest when it came down has long since been absorbed. Only the tree remains — unchanged, unhurried, suspended between the moment it fell and the moment it finally reaches the ground.`,
 
+  climbable: {
+    label: "Climb to the Tree Top",
+    path: "/pine-loft/lonely-path-pines/northern-tract/fallen-elder/tree-top",
+    note: "The bark is rough enough to climb without a check. Above the canopy, three directions open up — and one of them hides something.",
+  },
+
   dmNote: `The Fallen Elder is the largest landmark in the Northern Tract and the most likely place for travelers to make camp. The root wall provides natural shelter from wind and rain on one side, the trunk provides a windbreak on the other, and the ground in between is flat and clear.
 
 What the Elder provides the DM:

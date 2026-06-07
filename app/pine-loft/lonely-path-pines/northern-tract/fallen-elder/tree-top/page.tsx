@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { lonelyPathFallenElder } from "@/data/lonely-path-fallen-elder";
+import { lonelyPathElderPineTop } from "@/data/lonely-path-elder-pine-top";
 
-export default function FallenElderPage() {
-  const v = lonelyPathFallenElder;
+export default function ElderPineTopPage() {
+  const v = lonelyPathElderPineTop;
   const [dmOpen, setDmOpen] = useState(false);
 
   return (
@@ -18,17 +18,18 @@ export default function FallenElderPage() {
             { label: "Pine Loft", href: "/pine-loft" },
             { label: "Lonely Path Pines", href: "/pine-loft/lonely-path-pines" },
             { label: "Northern Tract", href: "/pine-loft/lonely-path-pines/northern-tract" },
-            { label: v.name },
+            { label: "The Fallen Elder", href: "/pine-loft/lonely-path-pines/northern-tract/fallen-elder" },
+            { label: "Tree Top" },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Northern Tract</p>
-          <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>The Fallen Elder</p>
+          <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>Tree Top</h1>
         </div>
 
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
-          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center" }} priority />
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
         </div>
 
         <div className="gold-divider" />
@@ -50,7 +51,7 @@ export default function FallenElderPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Fallen Elder</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — Tree Top</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
           {dmOpen && (
@@ -64,13 +65,9 @@ export default function FallenElderPage() {
           )}
         </div>
 
-        <div className="mt-6 pt-6 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/pine-loft/lonely-path-pines/northern-tract" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Northern Tract
-          </a>
-          <a href="/pine-loft/lonely-path-pines/northern-tract/fallen-elder/tree-top" style={{ textDecoration: "none", textAlign: "right" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Climb the trunk</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>Tree Top →</p>
+        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/pine-loft/lonely-path-pines/northern-tract/fallen-elder" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← The Fallen Elder
           </a>
         </div>
       </div>
