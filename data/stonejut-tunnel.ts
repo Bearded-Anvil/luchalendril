@@ -62,5 +62,20 @@ When disturbed, Grushu stands tall, the front twenty-five to thirty legs lifting
     ],
     resistances: [`Slashing damage`, `Bludgeoning damage`],
     vulnerabilities: [`Fire damage`],
+    loot: {
+      onBody: {
+        name: "Venom Gland",
+        check: "Medicine DC 15",
+        description: `A successful Medicine check allows the hero to remove the venom gland from Grushu's body. The gland yields 1d6 applications of venom. Each application deals an additional 1d8 damage when used on a weapon.`,
+      },
+      inTunnel: {
+        description: `Searching through the tunnel reveals many more bones — human and otherwise. Digging around the area, the party finds a single spear, free from the muck that covers everything else.`,
+        item: {
+          name: "Spear of the Hunt",
+          description: `A spear made for throwing, though it can be used for melee as well. When thrown, the spear streaks forward, speeding up until it makes contact with an object.`,
+          effect: `Can be thrown twice as far as a regular spear. Deals 1d12 + 4 damage on a hit. If thrown beyond normal throw range, deals 2d12 + 4 damage instead.`,
+        },
+      },
+    },
   },
 };

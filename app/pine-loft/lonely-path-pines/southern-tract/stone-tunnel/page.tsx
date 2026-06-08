@@ -129,7 +129,7 @@ export default function StonejutTunnelPage() {
                 </div>
 
                 {/* Resistances & Vulnerabilities */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
                     <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>Resistances</p>
                     {c.resistances.map((r) => (
@@ -142,6 +142,24 @@ export default function StonejutTunnelPage() {
                       <p key={r} className="text-sm mb-1" style={{ color: "var(--parchment)", opacity: 0.85 }}>· {r}</p>
                     ))}
                   </div>
+                </div>
+
+                {/* Loot */}
+                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Loot</p>
+
+                {/* Venom Gland */}
+                <div className="mb-5" style={{ borderLeft: "2px solid rgba(201,168,76,0.3)", paddingLeft: "1rem" }}>
+                  <p className="font-bold mb-1" style={{ color: "var(--gold-light)" }}>{c.loot.onBody.name}</p>
+                  <p className="text-xs mb-2" style={{ color: "var(--parchment)", opacity: 0.6, fontStyle: "italic" }}>{c.loot.onBody.check}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.85 }}>{c.loot.onBody.description}</p>
+                </div>
+
+                {/* In the Tunnel */}
+                <div style={{ borderLeft: "2px solid rgba(201,168,76,0.3)", paddingLeft: "1rem" }}>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.85 }}>{c.loot.inTunnel.description}</p>
+                  <p className="font-bold mb-1" style={{ color: "var(--gold-light)" }}>{c.loot.inTunnel.item.name}</p>
+                  <p className="text-sm leading-relaxed mb-2" style={{ color: "var(--parchment)", opacity: 0.85 }}>{c.loot.inTunnel.item.description}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75, fontStyle: "italic" }}>{c.loot.inTunnel.item.effect}</p>
                 </div>
               </div>
             </div>
