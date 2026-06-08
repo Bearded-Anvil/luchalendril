@@ -83,7 +83,7 @@ export default function CampsitePage() {
           <div className="p-4" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.2)" }}>
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>DM Only</p>
             <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.6, fontStyle: "italic" }}>Only if they noticed with passive perception or passed the campsite check.</p>
-            <p style={{ color: "var(--parchment)", opacity: 0.3, fontSize: "0.95rem", fontWeight: "700", border: "1px solid rgba(255,255,255,0.1)", padding: "0.5rem 1.1rem", display: "inline-block" }}>The Foot Path → (coming soon)</p>
+            <a href="/pine-loft/lonely-path-pines/midbend-tract/foot-path" style={{ color: "var(--gold)", fontSize: "0.95rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block", textDecoration: "none" }}>The Foot Path →</a>
           </div>
         </div>
       </div>
