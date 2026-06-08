@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { lonelyPathFootPath } from "@/data/lonely-path-foot-path";
+import { lonelyPinesRuins } from "@/data/lonely-pines-ruins";
 
-export default function FootPathPage() {
-  const v = lonelyPathFootPath;
+export default function RuinsPage() {
+  const v = lonelyPinesRuins;
   const [dmOpen, setDmOpen] = useState(false);
 
   return (
@@ -17,13 +17,13 @@ export default function FootPathPage() {
             { label: "Luchalendril", href: "/" },
             { label: "Pine Loft", href: "/pine-loft" },
             { label: "Lonely Path Pines", href: "/pine-loft/lonely-path-pines" },
-            { label: "The Campsite", href: "/pine-loft/lonely-path-pines/midbend-tract/campsite" },
+            { label: "The Foot Path", href: "/pine-loft/lonely-path-pines/midbend-tract/foot-path" },
             { label: v.name },
           ]}
         />
 
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Off the Road — South of the Campsite</p>
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", letterSpacing: "0.25em" }}>Deep in the Lonely Path Pines</p>
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
         </div>
 
@@ -45,6 +45,24 @@ export default function FootPathPage() {
 
         <div className="gold-divider" />
 
+        {/* Locations */}
+        <div className="mt-8 mb-10">
+          <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Within the Ruins</h2>
+          <div className="grid gap-4">
+            {v.locations.map((loc) => (
+              <div key={loc.name} className="gold-border p-5" style={{ opacity: loc.status === "coming-soon" ? 0.4 : 1 }}>
+                <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name}</p>
+                <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
+                {loc.status === "coming-soon" && (
+                  <p className="text-xs mt-2 uppercase tracking-widest" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming Soon</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="gold-divider" />
+
         {/* DM Toggle */}
         <div className="mt-8 mb-10">
           <button
@@ -52,22 +70,12 @@ export default function FootPathPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Cliff</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Ruins</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
-              {/* Climb Down */}
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.climbDown.title}</p>
-              {v.dmNotes.climbDown.description.split("\n\n").map((paragraph, i) => (
-                <p key={i} className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>
-                  {paragraph}
-                </p>
-              ))}
-
-              {/* Climb Up */}
-              <p className="text-xs uppercase tracking-widest mt-6 mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.climbUp.title}</p>
-              {v.dmNotes.climbUp.description.split("\n\n").map((paragraph, i) => (
+              {v.dmNote.split("\n\n").map((paragraph, i) => (
                 <p key={i} className="text-sm leading-relaxed mb-4 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.9 }}>
                   {paragraph}
                 </p>
@@ -76,15 +84,10 @@ export default function FootPathPage() {
           )}
         </div>
 
-        {/* Navigation Footer */}
-        <div className="mt-10 pt-8 flex items-center justify-between" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/pine-loft/lonely-path-pines/midbend-tract/campsite" style={{ textDecoration: "none" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>Back</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>← The Campsite</p>
-          </a>
-          <a href="/pine-loft/lonely-path-pines/the-ruins" style={{ textDecoration: "none", textAlign: "right" }}>
-            <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--parchment)", opacity: 0.4, letterSpacing: "0.15em" }}>150 ft. Below</p>
-            <p style={{ color: "var(--gold)", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>The Ruins →</p>
+        {/* Footer */}
+        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/pine-loft/lonely-path-pines/midbend-tract/foot-path" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← The Foot Path (Cliff)
           </a>
         </div>
       </div>
