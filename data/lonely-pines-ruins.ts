@@ -23,7 +23,7 @@ Build out these locations as your campaign develops. The ruins are a place the p
       name: "The Howlers",
       description: "Creatures like howler monkeys that patrol the ruins. One sighting triggers a howl. More arrive. When numbers are on their side, they attack.",
       path: "/pine-loft/lonely-path-pines/the-ruins/howlers",
-      status: "coming-soon",
+      status: "live",
     },
     {
       name: "The Dungeon Door",

@@ -49,15 +49,22 @@ export default function RuinsPage() {
         <div className="mt-8 mb-10">
           <h2 className="text-xs uppercase tracking-widest mb-6" style={{ color: "var(--gold)", letterSpacing: "0.2em" }}>Within the Ruins</h2>
           <div className="grid gap-4">
-            {v.locations.map((loc) => (
-              <div key={loc.name} className="gold-border p-5" style={{ opacity: loc.status === "coming-soon" ? 0.4 : 1 }}>
-                <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name}</p>
-                <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
-                {loc.status === "coming-soon" && (
+            {v.locations.map((loc) =>
+              loc.status === "live" ? (
+                <a key={loc.name} href={loc.path} style={{ textDecoration: "none", display: "block" }}>
+                  <div className="gold-border p-5" style={{ cursor: "pointer" }}>
+                    <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name} →</p>
+                    <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
+                  </div>
+                </a>
+              ) : (
+                <div key={loc.name} className="gold-border p-5" style={{ opacity: 0.4 }}>
+                  <p style={{ color: "var(--gold-light)", fontWeight: "700", marginBottom: "0.35rem" }}>{loc.name}</p>
+                  <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.75 }}>{loc.description}</p>
                   <p className="text-xs mt-2 uppercase tracking-widest" style={{ color: "var(--parchment)", opacity: 0.35 }}>Coming Soon</p>
-                )}
-              </div>
-            ))}
+                </div>
+              )
+            )}
           </div>
         </div>
 
