@@ -27,6 +27,8 @@ Certain actions should always trigger a new check regardless of where the party 
 · Working a puzzle or mechanism
 · Any action that creates noise, light, or visible movement in the open
 
+Some actions should not require a check at all — they are an automatic failure. If a player casts a loud spell, sets off an explosion, creates a large light source, or does anything that would be immediately and obviously heard or seen across the ruins, don't roll. The Howlers heard it. A Howler screams.
+
 A failure means a Howler has spotted them. It does not attack immediately — it screams.
 
 The party has one turn to silence the Howler before its call is answered. Silencing it means killing it, knocking it unconscious, or using some means to stop the sound entirely. A Silence spell qualifies. A hand over its mouth does not — it will bite through the hand.
