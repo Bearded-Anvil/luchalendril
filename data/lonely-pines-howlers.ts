@@ -17,16 +17,21 @@ It was watching you before you ever arrived.`,
 The ruins are their territory. Anyone who enters is prey, or close enough to it.`,
 
   stealth: {
-    title: "Entering the Ruins",
-    description: `As soon as the party enters the ruins, they should begin making Stealth checks. DC 12.
+    title: "Moving Through the Ruins",
+    description: `Stealth checks should be called periodically as the party explores — not once at the entrance and never again. The Howlers are spread throughout the ruins, and a group that slipped past one may still be spotted by another fifty yards deeper in.
 
-If they pass every check without being spotted, no Howlers engage. The pack never knows they were there.
+A reasonable approach is to call for a check at each new location or area the party enters. The DM decides when the environment changes enough to warrant it.
+
+Certain actions should always trigger a new check regardless of where the party is:
+· Casting a spell
+· Working a puzzle or mechanism
+· Any action that creates noise, light, or visible movement in the open
 
 A failure means a Howler has spotted them. It does not attack immediately — it screams.
 
 The party has one turn to silence the Howler before its call is answered. Silencing it means killing it, knocking it unconscious, or using some means to stop the sound entirely. A Silence spell qualifies. A hand over its mouth does not — it will bite through the hand.
 
-If the Howler is silenced in that one turn, the call never goes out. No others arrive.`,
+If the Howler is silenced in that one turn, the call never goes out. No others arrive. But the party should check again before they do anything else.`,
   },
 
   escalation: {
