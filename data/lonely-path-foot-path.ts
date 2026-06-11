@@ -23,6 +23,20 @@ Failures should count as failing forward, not stopping the descent. Consider:
 · A weapon catches and tumbles down ahead of them.
 
 Let failure cost something without stopping the story.`,
+      perceptionCheck: {
+        dc: 14,
+        trigger: "Passive Perception 14, or a player calls out they are looking around during the descent.",
+        find: `Midway down the cliff face, a small necklace is looped around a root jutting from the rock. It has been there long enough that the root has grown slightly around the chain. There is no indication of how it got there. There is no one nearby who could have left it recently.`,
+        item: {
+          name: "Necklace of the Unseen",
+          description: `A thin silver chain with a small clouded-glass pendant. The glass is pale and slightly warm to the touch, even in cold air. It carries no visible markings.`,
+          dmNote: `No one knows what this does. It gives no indication of its nature, and nothing about it suggests magic to the untrained eye. Identification — through a spell, a skilled appraiser, or another means the DM allows — is the only way to learn its effect.
+
+Once identified: once per day, the bearer may clasp the pendant in their closed hand and speak no word. They become invisible for up to one hour, or until they attack or cast a spell.
+
+The necklace chooses its bearer. The first person to clasp it around their neck is the only person it will ever work for. In anyone else's hands it is cold, inert, and unremarkable.`,
+        },
+      },
     },
     climbUp: {
       title: "The Climb Up",

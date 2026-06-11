@@ -65,6 +65,22 @@ export default function FootPathPage() {
                 </p>
               ))}
 
+              {/* Perception Check */}
+              <div className="mt-4 mb-2 p-4" style={{ background: "rgba(201,168,76,0.05)", border: "1px solid rgba(201,168,76,0.2)" }}>
+                <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", opacity: 0.7, letterSpacing: "0.15em" }}>Perception — DC {v.dmNotes.climbDown.perceptionCheck.dc}</p>
+                <p className="text-xs mb-3" style={{ color: "var(--parchment)", opacity: 0.6, fontStyle: "italic" }}>{v.dmNotes.climbDown.perceptionCheck.trigger}</p>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmNotes.climbDown.perceptionCheck.find}</p>
+
+                {/* The Item */}
+                <p className="text-xs uppercase tracking-widest mt-4 mb-2" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.15em" }}>{v.dmNotes.climbDown.perceptionCheck.item.name}</p>
+                <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.85, fontStyle: "italic" }}>{v.dmNotes.climbDown.perceptionCheck.item.description}</p>
+                {v.dmNotes.climbDown.perceptionCheck.item.dmNote.split("\n\n").map((paragraph, i) => (
+                  <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.9 }}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
               {/* Climb Up */}
               <p className="text-xs uppercase tracking-widest mt-6 mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.climbUp.title}</p>
               {v.dmNotes.climbUp.description.split("\n\n").map((paragraph, i) => (
