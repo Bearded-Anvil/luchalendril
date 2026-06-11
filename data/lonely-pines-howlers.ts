@@ -20,20 +20,24 @@ The ruins are their territory. Anyone who enters is prey, or close enough to it.
     title: "Entering the Ruins",
     description: `As soon as the party enters the ruins, they should begin making Stealth checks. DC 12.
 
+If they pass every check without being spotted, no Howlers engage. The pack never knows they were there.
+
 A failure means a Howler has spotted them. It does not attack immediately — it screams.
 
 The party has one turn to silence the Howler before its call is answered. Silencing it means killing it, knocking it unconscious, or using some means to stop the sound entirely. A Silence spell qualifies. A hand over its mouth does not — it will bite through the hand.
 
-If the Howler is not silenced in one turn, the call goes out.`,
+If the Howler is silenced in that one turn, the call never goes out. No others arrive.`,
   },
 
   escalation: {
     title: "When the Call Goes Out",
-    description: `When a Howler's alarm sounds, roll a d4. That many Howlers drop from the trees and join the fight on the following turn.
+    description: `If the first Howler is not silenced in time, roll a d4. That many Howlers drop from the trees and join the fight on the following turn.
 
-Each subsequent round after that, roll a d6. On a 1, one more Howler arrives.
+Once multiple Howlers are in the fight, they are all calling. The alarm doesn't stop just because one goes down — the others keep it going. Every round from that point forward, roll a d6. On a 1, one more Howler arrives.
 
-Once all Howlers are silenced — dead or unconscious — no more will come. The pack is finite. But the DM should not reveal that to the players. Let the d6 roll feel like it could always bring one more.`,
+This continues for the entire fight. The d6 roll only stops when the last Howler is silenced or dead. Until then, another one can always come.
+
+The DM should not tell the players when the pack runs out. Let each d6 roll feel like it could bring one more.`,
   },
 
   creature: {
