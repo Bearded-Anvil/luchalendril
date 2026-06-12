@@ -20,6 +20,12 @@ Build out these locations as your campaign develops. The ruins are a place the p
 
   locations: [
     {
+      name: "Pine Temple — North Ruins",
+      description: "The first open expanse of stonework. Wide steps, broken columns, a walkway leading further in. Something watches from the trees.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/north-ruins",
+      status: "live",
+    },
+    {
       name: "The Howlers",
       description: "Creatures like howler monkeys that patrol the ruins. One sighting triggers a howl. More arrive. When numbers are on their side, they attack.",
       path: "/pine-loft/lonely-path-pines/the-ruins/howlers",
