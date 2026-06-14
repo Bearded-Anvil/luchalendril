@@ -5,7 +5,9 @@ export const pineTempleChase = {
   path: "/pine-loft/lonely-path-pines/the-ruins/temple-chase",
 
   trigger: {
-    dm: `This sequence begins if the party kills a group of Howlers. Use it at your discretion — it works best if the party feels they've handled things, right before the world reminds them they haven't.`,
+    dm: `This sequence can begin anywhere in the ruins that the party alerts Howlers — not just after killing a group. A failed stealth check, a loud spell, a noisy action on any platform can trigger the swarm. Use the chase whenever the Howlers have a reason to come in force. The narration below assumes the party has just fought and won; adjust the opening line to fit where they actually are when it starts.
+
+The topside ruins have been picked over for a very long time. There is nothing of value up here — no treasure, no loot, nothing hidden in the stonework. The platforms exist to be crossed, stealthed through, and survived. Any player who searches will find only old stone, Howler scat, and the same silence that has been here for centuries.`,
     narration: `As you stand over the fallen Howlers, you hear something in the distance. Something like thunder — but different somehow. And while you look to see what's making the racket, you begin to see the trees sway as if under a great weight.
 
 Then, as the sound draws nearer, you're able to make out that it isn't just one sound. It's dozens. Maybe scores.
@@ -290,6 +292,10 @@ Down and down the floor goes. Before long, the barking of the Howlers is muffled
 
 Finally, after what became a concerning amount of time, the floor thuds to a stop. You all stumble before regaining your footing. And there, against one wall, way down here in the ancient earth — is a very old iron door.`,
     },
+  },
+
+  elevatorReturn: {
+    dm: `The platform can be raised again the same way it was lowered. Touching all three knots simultaneously from below — one hand on each hand knot, a foot on the foot knot, any combination of players — activates the mechanism in reverse. The serpent head will extend back out from the wall, the mouth will open, and the platform will rise. The party can use this to return to the surface at any time.`,
   },
 
   ironDoor: {

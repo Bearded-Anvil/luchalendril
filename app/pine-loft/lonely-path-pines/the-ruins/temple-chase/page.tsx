@@ -229,6 +229,9 @@ export default function TempleChase() {
               <div style={{ borderTop: "1px solid rgba(232,128,128,0.12)", paddingTop: "1.5rem" }}>
                 <SectionLabel label="The Solve — The Elevator" />
                 <ReadAloudBlock><Narration text={v.puzzle.solve.narration} /></ReadAloudBlock>
+                <div className="mt-3 p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>⚑ {v.elevatorReturn.dm}</p>
+                </div>
               </div>
 
               {/* Iron Door */}
