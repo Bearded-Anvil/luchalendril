@@ -277,7 +277,7 @@ The room is roughly twenty feet deep and fifteen feet wide. The walls are plain 
     ],
     dmNotes: [
       `If the players light the torches, the knots of scales will shimmer in the flickering light — making the shapes easier to see.`,
-      `The solution: one player places both hands on the two hand-shaped knots, while simultaneously placing a foot on the foot-shaped knot. All three points of contact must be made at once.`,
+      `The solution: all three knots must be touched simultaneously. One player cannot reach all three alone — the hand knots and foot knot are too spread apart. Two players can manage it, one covering a hand knot and a foot, the other covering the second hand knot. Three players can each take one. Any combination works as long as all three points of contact are made at the same time.`,
     ],
     solve: {
       narration: `As you touch all three knots, you hear a sudden THUD — as if something heavy fell behind the shrine. At first, nothing happens. And then the serpent moves. So subtly at first that you think your eyes must be playing a trick on you.
