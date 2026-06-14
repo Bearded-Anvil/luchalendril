@@ -32,6 +32,12 @@ Build out these locations as your campaign develops. The ruins are a place the p
       status: "live",
     },
     {
+      name: "Pine Temple Chase",
+      description: "A full chase sequence — four checks, a points tally, a serpent puzzle, and an elevator descent. Triggered if the party wakes the pack.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/temple-chase",
+      status: "live",
+    },
+    {
       name: "The Dungeon Door",
       description: "A heavier door of darker stone at the far structure. It does not open by force. A puzzle lock seals it.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon-door",
