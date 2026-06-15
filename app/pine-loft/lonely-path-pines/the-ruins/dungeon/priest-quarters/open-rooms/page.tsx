@@ -59,18 +59,30 @@ export default function OpenRoomsPage() {
           </button>
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
+
               <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmNotes.overview}</p>
 
-              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Details — Use at Discretion</p>
-              <div className="flex flex-col gap-3 mb-5">
-                {v.dmNotes.details.map((detail, i) => (
-                  <div key={i} className="p-3" style={{ borderLeft: "2px solid rgba(201,168,76,0.25)" }}>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.88 }}>{detail}</p>
-                  </div>
-                ))}
+              {/* Drawers */}
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.drawers.trigger}</p>
+              <div className="p-4 mb-3" style={{ background: "rgba(201,168,76,0.04)", borderLeft: "2px solid rgba(201,168,76,0.3)" }}>
+                <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--gold)", opacity: 0.45, letterSpacing: "0.12em" }}>Read to Players</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.88, fontStyle: "italic" }}>{v.dmNotes.drawers.description}</p>
+              </div>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--parchment)", opacity: 0.8 }}>⚑ {v.dmNotes.drawers.dmNote}</p>
+
+              {/* Extra details */}
+              <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem" }}>
+                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>Optional Details</p>
+                <div className="flex flex-col gap-3 mb-4">
+                  {v.dmNotes.details.map((detail, i) => (
+                    <div key={i} className="p-3" style={{ borderLeft: "2px solid rgba(201,168,76,0.25)" }}>
+                      <p className="text-sm leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.88 }}>{detail}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>⚑ {v.dmNotes.note}</p>
               </div>
 
-              <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.6 }}>⚑ {v.dmNotes.note}</p>
             </div>
           )}
         </div>
