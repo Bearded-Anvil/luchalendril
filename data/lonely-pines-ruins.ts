@@ -47,7 +47,7 @@ Build out these locations as your campaign develops. The ruins are a place the p
       name: "The Underground Dungeon",
       description: "Below the ruins. Something old sleeps here, surrounded by what it has accumulated over a very long time.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon",
-      status: "coming-soon",
+      status: "live",
     },
   ],
 };
