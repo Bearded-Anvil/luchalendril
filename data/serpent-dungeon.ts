@@ -21,7 +21,7 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       name: "Priest Quarters",
       description: "Six individual sleeping cells where the priests who served Kahthriss lived. Whatever they believed, they lived close to it.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/priest-quarters",
-      status: "coming-soon",
+      status: "live",
     },
     {
       name: "Kitchen & Dining",
