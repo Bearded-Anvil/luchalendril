@@ -305,5 +305,10 @@ Finally, after what became a concerning amount of time, the floor thuds to a sto
       { position: "Middle lock", dc: 13 },
       { position: "Bottom lock", dc: 15 },
     ],
+    forceOpen: {
+      stat: "STR",
+      dc: 18,
+      note: `A player can attempt to kick or force the door rather than pick the locks. On a success, the door bursts open — padlock, frame and all. On a failure, the door holds. Multiple players may attempt in sequence, but the door does not weaken between attempts.`,
+    },
   },
 };

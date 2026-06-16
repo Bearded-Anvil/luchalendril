@@ -238,13 +238,20 @@ export default function TempleChase() {
               <div style={{ borderTop: "1px solid rgba(232,128,128,0.12)", paddingTop: "1.5rem" }}>
                 <SectionLabel label="The Iron Door" />
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.ironDoor.dm}</p>
-                <div className="flex flex-col gap-2" style={{ maxWidth: "320px" }}>
+                <div className="flex flex-col gap-2 mb-4" style={{ maxWidth: "320px" }}>
                   {v.ironDoor.locks.map((lock) => (
                     <div key={lock.position} className="flex items-center justify-between p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
                       <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.8 }}>{lock.position}</p>
                       <p className="text-sm font-bold" style={{ color: "var(--gold)" }}>DC {lock.dc}</p>
                     </div>
                   ))}
+                </div>
+                <div className="p-3 mb-2" style={{ border: "1px solid rgba(201,168,76,0.2)", maxWidth: "320px" }}>
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-xs uppercase tracking-widest" style={{ color: "var(--gold)", opacity: 0.6, letterSpacing: "0.12em" }}>Force the Door</p>
+                    <p className="text-sm font-bold" style={{ color: "var(--gold)" }}>{v.ironDoor.forceOpen.stat} DC {v.ironDoor.forceOpen.dc}</p>
+                  </div>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>{v.ironDoor.forceOpen.note}</p>
                 </div>
               </div>
 
@@ -253,9 +260,12 @@ export default function TempleChase() {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+        <div className="mt-6 pt-6 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <a href="/pine-loft/lonely-path-pines/the-ruins" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← The Ruins
+          </a>
+          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/great-hall" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            The Great Hall →
           </a>
         </div>
       </div>
