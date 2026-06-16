@@ -114,9 +114,12 @@ export default function PriestQuartersPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← The Dungeon
+        <div className="mt-6 pt-6 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/great-hall" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← Great Hall
+          </a>
+          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/dining-hall" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            The Dining Hall →
           </a>
         </div>
       </div>
