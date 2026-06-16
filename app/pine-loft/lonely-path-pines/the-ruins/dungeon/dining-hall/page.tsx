@@ -144,6 +144,12 @@ export default function DiningHallPage() {
                   <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Doors</p>
                   <div className="flex flex-col gap-3">
                     <div className="p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
+                      <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.12em" }}>Sounds at the Kitchen & Storage Doors</p>
+                      <p className="text-sm mb-2" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.doorSounds.kitchen}</p>
+                      <p className="text-sm mb-2" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.doorSounds.priestQuarters}</p>
+                      <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}>⚑ {rats.doorSounds.dmNote}</p>
+                    </div>
+                    <div className="p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
                       <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.12em" }}>Storage Room Door</p>
                       <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.storageRoom}</p>
                     </div>

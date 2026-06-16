@@ -68,6 +68,13 @@ Rats already in the fight who are not currently looking at the flame are not aff
       storageRoom: `Opening the storage room door at the far end triggers a separate wave regardless of how many rats are currently in the room. The storage room has been undisturbed longer — the rats there are more agitated.`,
 
       doorNote: `Closing either door stops that source of waves entirely. The rats cannot open doors. A barred or held door is a permanent solution to that entrance.`,
+
+      doorSounds: {
+        title: "Approaching the Doors",
+        kitchen: `Any player who moves within a few feet of the kitchen door or the storage room door can hear skittering and movement on the other side — claws on stone, the dry rustle of things moving in the dark. It is not subtle. A lone player who approaches either door should hear this before they touch the handle.`,
+        priestQuarters: `The door leading back toward the priest quarters is silent. Nothing moves on that side. This distinction is intentional — it gives an observant party a way to tell which doors are safe to open without committing to finding out the hard way.`,
+        dmNote: `Don't hide this. The sounds at the kitchen and storage doors are meant to be noticed. A player who opens one anyway has made a choice with full information.`,
+      },
     },
   },
 };
