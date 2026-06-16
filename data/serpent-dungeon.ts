@@ -24,10 +24,10 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       status: "live",
     },
     {
-      name: "Kitchen & Dining",
-      description: "Where the priests cooked and ate. The collapsed floor hole from the chase drops into this area.",
-      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/kitchen",
-      status: "coming-soon",
+      name: "The Dining Hall",
+      description: "Where the priests ate. The collapsed ceiling is the hole from Check Two — and the rats came with it.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/dining-hall",
+      status: "live",
     },
     {
       name: "The Prison Cell",
