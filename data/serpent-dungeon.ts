@@ -36,6 +36,12 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       status: "live",
     },
     {
+      name: "The Storage Room",
+      description: "Off the dining hall. Nothing on the shelves — except four healing potions on a hidden pallet, and something in the walls that is about to find them.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/storage",
+      status: "live",
+    },
+    {
       name: "The Prison Cell",
       description: "A single cell off the southern passage. Where sacrifices were held before preparation.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/prison-cell",

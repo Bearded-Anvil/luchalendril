@@ -170,9 +170,14 @@ export default function DiningHallPage() {
           <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/priest-quarters" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← Priest Quarters
           </a>
-          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/kitchen" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            The Kitchen →
-          </a>
+          <div className="flex gap-3 flex-wrap">
+            <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/kitchen" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+              The Kitchen →
+            </a>
+            <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/storage" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+              Storage Room →
+            </a>
+          </div>
         </div>
       </div>
     </main>
