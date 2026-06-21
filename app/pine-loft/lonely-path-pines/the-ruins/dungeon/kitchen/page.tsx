@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
-import { serpentRuinDiningHall } from "@/data/serpent-ruin-dining-hall";
+import { serpentRuinKitchen } from "@/data/serpent-ruin-kitchen";
 
-export default function DiningHallPage() {
-  const v = serpentRuinDiningHall;
+export default function KitchenPage() {
+  const v = serpentRuinKitchen;
   const rats = v.dmNotes.rats;
   const [dmOpen, setDmOpen] = useState(false);
 
@@ -54,28 +54,26 @@ export default function DiningHallPage() {
             className="dm-private w-full text-left px-5 py-3 flex items-center justify-between"
             style={{ border: "none", cursor: "pointer" }}
           >
-            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Dining Hall</span>
+            <span className="text-xs uppercase tracking-widest" style={{ color: "#e88080", letterSpacing: "0.2em" }}>DM — The Kitchen</span>
             <span style={{ color: "#e88080", fontSize: "1.1rem" }}>{dmOpen ? "▲" : "▼"}</span>
           </button>
 
           {dmOpen && (
             <div className="dm-private p-6" style={{ borderTop: "none" }}>
 
-              {/* Ceiling Hole */}
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.ceilingHole.title}</p>
-              {v.dmNotes.ceilingHole.description.split("\n\n").map((p, i) => (
-                <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--parchment)", opacity: 0.9 }}>
-                  {p}
-                </p>
-              ))}
+              {/* Door Warning */}
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.doorWarning.title}</p>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--parchment)", opacity: 0.9 }}>{v.dmNotes.doorWarning.description}</p>
 
-              {/* Rats Overview */}
-              <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem", marginTop: "1.5rem" }}>
+              {/* Rats */}
+              <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem" }}>
                 <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{rats.title}</p>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--parchment)", opacity: 0.9 }}>{rats.description}</p>
+                {rats.description.split("\n\n").map((p, i) => (
+                  <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
+                ))}
 
                 {/* Stat Block */}
-                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--gold)", opacity: 0.55, letterSpacing: "0.15em" }}>Giant Rat — Stat Block</p>
+                <p className="text-xs uppercase tracking-widest mb-3 mt-6" style={{ color: "var(--gold)", opacity: 0.55, letterSpacing: "0.15em" }}>Giant Rat — Stat Block</p>
                 <div className="grid grid-cols-6 gap-2 mb-4">
                   {Object.entries(rats.stats).filter(([k]) => ["STR","DEX","CON","INT","WIS","CHA"].includes(k)).map(([key, val]) => (
                     <div key={key} className="text-center p-2" style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.15)" }}>
@@ -132,32 +130,19 @@ export default function DiningHallPage() {
                 </div>
 
                 {/* Torch Fear */}
-                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{rats.torchFear.title}</p>
-                {rats.torchFear.description.split("\n\n").map((p, i) => (
-                  <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>
-                    {p}
-                  </p>
-                ))}
+                <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem" }}>
+                  <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{rats.torchFear.title}</p>
+                  {rats.torchFear.description.split("\n\n").map((p, i) => (
+                    <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
+                  ))}
+                </div>
 
-                {/* Door Notes */}
-                <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem", marginTop: "1rem" }}>
-                  <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>The Doors</p>
-                  <div className="flex flex-col gap-3">
-                    <div className="p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
-                      <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.12em" }}>Sounds at the Kitchen & Storage Doors</p>
-                      <p className="text-sm mb-2" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.doorSounds.kitchen}</p>
-                      <p className="text-sm mb-2" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.doorSounds.priestQuarters}</p>
-                      <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.6 }}>⚑ {rats.doorSounds.dmNote}</p>
-                    </div>
-                    <div className="p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
-                      <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.12em" }}>Storage Room Door</p>
-                      <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.storageRoom}</p>
-                    </div>
-                    <div className="p-3" style={{ border: "1px solid rgba(201,168,76,0.15)" }}>
-                      <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.12em" }}>Closing a Door</p>
-                      <p className="text-sm" style={{ color: "var(--parchment)", opacity: 0.85 }}>{rats.doorNote}</p>
-                    </div>
-                  </div>
+                {/* Door Control */}
+                <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem", marginTop: "0.5rem" }}>
+                  <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{rats.doorControl.title}</p>
+                  {rats.doorControl.description.split("\n\n").map((p, i) => (
+                    <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
+                  ))}
                 </div>
 
               </div>
@@ -166,12 +151,9 @@ export default function DiningHallPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-6 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/priest-quarters" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            ← Priest Quarters
-          </a>
-          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/kitchen" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            The Kitchen →
+        <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/dining-hall" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+            ← The Dining Hall
           </a>
         </div>
       </div>

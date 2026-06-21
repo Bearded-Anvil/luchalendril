@@ -30,6 +30,12 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       status: "live",
     },
     {
+      name: "The Kitchen",
+      description: "The rat lair. Directly off the dining hall — the source of the waves. Nothing of value inside, and the rats do not wait to be disturbed.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/kitchen",
+      status: "live",
+    },
+    {
       name: "The Prison Cell",
       description: "A single cell off the southern passage. Where sacrifices were held before preparation.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/prison-cell",
