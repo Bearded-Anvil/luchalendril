@@ -36,7 +36,7 @@ export default function SecretPassagePage() {
         </div>
 
         <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
-          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center bottom" }} priority />
         </div>
 
         <div className="gold-divider" />
@@ -89,7 +89,7 @@ export default function SecretPassagePage() {
 
                 {/* Spider image */}
                 <div className="relative w-full my-6 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
-                  <Image src={sp.spiderImage} alt="Giant Spider" fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+                  <Image src={sp.spiderImage} alt="Giant Spider" fill style={{ objectFit: "cover", objectPosition: "center 40%" }} />
                 </div>
 
                 {/* Stat Block */}
