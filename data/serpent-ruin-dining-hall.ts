@@ -20,6 +20,16 @@ Directly across from you, a small wooden door stands closed. At the far end of t
 If a player arrives this way, they land in the dining hall alone — no iron door behind them, no party, and the rats are already present. Handle the separation however fits your table, but the player is inside the dungeon ahead of everyone else with no obvious way back up without help.`,
     },
 
+    secretPassage: {
+      title: "The Secret Passageway",
+      dc: 14,
+      trigger: "Investigation — only if players actively search the walls, or passive perception 14+",
+      description: `A section of the east wall shifts when pressed. The seam blends into the surrounding stonework with no handle or marking to distinguish it. Behind it, a narrow corridor — wide enough for two people side by side, no more. It connects south through the rock toward the preparation chamber and the sunning chamber beyond.
+
+Kahthriss cannot fit through it.`,
+      dmNote: `Do not call for a check. Do not hint that the walls are worth examining. Only reveal this if players say they are searching the walls, or if a player's passive perception is 14 or higher and they are close enough to that section of wall. This is a reward for curiosity, not a prompt.`,
+    },
+
     rats: {
       title: "The Giant Rats",
       description: `The rats live in the kitchen and storage rooms beyond the two doors. They are drawn by noise, movement, and the smell of living things. They do not charge as a unit — they spill out of the doorways in waves, more arriving as the fight continues.`,

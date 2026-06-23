@@ -104,6 +104,23 @@ export default function PreparationChamberPage() {
                 </div>
               </div>
 
+              {/* Secret Passage */}
+              <div style={{ borderTop: "1px solid rgba(232,128,128,0.15)", paddingTop: "1.5rem", marginTop: "1.5rem" }}>
+                <div className="flex items-start justify-between gap-6 mb-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#e88080", opacity: 0.7, letterSpacing: "0.15em" }}>{v.dmNotes.secretPassage.title}</p>
+                    <p className="text-xs" style={{ color: "var(--parchment)", opacity: 0.5 }}>{v.dmNotes.secretPassage.trigger}</p>
+                  </div>
+                  <p className="text-2xl font-bold flex-shrink-0" style={{ color: "var(--gold)" }}>DC {v.dmNotes.secretPassage.dc}</p>
+                </div>
+                {v.dmNotes.secretPassage.description.split("\n\n").map((p, i) => (
+                  <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
+                ))}
+                <div className="p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>⚑ {v.dmNotes.secretPassage.dmNote}</p>
+                </div>
+              </div>
+
             </div>
           )}
         </div>

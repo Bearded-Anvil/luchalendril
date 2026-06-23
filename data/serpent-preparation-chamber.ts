@@ -32,6 +32,16 @@ The cell is not a mystery to solve. It is context. Someone was held here before 
       skill: "Medicine or Investigation",
     },
 
+    secretPassage: {
+      title: "The Secret Passageway",
+      dc: 14,
+      trigger: "Investigation — only if players actively search the walls, or passive perception 14+",
+      description: `A section of the south wall shifts when pressed. Behind it, a narrow corridor — wide enough for two, no more. It connects through the rock to the sunning chamber on one end and runs north toward the dining hall on the other.
+
+Kahthriss cannot fit through it. The passage is too narrow for his body.`,
+      dmNote: `Do not call for a check. Do not hint that the walls are worth examining. Only reveal this if players say they are searching the walls, or if a player's passive perception is 14 or higher and they are close enough to the relevant section of wall. This is a reward for curiosity, not a prompt.`,
+    },
+
     inscription: {
       title: "The Hallway Inscription",
       dc: 15,

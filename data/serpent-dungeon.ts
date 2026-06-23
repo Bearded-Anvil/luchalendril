@@ -51,7 +51,7 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       name: "The Sunning Chamber",
       description: "Where Kahthriss waits. The ledge. The grate above. The floor that breathes.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/sunning-chamber",
-      status: "coming-soon",
+      status: "live",
     },
   ],
 };
