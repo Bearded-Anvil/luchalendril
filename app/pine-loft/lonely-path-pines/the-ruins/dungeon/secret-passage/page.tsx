@@ -87,7 +87,10 @@ export default function SecretPassagePage() {
                   <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
                 ))}
 
-                {/* Spider image placeholder — add /giant-spider.jpg to public when ready */}
+                {/* Spider image */}
+                <div className="relative w-full my-6 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                  <Image src={sp.spiderImage} alt="Giant Spider" fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+                </div>
 
                 {/* Stat Block */}
                 <div className="mt-6">

@@ -20,7 +20,7 @@ Use the dungeon map to guide them through any turns. The passage is not a straig
 
     spiders: {
       title: "The Giant Spiders",
-      spiderImage: "/giant-spider.jpg",
+      spiderImage: "/serpent-giant-spider.jpg",
       description: `The ceiling is missing in several sections throughout the passage. Giant spiders have claimed these gaps as their territory, building webs across the openings and dropping down onto prey that moves through below. They feed on the giant rats that wander the corridor and have been here long enough that the rats' bones have become part of the floor.
 
 The spiders do not distinguish between rats and people. When something warm moves beneath a gap in the ceiling, they drop.
