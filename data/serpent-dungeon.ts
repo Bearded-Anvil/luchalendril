@@ -48,6 +48,12 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       status: "live",
     },
     {
+      name: "The Secret Passageway",
+      description: "A narrow corridor connecting three rooms. Too tight for Kahthriss. Not too tight for spiders.",
+      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/secret-passage",
+      status: "live",
+    },
+    {
       name: "The Sunning Chamber",
       description: "Where Kahthriss waits. The ledge. The grate above. The floor that breathes.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/sunning-chamber",
