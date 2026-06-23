@@ -87,6 +87,10 @@ export default function SunningChamberPage() {
                   <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
                 ))}
 
+                <div className="relative w-full my-6 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                  <Image src={k.image} alt="Kahthriss" fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+                </div>
+
                 {/* Stat Block */}
                 <div className="mt-6 mb-2">
                   <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.55, letterSpacing: "0.15em" }}>Kahthriss — Stat Block</p>
