@@ -170,9 +170,12 @@ export default function SunningChamberPage() {
                     <span key={room} className="text-xs px-2 py-1" style={{ border: "1px solid rgba(201,168,76,0.25)", color: "var(--gold)", opacity: 0.7 }}>{room}</span>
                   ))}
                 </div>
-                <div className="p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                <div className="p-3 mb-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
                   <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>⚑ {v.dmNotes.secretPassage.dmNote}</p>
                 </div>
+                <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/secret-passage" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "0.8rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.3)", padding: "0.4rem 0.9rem", display: "inline-block" }}>
+                  The Secret Passageway →
+                </a>
               </div>
 
               {/* After the Fight */}
