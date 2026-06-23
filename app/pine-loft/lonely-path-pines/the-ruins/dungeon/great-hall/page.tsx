@@ -132,9 +132,14 @@ export default function GreatHallPage() {
           <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
             ← The Dungeon
           </a>
-          <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/priest-quarters" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
-            Priest Quarters →
-          </a>
+          <div className="flex gap-3 flex-wrap">
+            <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/priest-quarters" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+              Priest Quarters →
+            </a>
+            <a href="/pine-loft/lonely-path-pines/the-ruins/dungeon/preparation-chamber" style={{ color: "var(--gold)", textDecoration: "none", fontSize: "1rem", fontWeight: "700", border: "1px solid rgba(201,168,76,0.4)", padding: "0.5rem 1.1rem", display: "inline-block" }}>
+              Preparation Chamber →
+            </a>
+          </div>
         </div>
       </div>
     </main>

@@ -42,16 +42,10 @@ Kahthriss uses the collapsed section to hunt on the surface. When it is below, i
       status: "live",
     },
     {
-      name: "The Prison Cell",
-      description: "A single cell off the southern passage. Where sacrifices were held before preparation.",
-      path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/prison-cell",
-      status: "coming-soon",
-    },
-    {
       name: "Sacrificial Preparation Chamber",
-      description: "Between the prison cell and the sacrificial chamber. The second inscription — Kahthriss's name — is carved into the hallway wall here.",
+      description: "A locked cell, a tilted stone table with manacles, a workbench of tools, and a hallway wall carved with a name the players haven't heard yet.",
       path: "/pine-loft/lonely-path-pines/the-ruins/dungeon/preparation-chamber",
-      status: "coming-soon",
+      status: "live",
     },
     {
       name: "The Sunning Chamber",
