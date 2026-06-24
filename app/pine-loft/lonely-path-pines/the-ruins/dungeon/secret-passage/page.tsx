@@ -35,8 +35,8 @@ export default function SecretPassagePage() {
           <h1 className="text-4xl md:text-6xl" style={{ color: "var(--gold-light)", letterSpacing: "0.06em" }}>{v.name}</h1>
         </div>
 
-        <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "16/9" }}>
-          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center bottom" }} priority />
+        <div className="relative w-full mb-10 gold-border overflow-hidden" style={{ aspectRatio: "2/3" }}>
+          <Image src={v.image} alt={v.name} fill style={{ objectFit: "cover", objectPosition: "center center" }} priority />
         </div>
 
         <div className="gold-divider" />
