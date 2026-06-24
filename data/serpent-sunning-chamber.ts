@@ -107,9 +107,49 @@ If Kahthriss is driven from the chamber, he moves through the dungeon toward the
       title: "After the Fight",
       description: `There is no treasure chest, no hoard. Kahthriss was not a dragon. He did not collect.
 
-What the party finds, if they look, is the body. Sixty feet of it. The weight of centuries. The steel fangs on the wall are not decorative — they are real, and they can be removed. An antiques dealer or collector would pay well for them. A blacksmith could repurpose the steel.
+What the party finds is the body. Sixty feet of it. The weight of centuries. The steel fangs on the wall are not decorative — they are real, and they can be removed. An antiques dealer or collector would pay well for them. A blacksmith could repurpose the steel.
 
-The grates above are fixed in place but a strong enough party could pry them loose. From the pit floor, a player could climb the walls to the walkway level or use the body itself as a ramp.`,
+The grates above are fixed in place but a strong enough party could pry them loose. From the pit floor, a player could climb the walls to the walkway level or use the body itself as a ramp.
+
+Scattered around the chamber — tucked against the walls, half-buried under debris, still strapped to the bones of those who carried them — are the belongings of people who came here before the party did and did not leave.`,
+
+      fromKahthriss: [
+        {
+          name: "Kahthriss's Scales",
+          type: "Crafting Material",
+          identification: null,
+          description: `The body yields enough intact scales to craft a breastplate or a shield. The scales are dense, interlocked, and resistant to physical deformation — the same material that gave Kahthriss his AC in life.`,
+          mechanics: `A skilled blacksmith or leatherworker (DC 15 Smith's Tools or Leatherworker's Tools) can shape the scales into armor or a shield over the course of a week. The finished piece has AC 14 + DEX modifier (breastplate) or +2 AC (shield), and the wearer has advantage on saving throws against being grappled or restrained.`,
+          dmNote: `The scales are raw material, not a finished item. The party has to carry them out and find someone capable of working them. That is part of the reward — it takes effort to claim.`,
+        },
+      ],
+
+      fromHunters: [
+        {
+          name: "Marked Crossbow",
+          type: "Weapon (hand crossbow) · Requires identification",
+          identification: `Must be identified before its ability is known. Appears to be a finely crafted hand crossbow with a carved serpent motif on the stock — clearly the weapon of a hunter who specialized in large prey.`,
+          description: `Found near a skeleton on the walkway above the pit. The hunter made it to the ledge. That was as far as they got.`,
+          mechanics: `As a bonus action, the bearer may mark a creature they can see. While the target is marked, the bearer always knows its direction and approximate distance, even through walls and obstacles, for 1 hour. Once per day. The crossbow functions as a standard hand crossbow (+2 to hit, 1d6 piercing, range 30/120 ft.) regardless of whether its ability has been identified.`,
+          dmNote: null,
+        },
+        {
+          name: "Boots of the Still Hunt",
+          type: "Wondrous Item · Requires identification",
+          identification: `Must be identified before their ability is known. Soft-soled leather boots, well-made, with reinforced ankles. A hunter's boots.`,
+          description: `Still laced onto a pair of feet near the base of the stairs. Whatever wore the boots down here knew how to be quiet. It was not enough.`,
+          mechanics: `While the wearer is not moving, they have advantage on Stealth checks. The moment they move, the advantage ends until they stop again. No charges, no attunement required.`,
+          dmNote: null,
+        },
+        {
+          name: "Hunter's Lantern",
+          type: "Wondrous Item · Requires identification",
+          identification: `Must be identified before its ability is known. Looks like a standard hooded lantern — brass, well-maintained, with an unusual smoked glass that seems to dim the light more than expected.`,
+          description: `Hanging from a belt on a skeleton near the chamber entrance. The hunter brought light they could control. They still didn't see Kahthriss until it was too late.`,
+          mechanics: `When lit, the lantern sheds light only visible to the bearer and any creatures they consciously designate as they light it. To anyone else, the flame appears extinguished — they see no light at all. The bearer may redesignate recipients by extinguishing and relighting the lantern. Burns standard oil.`,
+          dmNote: `This is one of the most situationally useful items in the dungeon. A party that figures out what it does will find uses for it far beyond this location.`,
+        },
+      ],
     },
   },
 };

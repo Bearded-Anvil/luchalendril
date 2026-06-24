@@ -188,6 +188,46 @@ export default function SunningChamberPage() {
                 {v.dmNotes.loot.description.split("\n\n").map((p, i) => (
                   <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.9 }}>{p}</p>
                 ))}
+
+                {/* From Kahthriss */}
+                <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.15em" }}>From Kahthriss</p>
+                {v.dmNotes.loot.fromKahthriss.map((item) => (
+                  <div key={item.name} className="p-4 mb-4" style={{ border: "1px solid rgba(201,168,76,0.2)" }}>
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{item.name}</p>
+                      <p className="text-xs flex-shrink-0" style={{ color: "var(--gold)", opacity: 0.55 }}>{item.type}</p>
+                    </div>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.85, fontStyle: "italic" }}>{item.description}</p>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.85 }}>{item.mechanics}</p>
+                    {item.dmNote && (
+                      <div className="p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                        <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>⚑ {item.dmNote}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {/* From Fallen Hunters */}
+                <p className="text-xs uppercase tracking-widest mt-6 mb-4" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.15em" }}>From Fallen Hunters</p>
+                {v.dmNotes.loot.fromHunters.map((item) => (
+                  <div key={item.name} className="p-4 mb-4" style={{ border: "1px solid rgba(201,168,76,0.2)" }}>
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <p className="text-sm font-bold" style={{ color: "var(--gold-light)" }}>{item.name}</p>
+                      <p className="text-xs flex-shrink-0" style={{ color: "var(--gold)", opacity: 0.55 }}>{item.type}</p>
+                    </div>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.85, fontStyle: "italic" }}>{item.description}</p>
+                    <div className="p-3 mb-3" style={{ borderLeft: "2px solid rgba(201,168,76,0.3)" }}>
+                      <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--gold)", opacity: 0.5, letterSpacing: "0.1em" }}>Identification Required</p>
+                      <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.7 }}>{item.identification}</p>
+                    </div>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--parchment)", opacity: 0.85 }}>{item.mechanics}</p>
+                    {item.dmNote && (
+                      <div className="p-3" style={{ background: "rgba(139,26,26,0.08)", border: "1px solid rgba(139,26,26,0.15)" }}>
+                        <p className="text-xs leading-relaxed" style={{ color: "var(--parchment)", opacity: 0.75 }}>⚑ {item.dmNote}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
 
             </div>
